@@ -1,0 +1,10 @@
+import React from 'react'
+import { Text } from 'react-native'
+
+import { styles } from './styles'
+
+export const PrimaryTitleText = ({ children, style }) => {
+    return (
+        <Text style={[styles.primaryTitleText, style]}>{children}</Text>
+    )
+}
