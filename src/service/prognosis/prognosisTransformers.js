@@ -18,10 +18,10 @@ export function prognosisListResponseTransformer(prognosisList) {
                 id: prognosis.id,
                 path: prognosis.path,
                 rate: prognosis.betsUsers.ratio,
-                odd: prognosis.odd_name,
-                home: prognosis.home.name,
-                away: prognosis.away.name,
-                title: prognosis.home.name + ' - ' + prognosis.away.name,
+                odd: prognosis.oddstype.name,
+                home: prognosis.home_team.name,
+                away: prognosis.away_team.name,
+                title: prognosis.home_team.name + ' - ' + prognosis.away_team.name,
                 sport: prognosis.sport.name,
                 date: date,
                 dateString: formattedDate
@@ -35,24 +35,24 @@ export function prognosisListResponseTransformer(prognosisList) {
 
 export function prognosisResponseTransformer(prognosis) {
 
-    let description = prognosis.description
-        .replace(/<\/?p[^>]*>|<br>|<\/?em[^>]*>|<\/?span[^>]*>|<\/?strong[^>]*>|<br\/>|\n|\r/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim()
-        .split(/<h3>|<\/h3>/g)
+    // let description = prognosis.description
+    //     .replace(/<\/?p[^>]*>|<br>|<\/?em[^>]*>|<\/?span[^>]*>|<\/?strong[^>]*>|<br\/>|\n|\r/g, ' ')
+    //     .replace(/\s+/g, ' ')
+    //     .trim()
+    //     .split(/<h3>|<\/h3>/g)
     let home = {
-        name: prognosis.home.home_info.name,
-        description: description[2].trim(),
-        logoUrl: prognosis.home.home_logo,
-        last: prognosis.last.home.splice(0, 5)
+        name: prognosis.home_team.name,
+        description: prognosis.home,
+        logoUrl: prognosis.home_logo.filename,
+        last: prognosis.scores.home.splice(0, 5)
     }
     let away = {
-        name: prognosis.away.away_info.name,
-        description: description[4].trim(),
-        logoUrl: prognosis.away.away_logo,
-        last: prognosis.last.away.splice(0, 5)
+        name: prognosis.away_team.name,
+        description: prognosis.away,
+        logoUrl: prognosis.away_logo.filename,
+        last: prognosis.scores.away.splice(0, 5)
     }
-    let prognosisDescription = description[6].trim()
+    // let prognosisDescription = description[6].trim()
 
     let date = new Date(parseInt(prognosis.match.date_start) * 1000)
     let time = date.toTimeString().substr(0, 5)
@@ -76,16 +76,16 @@ export function prognosisResponseTransformer(prognosis) {
 
     return {
         id: prognosis.id,
-        title: prognosis.home.home_info.name + ' - ' + prognosis.away.away_info.name,
+        title: prognosis.home_team.name + ' - ' + prognosis.away_team.name,
         rate: prognosis.betsUsers.ratio,
         home: home,
         away: away,
-        slog: prognosis.odd_name,
-        description: prognosisDescription,
+        slog: prognosis.oddstype.name,
+        description: prognosis.forecast,
         sport: prognosis.sport.name,
-        tournament: prognosis.sport.name + '. ' + prognosis.tournament_name.name,
+        tournament: prognosis.sport.name + '. ' + prognosis.tournament.name,
         date: formattedDate,
         time: time,
-        last: prognosis.last.face_to_face.splice(0, 5)
+        last: prognosis.scores.face_to_face.splice(0, 5)
     }
 }

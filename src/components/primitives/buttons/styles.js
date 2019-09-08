@@ -55,5 +55,12 @@ export const styles = {
         fontSize: 15,
         fontFamily: 'PTSans-NarrowBold',
         color: "#fff"
-    }
+    },
+    iconPrimaryButton: {
+        padding: 12,
+        borderRadius: 5,
+        backgroundColor: '#45ade1',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
 }

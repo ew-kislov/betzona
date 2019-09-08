@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
-import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { createStackNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation'
 import SplashScreen from 'react-native-splash-screen'
 
 import { Provider } from 'react-redux'
 import { configureStore } from './src/config'
 
-import { PrognosisDetailsContainer, PrognosisListContainer } from './src/components/screens'
+import { PrognosisDetailsContainer, PrognosisListContainer, SideMenuContainer } from './src/components/screens'
 
 import { SCREENS } from './src/constants'
 
-const navigator = createStackNavigator(
+import { connect } from 'react-redux'
+import { initAuthDataActionCreator } from './src/store'
+
+const stackNavigator = createStackNavigator(
     {
         [SCREENS.PROGNOSIS_LIST]: PrognosisListContainer,
         [SCREENS.PROGNOSIS_DETAILS]: PrognosisDetailsContainer
@@ -20,21 +23,34 @@ const navigator = createStackNavigator(
     }
 )
 
-const AppContainer = createAppContainer(navigator)
+const appNavigator = createDrawerNavigator(
+    {
+        'APP': stackNavigator
+    },
+    {
+        contentComponent: SideMenuContainer
+    }
+)
+
+const AppContainer = createAppContainer(appNavigator)
 
 const store = configureStore()
 
-export default class App extends Component {
+class AppWithoutConnect extends Component {
 
     componentDidMount() {
-        SplashScreen.hide()
+        this.props.initAuthDataActionCreator().then(() => SplashScreen.hide())
     }
-        
+
     render() {
         return (
-            <Provider store={store}>
-                <AppContainer />
-            </Provider>
+            // <Provider store={store}>
+            <AppContainer />
+            // </Provider>
         )
     }
 }
+
+const AppWithConnect = connect(null, { initAuthDataActionCreator })(AppWithoutConnect)
+
+export default App = () => <Provider store={store}><AppWithConnect /></Provider>

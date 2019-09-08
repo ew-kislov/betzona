@@ -13,7 +13,7 @@ import { FootballIcon, FootballBlueIcon, TennisIcon, TennisBlueIcon, HockeyIcon,
 
 import { SPORT_TYPES } from '../../../constants'
 
-class CustomTabBarIcon extends React.PureComponent {
+class CustomTab extends React.PureComponent {
     render() {
         const { focused, routeName } = this.props
 
@@ -26,11 +26,11 @@ class CustomTabBarIcon extends React.PureComponent {
             icon = focused ? <HockeyBlueIcon /> : <HockeyIcon />
 
         return (
-            <TouchableOpacity onPress={() => this.onSelect(routeName)} style={[styles2.container, focused ? styles2.active : styles2.inactive]}>
+            <TouchableOpacity onPress={() => this.onSelect(routeName)} style={[tabStyles.container, focused ? tabStyles.active : tabStyles.inactive]}>
                 <View style = {{ marginRight: 5 }}>
                     {(routeName != SPORT_TYPES.ALL) && icon}
                 </View>
-                <Text style={[styles2.textStyle, focused ? styles2.activeText : styles2.inactiveText]}>{routeName}</Text>
+                <Text style={[tabStyles.textStyle, focused ? tabStyles.activeText : tabStyles.inactiveText]}>{routeName}</Text>
             </TouchableOpacity>
         )
     }
@@ -40,7 +40,7 @@ class CustomTabBarIcon extends React.PureComponent {
     }
 }
 
-const styles2 = StyleSheet.create({
+const tabStyles = StyleSheet.create({
     container: {
         marginTop: 5,
         flex: 1,
@@ -85,7 +85,7 @@ class CustomTabBar extends React.Component {
             <View horizontal={true} style={styles.container}>
                 {routes.map((route, index) =>
                     <View style={styles.tabBarItem}>
-                        <CustomTabBarIcon
+                        <CustomTab
                             key={index}
                             routeName={route.routeName}
                             onPress={() => this.navigationHandler(route.routeName)}

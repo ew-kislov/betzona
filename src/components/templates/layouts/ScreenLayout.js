@@ -9,12 +9,14 @@ import { styles } from './styles'
  */
 export const ScreenLayout = ({ children }) => {
     return (
-        <View>
-            <SafeAreaView backgroundColor='#8b8b8b' />
+
+        <SafeAreaView backgroundColor='#8b8b8b' style={styles.flex1}>
             <StatusBar backgroundColor='#8b8b8b' barStyle="light-content" />
             <View style={styles.container}>
                 {children}
             </View>
-        </View>
+        </SafeAreaView>
+
+
     )
 }

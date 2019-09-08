@@ -15,7 +15,7 @@ export const VSPanel = ({ homeTeam, awayTeam, style }) => {
         <View style={[styles.VSPanel, style]}>
             <View style={styles.VSImageContainer}>
                 <Image
-                    source={ homeTeam && homeTeam.logoUrl !== 'https://betzona.ru/img/logo_team/' ? { uri: homeTeam.logoUrl } : require('../../../../assets/png/no_logo.png')}
+                    source={ homeTeam && homeTeam.logoUrl !== '' ? { uri: 'https://betzona.ru/img/logo_team/' + homeTeam.logoUrl } : require('../../../../assets/png/no_logo.png')}
                     style={styles.VSImage}
                 />
                 {/* {mockedLogo} */}
@@ -31,7 +31,7 @@ export const VSPanel = ({ homeTeam, awayTeam, style }) => {
 
             <View style={styles.VSImageContainer}>
                 <Image
-                    source={ awayTeam && awayTeam.logoUrl !== 'https://betzona.ru/img/logo_team/' ? { uri: awayTeam.logoUrl } : require('../../../../assets/png/no_logo.png')}
+                    source={ awayTeam && awayTeam.logoUrl !== '' ? { uri: 'https://betzona.ru/img/logo_team/' + awayTeam.logoUrl } : require('../../../../assets/png/no_logo.png')}
                     style={styles.VSImage}
                 />
                 {/* {mockedLogo} */}

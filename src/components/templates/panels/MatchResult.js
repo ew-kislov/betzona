@@ -6,14 +6,14 @@ import { styles } from './styles'
 
 export const MatchResult = ({ matchResult, currentTeamName, style }) => {
 
-    firstScore = matchResult.score.score.split(' ')[0]
+    firstScore = matchResult.score.split(' ')[0]
 
     if (currentTeamName) {
         homeScore = firstScore.split(':')[0]
         awayScore = firstScore.split(':')[1]
         var currentScore, opponentScore
 
-        if (matchResult.home_name == currentTeamName) {
+        if (matchResult.home.name == currentTeamName) {
             currentScore = homeScore
             opponentScore = awayScore
         }
@@ -26,7 +26,7 @@ export const MatchResult = ({ matchResult, currentTeamName, style }) => {
     return (
         <RowContainer style={[{ justifyContent: 'space-between' }, style]}>
             <DescriptionText style={{ flex: 1 }}>
-                {matchResult.home_name} - {matchResult.away_name}
+                {matchResult.home.name} - {matchResult.away.name}
             </DescriptionText>
 
             <RowContainer style={{ alignItems: 'center' }}>

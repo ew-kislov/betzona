@@ -37,7 +37,7 @@ export const PrognosisDetails = ({
 
                 {prognosis.last && prognosis.last.length > 0 && (
                     <View style={{ marginTop: 10, marginBottom: 15 }}>
-                        <TitleText style={{ marginTop: 20 }}>Статистика личных встреч</TitleText>
+                        <TitleText style={{ marginTop: 20, marginBottom: 10 }}>Статистика личных встреч</TitleText>
                         {prognosis.last.map(matchResult => <MatchResult matchResult={matchResult} key={matchResult.score.match_id} style={{ marginBottom: 5 }} />)}
                     </View>
                 )}
