@@ -5,7 +5,7 @@ import Icon from 'react-native-ionicons'
 import { PrimaryInput, WidePrimaryButton, TitleText, RowContainer, PrimaryTitleText, DividerPanel, PrimaryIconButton } from '../../primitives'
 import { ContentLayout } from '../../templates'
 
-export const SideMenu = ({ loading, token, username, handleUsernameChange, handlePasswordChange, handleLogin, handleLogout }) => {
+export const SideMenu = ({ loading, token, username, handleUsernameChange, handlePasswordChange, handleLogin, handleLogout, navigateToProfileInfo }) => {
     return (
         <ContentLayout style={{ padding: 20 }} loading={loading}>
             <SafeAreaView />
@@ -19,7 +19,7 @@ export const SideMenu = ({ loading, token, username, handleUsernameChange, handl
                                     <PrimaryTitleText>{username}</PrimaryTitleText>
                                 </RowContainer>
 
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={navigateToProfileInfo}>
                                     <RowContainer style={{ marginTop: 10, alignItems: 'center' }}>
                                         <Icon name="md-person" color='#45ade1' size={21} style={{ marginRight: 15 }} />
                                         <PrimaryTitleText>Открыть профиль</PrimaryTitleText>

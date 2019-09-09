@@ -5,6 +5,7 @@ import { SideMenu } from './SideMenu'
 
 import { loginActionCreator, logoutActionCreator } from '../../../store'
 import { connect } from 'react-redux'
+import { SCREENS } from '../../../constants'
 
 export class SideMenuContainerWithoutConnect extends Component {
 
@@ -31,6 +32,8 @@ export class SideMenuContainerWithoutConnect extends Component {
         this.props.logoutActionCreator()
     }
 
+    navigateToProfileInfo = () => this.props.navigation.navigate(SCREENS.PROFILE_INFO)
+
     render() {
         let { token, username, loading } = this.props
         return <SideMenu
@@ -41,6 +44,7 @@ export class SideMenuContainerWithoutConnect extends Component {
             handlePasswordChange={this.handlePasswordChange}
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
+            navigateToProfileInfo={this.navigateToProfileInfo}
         />
     }
 }

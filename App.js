@@ -5,7 +5,7 @@ import SplashScreen from 'react-native-splash-screen'
 import { Provider } from 'react-redux'
 import { configureStore } from './src/config'
 
-import { PrognosisDetailsContainer, PrognosisListContainer, SideMenuContainer } from './src/components/screens'
+import { PrognosisDetailsContainer, PrognosisListContainer, SideMenuContainer, ProfileInfoContainer } from './src/components/screens'
 
 import { SCREENS } from './src/constants'
 
@@ -15,7 +15,8 @@ import { initAuthDataActionCreator } from './src/store'
 const stackNavigator = createStackNavigator(
     {
         [SCREENS.PROGNOSIS_LIST]: PrognosisListContainer,
-        [SCREENS.PROGNOSIS_DETAILS]: PrognosisDetailsContainer
+        [SCREENS.PROGNOSIS_DETAILS]: PrognosisDetailsContainer,
+        [SCREENS.PROFILE_INFO]: ProfileInfoContainer
     },
     {
         initialRouteName: SCREENS.PROGNOSIS_LIST,

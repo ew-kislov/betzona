@@ -47,5 +47,11 @@ export const styles = {
         height: 10,
         borderRadius: 30,
         margin: 5
+    },
+    oddPayment: {
+        borderTopWidth: 1,
+        borderTopColor: '#e0e4e8',
+        marginTop: 10,
+        paddingTop: 10
     }
 }

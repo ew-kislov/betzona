@@ -45,6 +45,20 @@ export const styles = {
         color: "#fff"
     },
 
+    timeButton: {
+        height: 36,
+        borderRadius: 2.5,
+        textAlign: 'center',
+        width: 70,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    timeButtonText: {
+        fontSize: 18,
+        fontFamily: 'PTSans-Narrow',
+        color: "#fff"
+    },
+
     widePrimaryButton: {
         padding: 14,
         borderRadius: 5,
@@ -63,4 +77,30 @@ export const styles = {
         alignItems: 'center',
         justifyContent: 'center'
     },
+
+    oddRateButton: {
+        alignItems: 'center',
+        flex: 1
+    },
+    oddRateButtonText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-NarrowBold',
+        color: "#fff"
+    },
+    oddRateButtonLeft: {
+        backgroundColor: '#66a8cb',
+        flex: 1,
+        alignItems: 'center',
+        padding: 8,
+        borderBottomLeftRadius: 3,
+        borderTopLeftRadius: 3
+    },
+    oddRateButtonRight: {
+        backgroundColor: '#5990ae',
+        width: 80,
+        alignItems: 'center',
+        padding: 8,
+        borderBottomRightRadius: 3,
+        borderTopRightRadius: 3
+    }
 }
