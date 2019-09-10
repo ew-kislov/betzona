@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-import { Panel, RowContainer, RateButton, DescriptionText, TimeButton, PrimaryText, OddRateButton } from '../../primitives'
+import { Panel, RowContainer, DescriptionText, TimeButton, PrimaryText, OddRateButton } from '../../primitives'
 import { styles } from './styles'
 
 export const ProfileBetPanel = ({ profileBet, style }) => {

@@ -1,5 +1,6 @@
 import 'moment/min/moment-with-locales'
-
+import '../../util'
+import { getDayMonthFormat } from '../../util'
 
 export function prognosisListResponseTransformer(prognosisList) {
     for (selector in prognosisList) {
@@ -34,12 +35,6 @@ export function prognosisListResponseTransformer(prognosisList) {
 }
 
 export function prognosisResponseTransformer(prognosis) {
-
-    // let description = prognosis.description
-    //     .replace(/<\/?p[^>]*>|<br>|<\/?em[^>]*>|<\/?span[^>]*>|<\/?strong[^>]*>|<br\/>|\n|\r/g, ' ')
-    //     .replace(/\s+/g, ' ')
-    //     .trim()
-    //     .split(/<h3>|<\/h3>/g)
     let home = {
         name: prognosis.home_team.name,
         description: prognosis.home,
@@ -52,27 +47,11 @@ export function prognosisResponseTransformer(prognosis) {
         logoUrl: prognosis.away_logo.filename,
         last: prognosis.scores.away.splice(0, 5)
     }
-    // let prognosisDescription = description[6].trim()
 
     let date = new Date(parseInt(prognosis.match.date_start) * 1000)
     let time = date.toTimeString().substr(0, 5)
 
-    let months = [
-        'января',
-        'февраля',
-        'марта',
-        'апреля',
-        'мая',
-        'июня',
-        'июля',
-        'августа',
-        'сентября',
-        'октября',
-        'ноября',
-        'декабря',
-    ]
-
-    let formattedDate = date.getDate() + ' ' + months[date.getMonth()]
+    let formattedDate = getDayMonthFormat(date)
 
     return {
         id: prognosis.id,

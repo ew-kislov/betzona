@@ -6,21 +6,29 @@ import { connect } from 'react-redux'
 
 export class ProfileInfoContainerWithoutConnect extends Component {
 
-    componentDidMount() {
-        this.props.getProfileBetsActionCreator('username').then(() => console.warn(this.props.profileBets))
+    state = {
+        betsShown: 10
     }
+
+    componentDidMount() {
+        this.props.getProfileBetsActionCreator('username')
+    }
+
+    showMore = () => this.setState({ betsShown: this.state.betsShown + 10 })
 
     render() {
         let { loading, profileBets } = this.props
+        let { betsShown } = this.state
         return (
-            <ProfileInfo loading={loading} profileBets={profileBets} />
+            <ProfileInfo loading={loading} profileBets={profileBets} betsShown={betsShown} showMore={this.showMore} />
         )
     }
 }
 
 const mapStateToProps = state => ({
     loading: state.profile.loading,
-    profileBets: state.profile.profileBets
+    profileBets: state.profile.profileBets,
+    error: state.profile.error
 })
 export const ProfileInfoContainer
     = connect(mapStateToProps, { getProfileBetsActionCreator })(ProfileInfoContainerWithoutConnect)

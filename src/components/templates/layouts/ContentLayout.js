@@ -9,13 +9,14 @@ import { styles } from './styles'
  * ContentLayout - layout for content in screen apart from header
  * @prop loading: Boolean - indicator for screens which have data fetch
  */
-export const ContentLayout = ({ loading, refreshing, refreshHandler, children, style }) => {
+export const ContentLayout = ({ loading, refreshing, refreshHandler, children, style, scrollEndHanler }) => {
     return (
         <LoadingView loading={loading || false}>
             <View style={styles.flex1}>
                 <ShiftScrollView
                     refreshing={refreshing || false}
                     refreshHandler={refreshHandler}
+                    scrollEndHanler={scrollEndHanler}
                     style={[styles.centerContainer, style]}>
                     {children}
                 </ShiftScrollView>
