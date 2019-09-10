@@ -33,6 +33,8 @@ export class SideMenuContainerWithoutConnect extends Component {
     }
 
     navigateToProfileInfo = () => this.props.navigation.navigate(SCREENS.PROFILE_INFO)
+    navigateToPrognosis = () => this.props.navigation.navigate(SCREENS.PROGNOSIS_LIST)
+    navigateToAddPrognosis = () => {}
 
     render() {
         let { token, username, loading } = this.props
@@ -45,6 +47,8 @@ export class SideMenuContainerWithoutConnect extends Component {
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
             navigateToProfileInfo={this.navigateToProfileInfo}
+            navigateToPrognosis={this.navigateToPrognosis}
+            navigateToAddPrognosis={this.navigateToAddPrognosis}
         />
     }
 }

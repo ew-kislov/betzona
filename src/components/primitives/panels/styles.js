@@ -24,5 +24,14 @@ export const styles = {
         borderTopWidth: 1,
         borderBottomColor: '#e1eaec',
         borderBottomWidth: 1
-    }
+    },
+    menuItem: {
+        paddingTop: 10,
+        paddingBottom: 10,
+        // borderTopColor: '#e4e4e4',
+        // borderTopWidth: 1,
+        borderBottomColor: '#cadbe1',
+        borderBottomWidth: 1,
+        flexDirection: 'row'
+    },
 }
