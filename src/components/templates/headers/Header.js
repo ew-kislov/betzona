@@ -13,7 +13,7 @@ export const HeaderWithoutNavigation = ({ navigation, customTitle, title, noShad
                     <BackIcon />
                 </TouchableOpacity>
                 :
-                <TouchableOpacity style={styles.headerIcon} onPress={() => navigation.openDrawer()}>
+                <TouchableOpacity style={styles.headerIcon} onPress={() => navigation.toggleDrawer()}>
                     <MenuIcon />
                 </TouchableOpacity>
             }

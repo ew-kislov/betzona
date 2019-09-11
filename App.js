@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { createStackNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation'
+import { StatusBar } from 'react-native'
+import { createStackNavigator, createAppContainer, createDrawerNavigator, SafeAreaView } from 'react-navigation'
 import SplashScreen from 'react-native-splash-screen'
 
 import { Provider } from 'react-redux'
@@ -45,9 +46,10 @@ class AppWithoutConnect extends Component {
 
     render() {
         return (
-            // <Provider store={store}>
-            <AppContainer />
-            // </Provider>
+            <SafeAreaView backgroundColor='#00000040' style={{ flex: 1, color: '#767676' }} forceInset={{ bottom: 'never'}}>
+                <StatusBar backgroundColor='#00000040' barStyle="light-content" />
+                <AppContainer />
+            </SafeAreaView>
         )
     }
 }

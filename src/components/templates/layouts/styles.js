@@ -14,7 +14,8 @@ export const styles = {
     },
     container: {
         backgroundColor: '#FFF',
-        width: SCREEN_WIDTH,
-        height: Platform.OS === 'android' ? SCREEN_HEIGHT - 24 : SCREEN_HEIGHT - 40,
+        flex: 1
+        // width: SCREEN_WIDTH,
+        // height: Platform.OS === 'android' ? SCREEN_HEIGHT - 24 : SCREEN_HEIGHT - 40,
     },
 }

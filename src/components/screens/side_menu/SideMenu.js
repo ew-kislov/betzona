@@ -9,7 +9,7 @@ export const SideMenu = ({ loading, token, username, handleUsernameChange, handl
     return (
         <ContentLayout style={{ padding: 20 }} loading={loading}>
             <SafeAreaView />
-            <View>
+            <View style={{ marginTop: 10 }}>
                 {
                     token ?
                         (
