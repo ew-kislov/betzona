@@ -34,7 +34,7 @@ export class SideMenuContainerWithoutConnect extends Component {
 
     navigateToProfileInfo = () => this.props.navigation.navigate(SCREENS.PROFILE_INFO)
     navigateToPrognosis = () => this.props.navigation.navigate(SCREENS.PROGNOSIS_LIST)
-    navigateToAddPrognosis = () => {}
+    navigateToAddPrognosis = () => this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
 
     render() {
         let { token, username, loading } = this.props

@@ -6,7 +6,13 @@ import SplashScreen from 'react-native-splash-screen'
 import { Provider } from 'react-redux'
 import { configureStore } from './src/config'
 
-import { PrognosisDetailsContainer, PrognosisListContainer, SideMenuContainer, ProfileInfoContainer } from './src/components/screens'
+import {
+    PrognosisDetailsContainer,
+    PrognosisListContainer,
+    SideMenuContainer,
+    ProfileInfoContainer,
+    ChooseSportContainer
+} from './src/components/screens'
 
 import { SCREENS } from './src/constants'
 
@@ -17,7 +23,8 @@ const stackNavigator = createStackNavigator(
     {
         [SCREENS.PROGNOSIS_LIST]: PrognosisListContainer,
         [SCREENS.PROGNOSIS_DETAILS]: PrognosisDetailsContainer,
-        [SCREENS.PROFILE_INFO]: ProfileInfoContainer
+        [SCREENS.PROFILE_INFO]: ProfileInfoContainer,
+        [SCREENS.CHOOSE_SPORT]: ChooseSportContainer
     },
     {
         initialRouteName: SCREENS.PROGNOSIS_LIST,
@@ -46,7 +53,7 @@ class AppWithoutConnect extends Component {
 
     render() {
         return (
-            <SafeAreaView backgroundColor='#00000040' style={{ flex: 1, color: '#767676' }} forceInset={{ bottom: 'never'}}>
+            <SafeAreaView backgroundColor='#00000040' style={{ flex: 1, color: '#767676' }} forceInset={{ bottom: 'never' }}>
                 <StatusBar backgroundColor='#00000040' barStyle="light-content" />
                 <AppContainer />
             </SafeAreaView>
