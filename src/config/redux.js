@@ -1,7 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
-import { prognosisReducer, authReducer, profileReducer, sportReducer, tournamentReducer, matchReducer } from '../store'
+import {
+    prognosisReducer,
+    authReducer,
+    profileReducer,
+    sportReducer,
+    tournamentReducer,
+    matchReducer,
+    oddReducer
+} from '../store'
 
 export function configureStore(preloadedState) {
     const rootReducer = combineReducers({
@@ -10,7 +18,8 @@ export function configureStore(preloadedState) {
         profile: profileReducer,
         sport: sportReducer,
         tournament: tournamentReducer,
-        match: matchReducer
+        match: matchReducer,
+        odd: oddReducer
     })
 
     return createStore(rootReducer, preloadedState, applyMiddleware(thunkMiddleware))
