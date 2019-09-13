@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* betzonaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* betzonaTests.m */; };
 		025ECA2760674B5A9EEA8191 /* PTSansNarrow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDEAF74A92204486A4AD9A66 /* PTSansNarrow-Regular.ttf */; };
@@ -79,6 +78,8 @@
 		FBC38D62A669492B903A2397 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B5766BDF31504F54925C5CC2 /* calendar.png */; };
 		FCB8E2E8A6094A3DB9C4B8DC /* portu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4937C897E44CDA3DDC0F1 /* portu.png */; };
 		FEF66795460847CCBEB9CEAD /* football_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7564FBAB040C182D639DC /* football_white.png */; };
+		125EF95973C340C69B059A4F /* no_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2DED4BA3A94587B3FF4FB1 /* no_logo.png */; };
+		D4D48047286B405C91F15A68 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C5C898A2C8487682415A01 /* Ionicons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,8 @@
 		F90F56C62AC847719A466230 /* hockey_white.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = hockey_white.png; path = ../assets/png/hockey_white.png; sourceTree = "<group>"; };
 		FBE94095E44FD2CCFDBAD7E0 /* libPods-betzona-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-betzona-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC7564FBAB040C182D639DC /* football_white.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = football_white.png; path = ../assets/png/football_white.png; sourceTree = "<group>"; };
+		8E2DED4BA3A94587B3FF4FB1 /* no_logo.png */ = {isa = PBXFileReference; name = "no_logo.png"; path = "../assets/png/no_logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32C5C898A2C8487682415A01 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +302,8 @@
 				C76EF73C7BC24A4EAAE53FD5 /* Zocial.ttf */,
 				47BBDA6BCBD64326998BBA6D /* PTSans-Narrow.ttf */,
 				29722B99717B4945976FC7F6 /* PTSans-NarrowBold.ttf */,
+				8E2DED4BA3A94587B3FF4FB1 /* no_logo.png */,
+				32C5C898A2C8487682415A01 /* Ionicons.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -564,6 +569,8 @@
 				4E7AB3014ADA475F83DBDCBF /* Zocial.ttf in Resources */,
 				9EE7FDBDE1BC4558AD1F67CB /* PTSans-Narrow.ttf in Resources */,
 				7B4677EE0D1E4467844E5A23 /* PTSans-NarrowBold.ttf in Resources */,
+				125EF95973C340C69B059A4F /* no_logo.png in Resources */,
+				D4D48047286B405C91F15A68 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

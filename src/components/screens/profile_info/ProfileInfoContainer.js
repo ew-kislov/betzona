@@ -11,7 +11,7 @@ export class ProfileInfoContainerWithoutConnect extends Component {
     }
 
     componentDidMount() {
-        this.props.getProfileBetsActionCreator('username')
+        this.props.getProfileBetsActionCreator(this.props.username)
     }
 
     showMore = () => this.setState({ betsShown: this.state.betsShown + 10 })
@@ -26,6 +26,7 @@ export class ProfileInfoContainerWithoutConnect extends Component {
 }
 
 const mapStateToProps = state => ({
+    username: state.auth.username,
     loading: state.profile.loading,
     profileBets: state.profile.profileBets,
     error: state.profile.error

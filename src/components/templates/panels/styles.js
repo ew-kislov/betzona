@@ -53,5 +53,12 @@ export const styles = {
         borderTopColor: '#e0e4e8',
         marginTop: 10,
         paddingTop: 10
+    },
+    itemPanel: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: '#e0e4e8',
+        padding: 10
     }
 }

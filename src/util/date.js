@@ -16,3 +16,7 @@ const months = [
 export function getDayMonthFormat(date) {
     return date.getDate() + ' ' + months[date.getMonth()]
 }
+
+export function getDateTimeFormat(date) {
+    return date.getDate() + '/' + date.getMonth() + ' ' + date.toTimeString().substr(0, 5)
+}
