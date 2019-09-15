@@ -4,16 +4,18 @@ import { ChooseMatch } from './ChooseMatch'
 
 import { connect } from 'react-redux'
 import { getMatchListActionCreator } from '../../../store'
+import { SCREENS } from '../../../constants'
 
 export class ChooseMatchContainerWithoutConnect extends Component {
     componentDidMount() {
         this.props.getMatchListActionCreator(this.props.token, this.props.navigation.getParam('tournament_id'))
-            .then(() => console.warn(this.props.error))
     }
+
+    navigateToChooseOdd = match_id => this.props.navigation.navigate(SCREENS.CHOOSE_ODD, { match_id })
 
     render() {
         let { loading, matchList } = this.props
-        return <ChooseMatch loading={loading} matchList={matchList} />
+        return <ChooseMatch loading={loading} matchList={matchList} navigateToChooseOdd={this.navigateToChooseOdd} />
     }
 }
 

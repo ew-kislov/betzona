@@ -8,7 +8,8 @@ import {
     sportReducer,
     tournamentReducer,
     matchReducer,
-    oddReducer
+    oddReducer,
+    moneyReducer
 } from '../store'
 
 export function configureStore(preloadedState) {
@@ -19,7 +20,8 @@ export function configureStore(preloadedState) {
         sport: sportReducer,
         tournament: tournamentReducer,
         match: matchReducer,
-        odd: oddReducer
+        odd: oddReducer,
+        money: moneyReducer
     })
 
     return createStore(rootReducer, preloadedState, applyMiddleware(thunkMiddleware))

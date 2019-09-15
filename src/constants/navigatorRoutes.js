@@ -4,5 +4,6 @@ export const SCREENS = {
     PROFILE_INFO: 'Профиль',
     CHOOSE_SPORT: 'Выберите вид спорта',
     CHOOSE_TOURNAMENT: 'Выберите тур',
-    CHOOSE_MATCH: 'Выберите матч'
+    CHOOSE_MATCH: 'Выберите матч',
+    CHOOSE_ODD: 'Выберите котировку'
 }
