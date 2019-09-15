@@ -13,7 +13,10 @@ const initialState = {
     prognosisLoading: false,
     prognosisRefreshing: false,
     prognosis: {},
-    prognosisError: null
+    prognosisError: null,
+
+    addPrognosisLoading: false,
+    addPrognosisError: false
 }
 
 export function prognosisReducer(state = initialState, action) {
@@ -35,6 +38,13 @@ export function prognosisReducer(state = initialState, action) {
             return { ...state, prognosis: action.prognosis, prognosisLoading: false, prognosisRefreshing: false }
         case actionTypes.GET_PROGNOSIS_FAIL:
             return { ...state, prognosisError: action.prognosisError, prognosisLoading: false, prognosisRefreshing: false }
+
+        case actionTypes.ADD_PROGNOSIS_REQUEST:
+            return { ...state, addPrognosisLoading: true }
+        case actionTypes.ADD_PROGNOSIS_SUCCESS:
+            return { ...state, addPrognosisError: false, addPrognosisLoading: false }
+        case actionTypes.ADD_PROGNOSIS_FAIL:
+            return { ...state, addPrognosisError: action.error, addPrognosisLoading: false }
 
         default:
             return state

@@ -1,5 +1,5 @@
 import * as actions from './prognosisActions'
-import { getPrognosisList, getPrognosis } from '../../service'
+import { getPrognosisList, getPrognosis, addPrognosis } from '../../service'
 
 export function getPrognosisListActionCreator(isRefreshing = false) {
     return dispatch => {
@@ -24,5 +24,15 @@ export function getPrognosisActionCreator(path, isRefreshing = false) {
         return getPrognosis(path)
             .then(prognosis => dispatch(actions.getPrognosisSuccess(prognosis)))
             .catch(error => dispatch(actions.getPrognosisFail(error)))
+    }
+}
+
+export function addPrognosisActionCreator(token, prognosis) {
+    return dispatch => {
+        dispatch(actions.addPrognosisRequest())
+
+        return addPrognosis(token, prognosis)
+            .then(response => dispatch(actions.addPrognosisSuccess()))
+            .catch(error => dispatch(actions.addPrognosisFail(error)))
     }
 }

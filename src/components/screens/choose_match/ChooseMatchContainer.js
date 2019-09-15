@@ -11,7 +11,7 @@ export class ChooseMatchContainerWithoutConnect extends Component {
         this.props.getMatchListActionCreator(this.props.token, this.props.navigation.getParam('tournament_id'))
     }
 
-    navigateToChooseOdd = match_id => this.props.navigation.navigate(SCREENS.CHOOSE_ODD, { match_id })
+    navigateToChooseOdd = match => this.props.navigation.navigate(SCREENS.CHOOSE_ODD, { match })
 
     render() {
         let { loading, matchList } = this.props

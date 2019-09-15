@@ -28,10 +28,17 @@ export const styles = {
     menuItem: {
         paddingTop: 10,
         paddingBottom: 10,
-        // borderTopColor: '#e4e4e4',
-        // borderTopWidth: 1,
         borderBottomColor: '#cadbe1',
         borderBottomWidth: 1,
         flexDirection: 'row'
+    },
+    grayPanel: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 3,
+        margin: 0,
+        paddingHorizontal: 15,
+        borderColor: '#ebebeb',
+        alignItems: 'center',
+        borderWidth: 1
     },
 }

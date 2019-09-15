@@ -60,5 +60,49 @@ export const styles = {
         borderBottomWidth: 1,
         borderBottomColor: '#e0e4e8',
         padding: 10
-    }
+    },
+    chosenPrognosisPanel: {
+        padding: 10,
+        borderRadius: 3,
+        backgroundColor: '#98be62',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 180,
+        alignSelf: 'center'
+    },
+    chosenPrognosisPanelTopText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-NarrowBold',
+        color: "#fff"
+    },
+    chosenPrognosisPanelBottomText: {
+        fontSize: 16,
+        fontFamily: 'PTSans-NarrowBold',
+        color: "#fff"
+    },
+    inactiveSum: {
+        width: 100,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+    },
+    activeSum: {
+        width: 100,
+        height: 40,
+        justifyContent: 'center',
+        backgroundColor: '#98be62',
+        alignItems: 'center',
+        marginTop: 10
+    },
+    inactiveSumText: {
+        fontSize: 16,
+        fontFamily: 'PTSans-NarrowBold',
+        color: '#222'
+    },
+    activeSumText: {
+        fontSize: 16,
+        fontFamily: 'PTSans-NarrowBold',
+        color: '#fff'
+    },
 }

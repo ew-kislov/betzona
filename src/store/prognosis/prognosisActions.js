@@ -29,3 +29,14 @@ export const getPrognosisFail = prognosisError => ({
     type: actionTypes.GET_PROGNOSIS_FAIL,
     prognosisError
 })
+
+export const addPrognosisRequest = () => ({
+    type: actionTypes.ADD_PROGNOSIS_REQUEST
+})
+export const addPrognosisSuccess = () => ({
+    type: actionTypes.ADD_PROGNOSIS_SUCCESS
+})
+export const addPrognosisFail = error => ({
+    type: actionTypes.ADD_PROGNOSIS_FAIL,
+    error
+})

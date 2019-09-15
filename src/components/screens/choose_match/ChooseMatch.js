@@ -14,7 +14,7 @@ export const ChooseMatch = ({ loading, matchList, navigateToChooseOdd }) => {
             <Header back />
             <ContentLayout loading={loading}>
                 <View style={{ marginBottom: 20, marginTop: 20 }}>
-                    {matchList.map(match => <MatchPanel match={match} onPress={() => navigateToChooseOdd(match.id)} />)}
+                    {matchList.map(match => <MatchPanel match={match} onPress={() => navigateToChooseOdd(match)} />)}
                 </View>
             </ContentLayout>
         </ScreenLayout>

@@ -5,5 +5,6 @@ export const SCREENS = {
     CHOOSE_SPORT: 'Выберите вид спорта',
     CHOOSE_TOURNAMENT: 'Выберите тур',
     CHOOSE_MATCH: 'Выберите матч',
-    CHOOSE_ODD: 'Выберите котировку'
+    CHOOSE_ODD: 'Выберите котировку',
+    CHOOSE_MONEY: 'Выберите сумму'
 }

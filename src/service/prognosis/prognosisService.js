@@ -18,3 +18,8 @@ export function getPrognosis(path) {
             return prognosis
         })
 }
+
+export function addPrognosis(token, prognosis) {
+    return axios.post(BACKEND_URL + '/line/create', prognosis, { headers: { 'Authorization': 'Bearer ' + token } })
+        .then(response => response.data.data)
+}
