@@ -41,7 +41,7 @@ export const styles = {
     },
     headerText: {
         fontFamily: 'PTSans-NarrowBold',
-        fontSize: 22,
+        fontSize: 20,
         color: '#767676',
         marginRight: 40
     }

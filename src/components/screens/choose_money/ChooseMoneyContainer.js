@@ -16,7 +16,7 @@ export class ChooseMoneyContainerWithoutConnect extends Component {
     }
 
     componentDidMount() {
-        this.props.getMoneyListActionCreator(this.props.token, this.state.odd.id, this.state.match.id)
+        this.props.getMoneyListActionCreator(this.props.token, this.props.navigation.getParam('odd').id, this.props.navigation.getParam('match').id)
     }
 
     handleSumChange = sum => this.setState({ activeSum: sum })
@@ -27,20 +27,17 @@ export class ChooseMoneyContainerWithoutConnect extends Component {
             Toast.show('Укажите сумму')
             return
         }
-            
+
         let prognosis = {
             oddstype_id: this.state.odd.id,
             match_id: this.state.match.id,
             sum: this.state.activeSum
         }
-        console.warn(prognosis)
 
         this.props.addPrognosisActionCreator(this.props.token, prognosis)
             .then(() => {
-                if (this.props.prognosisError) {
-                    console.warn(this.props.prognosisError)
-                    Toast.show('Во время добавления прогноза произошла ошибка')
-                }
+                if (this.props.prognosisError)
+                    Toast.show('Вы не можете делать повторные прогнозы')
                 else
                     Toast.show('Ваш прогноз добавлен')
             })
@@ -67,6 +64,7 @@ const mapStateToProps = state => ({
 
     moneyLoading: state.money.loading,
     moneyList: state.money.moneyList,
+    moneyError: state.money.error,
 
     prognosisLoading: state.prognosis.addPrognosisLoading,
     prognosisError: state.prognosis.addPrognosisError

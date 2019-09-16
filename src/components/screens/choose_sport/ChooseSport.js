@@ -14,7 +14,7 @@ export const ChooseSport = ({ loading, sportList, navigateToTournaments }) => {
             <Header menu />
             <ContentLayout loading={loading}>
                 <View style={{ marginBottom: 20 }}>
-                    {sportList.map(sport => <SportPanel style={{ marginTop: 20 }} sport={sport} onPress={() => navigateToTournaments(sport.id)} />)}
+                    {sportList.map(sport => <SportPanel style={{ marginTop: 20 }} sport={sport} onPress={() => navigateToTournaments(sport)} />)}
                 </View>
             </ContentLayout>
         </ScreenLayout>

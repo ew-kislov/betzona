@@ -105,4 +105,9 @@ export const styles = {
         fontFamily: 'PTSans-NarrowBold',
         color: '#fff'
     },
+    sportImage: {
+        width: 40,
+        height: 40,
+        resizeMode: 'contain'
+    },
 }

@@ -11,7 +11,7 @@ export class ChooseSportContainerWithoutConnect extends Component {
         this.props.getSportListActionCreator(this.props.token)
     }
 
-    navigateToTournaments = sport_id => this.props.navigation.navigate(SCREENS.CHOOSE_TOURNAMENT, { sport_id })
+    navigateToTournaments = sport => this.props.navigation.navigate(SCREENS.CHOOSE_TOURNAMENT, { sport })
 
     render() {
         let { loading, sportList } = this.props

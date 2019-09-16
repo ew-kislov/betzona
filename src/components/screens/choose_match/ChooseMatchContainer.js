@@ -7,15 +7,31 @@ import { getMatchListActionCreator } from '../../../store'
 import { SCREENS } from '../../../constants'
 
 export class ChooseMatchContainerWithoutConnect extends Component {
-    componentDidMount() {
-        this.props.getMatchListActionCreator(this.props.token, this.props.navigation.getParam('tournament_id'))
+
+    state = {
+        tournament: this.props.navigation.getParam('tournament'),
+        matchesShown: 10
     }
+
+    componentDidMount() {
+        this.props.getMatchListActionCreator(this.props.token, this.props.navigation.getParam('tournament').id)
+    }
+
+    showMore = () => this.setState({ matchesShown: this.state.matchesShown + 10 })
 
     navigateToChooseOdd = match => this.props.navigation.navigate(SCREENS.CHOOSE_ODD, { match })
 
     render() {
         let { loading, matchList } = this.props
-        return <ChooseMatch loading={loading} matchList={matchList} navigateToChooseOdd={this.navigateToChooseOdd} />
+        let { tournament, matchesShown } = this.state
+        return <ChooseMatch
+            loading={loading}
+            matchList={matchList}
+            matchesShown={matchesShown}
+            showMore={this.showMore}
+            tournament={tournament}
+            navigateToChooseOdd={this.navigateToChooseOdd}
+        />
     }
 }
 

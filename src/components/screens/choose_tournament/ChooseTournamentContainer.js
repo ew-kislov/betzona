@@ -7,15 +7,26 @@ import { getTournamentListActionCreator } from '../../../store'
 import { SCREENS } from '../../../constants'
 
 export class ChooseTournamentContainerWithoutConnect extends Component {
-    componentDidMount() {
-        this.props.getTournamentListActionCreator(this.props.token, this.props.navigation.getParam('sport_id'))
+
+    state = {
+        sport: this.props.navigation.getParam('sport')
     }
 
-    navigateToChooseMatch = tournament_id => this.props.navigation.navigate(SCREENS.CHOOSE_MATCH, { tournament_id })
+    componentDidMount() {
+        this.props.getTournamentListActionCreator(this.props.token, this.props.navigation.getParam('sport').id)
+    }
+
+    navigateToChooseMatch = tournament => this.props.navigation.navigate(SCREENS.CHOOSE_MATCH, { tournament })
 
     render() {
         let { loading, tournamentList } = this.props
-        return <ChooseTournament loading={loading} tournamentList={tournamentList} navigateToChooseMatch={this.navigateToChooseMatch} />
+        let { sport } = this.state
+        return <ChooseTournament
+            loading={loading}
+            tournamentList={tournamentList}
+            sport={sport}
+            navigateToChooseMatch={this.navigateToChooseMatch}
+        />
     }
 }
 

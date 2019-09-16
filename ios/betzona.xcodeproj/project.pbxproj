@@ -80,6 +80,16 @@
 		FEF66795460847CCBEB9CEAD /* football_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7564FBAB040C182D639DC /* football_white.png */; };
 		125EF95973C340C69B059A4F /* no_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2DED4BA3A94587B3FF4FB1 /* no_logo.png */; };
 		D4D48047286B405C91F15A68 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32C5C898A2C8487682415A01 /* Ionicons.ttf */; };
+		CFD218E100CD4B1B85104E1C /* american_football.png in Resources */ = {isa = PBXBuildFile; fileRef = 029E19957B2F4B029EBD406A /* american_football.png */; };
+		3A31EC29D21744F29AF64162 /* baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 4043233F013A4AA59569C3D5 /* baseball.png */; };
+		BD7AEBB726DE4D0FAC6B5307 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EDD40B22CB04D9B97890C2B /* basketball.png */; };
+		C4FC87F1E4D54C9EAD679BDD /* football_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD4E717A72944678303BF2C /* football_blue.png */; };
+		526549DEAD324F12873F90B1 /* handball.png in Resources */ = {isa = PBXBuildFile; fileRef = BB8426A78A8049F086E4982B /* handball.png */; };
+		B0E141D18FC047C5A96D407A /* hockey_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B985713C09B4D11B1FFA7EF /* hockey_blue.png */; };
+		1FDAF35B3E7843C4986BB40B /* soccer.png in Resources */ = {isa = PBXBuildFile; fileRef = F3C24CD532DF4F478C1BCAB0 /* soccer.png */; };
+		24976B7F18BF4230B769D3DC /* tennis_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BB3AC4C47DF46CD850F867D /* tennis_blue.png */; };
+		04FF6E513322433EA8525FC2 /* volleyball.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F376298BDFD4441A29A270D /* volleyball.png */; };
+		2EDC3C155C604E2D9E15598F /* water_polo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8515A6DBEB3A4B3C9EF8435E /* water_polo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +181,16 @@
 		FDC7564FBAB040C182D639DC /* football_white.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = football_white.png; path = ../assets/png/football_white.png; sourceTree = "<group>"; };
 		8E2DED4BA3A94587B3FF4FB1 /* no_logo.png */ = {isa = PBXFileReference; name = "no_logo.png"; path = "../assets/png/no_logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		32C5C898A2C8487682415A01 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		029E19957B2F4B029EBD406A /* american_football.png */ = {isa = PBXFileReference; name = "american_football.png"; path = "../assets/png/american_football.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4043233F013A4AA59569C3D5 /* baseball.png */ = {isa = PBXFileReference; name = "baseball.png"; path = "../assets/png/baseball.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5EDD40B22CB04D9B97890C2B /* basketball.png */ = {isa = PBXFileReference; name = "basketball.png"; path = "../assets/png/basketball.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7BD4E717A72944678303BF2C /* football_blue.png */ = {isa = PBXFileReference; name = "football_blue.png"; path = "../assets/png/football_blue.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB8426A78A8049F086E4982B /* handball.png */ = {isa = PBXFileReference; name = "handball.png"; path = "../assets/png/handball.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5B985713C09B4D11B1FFA7EF /* hockey_blue.png */ = {isa = PBXFileReference; name = "hockey_blue.png"; path = "../assets/png/hockey_blue.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F3C24CD532DF4F478C1BCAB0 /* soccer.png */ = {isa = PBXFileReference; name = "soccer.png"; path = "../assets/png/soccer.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0BB3AC4C47DF46CD850F867D /* tennis_blue.png */ = {isa = PBXFileReference; name = "tennis_blue.png"; path = "../assets/png/tennis_blue.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8F376298BDFD4441A29A270D /* volleyball.png */ = {isa = PBXFileReference; name = "volleyball.png"; path = "../assets/png/volleyball.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8515A6DBEB3A4B3C9EF8435E /* water_polo.png */ = {isa = PBXFileReference; name = "water_polo.png"; path = "../assets/png/water_polo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +324,16 @@
 				29722B99717B4945976FC7F6 /* PTSans-NarrowBold.ttf */,
 				8E2DED4BA3A94587B3FF4FB1 /* no_logo.png */,
 				32C5C898A2C8487682415A01 /* Ionicons.ttf */,
+				029E19957B2F4B029EBD406A /* american_football.png */,
+				4043233F013A4AA59569C3D5 /* baseball.png */,
+				5EDD40B22CB04D9B97890C2B /* basketball.png */,
+				7BD4E717A72944678303BF2C /* football_blue.png */,
+				BB8426A78A8049F086E4982B /* handball.png */,
+				5B985713C09B4D11B1FFA7EF /* hockey_blue.png */,
+				F3C24CD532DF4F478C1BCAB0 /* soccer.png */,
+				0BB3AC4C47DF46CD850F867D /* tennis_blue.png */,
+				8F376298BDFD4441A29A270D /* volleyball.png */,
+				8515A6DBEB3A4B3C9EF8435E /* water_polo.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -571,6 +601,16 @@
 				7B4677EE0D1E4467844E5A23 /* PTSans-NarrowBold.ttf in Resources */,
 				125EF95973C340C69B059A4F /* no_logo.png in Resources */,
 				D4D48047286B405C91F15A68 /* Ionicons.ttf in Resources */,
+				CFD218E100CD4B1B85104E1C /* american_football.png in Resources */,
+				3A31EC29D21744F29AF64162 /* baseball.png in Resources */,
+				BD7AEBB726DE4D0FAC6B5307 /* basketball.png in Resources */,
+				C4FC87F1E4D54C9EAD679BDD /* football_blue.png in Resources */,
+				526549DEAD324F12873F90B1 /* handball.png in Resources */,
+				B0E141D18FC047C5A96D407A /* hockey_blue.png in Resources */,
+				1FDAF35B3E7843C4986BB40B /* soccer.png in Resources */,
+				24976B7F18BF4230B769D3DC /* tennis_blue.png in Resources */,
+				04FF6E513322433EA8525FC2 /* volleyball.png in Resources */,
+				2EDC3C155C604E2D9E15598F /* water_polo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
