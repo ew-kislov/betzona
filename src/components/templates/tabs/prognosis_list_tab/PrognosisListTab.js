@@ -30,9 +30,9 @@ export const PrognosisListTab = ({
 
             {isBlank && <SubtitleText style={{ marginTop: 10 }}>Прогнозов нет</SubtitleText>}
             <RowContainer style={{ marginTop: 10 }}>
-                {allPrognosisLength > 0 && <PrimaryButton style={{ marginRight: 10 }} isActive={selector == DAY_TYPES.ALL} onPress={() => changeSelector(DAY_TYPES.ALL)}>все</PrimaryButton>}
-                {todayPrognosisLength > 0 && <PrimaryButton style={{ marginRight: 10 }} isActive={selector == DAY_TYPES.TODAY} onPress={() => changeSelector(DAY_TYPES.TODAY)}>сегодня</PrimaryButton>}
-                {tomorrowPrognosisLength > 0 && <PrimaryButton isActive={selector == DAY_TYPES.TOMORROW} onPress={() => changeSelector(DAY_TYPES.TOMORROW)}>завтра</PrimaryButton>}
+                {allPrognosisLength > 0 && <PrimaryButton style={{ marginRight: 10 }} isActive={selector == DAY_TYPES.ALL} onPress={() => changeSelector(DAY_TYPES.ALL)}>Все</PrimaryButton>}
+                {todayPrognosisLength > 0 && <PrimaryButton style={{ marginRight: 10 }} isActive={selector == DAY_TYPES.TODAY} onPress={() => changeSelector(DAY_TYPES.TODAY)}>Сегодня</PrimaryButton>}
+                {tomorrowPrognosisLength > 0 && <PrimaryButton isActive={selector == DAY_TYPES.TOMORROW} onPress={() => changeSelector(DAY_TYPES.TOMORROW)}>Завтра</PrimaryButton>}
             </RowContainer>
 
             {

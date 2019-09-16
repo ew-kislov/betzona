@@ -15,11 +15,12 @@ export const OddPanel = ({ oddName, oddInfo, handleOddPress }) => {
                         <QuotationPanel
                             style={{ marginRight: 20, marginTop: 10 }}
                             odd={odd}
+                            key={odd.id}
                             handleOddPress={handleOddPress}
                         />)
 
                     return (
-                        <RowContainer style={{ marginBottom: 15, flex: 1, flexWrap: 'wrap' }}>
+                        <RowContainer key={oddSubName} style={{ marginBottom: 15, flex: 1, flexWrap: 'wrap' }}>
                             {renderedOdds}
                         </RowContainer>
                     )

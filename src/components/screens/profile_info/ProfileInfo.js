@@ -20,10 +20,10 @@ export const ProfileInfo = ({ loading, profileBets, betsShown, showMore }) => {
                         if (count < betsShown) {
                             let renderedProfileBets = profileBetsByDate.map(profileBet => {
                                 count++
-                                return <ProfileBetPanel style={{ marginTop: 10 }} profileBet={profileBet} />
+                                return <ProfileBetPanel key={profileBet.id} style={{ marginTop: 10 }} profileBet={profileBet} />
                             })
                             return (
-                                <View style={{ marginBottom: 20 }}>
+                                <View key={date} style={{ marginBottom: 20 }}>
                                     <SubtitleText style={{ marginTop: 20 }}>{date}</SubtitleText>
                                     {renderedProfileBets}
                                 </View>

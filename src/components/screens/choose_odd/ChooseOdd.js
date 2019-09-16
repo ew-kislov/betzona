@@ -14,8 +14,9 @@ export const ChooseOdd = ({ loading, oddList, navigateToChooseMoney, match }) =>
             <Header back customTitle title={match.name} />
             <ContentLayout loading={loading}>
                 <View style={{ marginBottom: 20, marginTop: 20 }}>
-                    {Object.keys(oddList).map(oddName =>
+                    {Object.keys(oddList).map((oddName, ind) =>
                         <OddPanel
+                            key={ind}
                             oddName={oddName}
                             oddInfo={oddList[oddName]}
                             handleOddPress={navigateToChooseMoney}

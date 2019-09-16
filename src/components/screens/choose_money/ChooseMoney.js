@@ -33,6 +33,7 @@ export const ChooseMoney = ({
                         {moneyList.map(money =>
                             <SumPanel
                                 sum={money}
+                                key={money}
                                 activeSum={activeSum}
                                 handleSumChange={() => handleSumChange(money)}
                             />)}

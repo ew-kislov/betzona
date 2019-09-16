@@ -11,7 +11,7 @@ export const MatchPanel = ({ match, style, onPress }) => {
                     <PrimaryText>{match.date}</PrimaryText>
                     <DescriptionText>{match.name}</DescriptionText>
                 </View>
-                <View style={{ flex: 1, flexGrow: 1, marginLeft: 10 }}>
+                <View style={{ flex: 1, flexGrow: 1, marginLeft: 10, alignItems: 'flex-end' }}>
                     <ChevronIcon />
                 </View>
             </View>

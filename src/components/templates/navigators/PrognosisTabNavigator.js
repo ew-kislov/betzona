@@ -27,7 +27,7 @@ class CustomTab extends React.PureComponent {
 
         return (
             <TouchableOpacity onPress={() => this.onSelect(routeName)} style={[tabStyles.container, focused ? tabStyles.active : tabStyles.inactive]}>
-                <View style = {{ marginRight: 5 }}>
+                <View>
                     {(routeName != SPORT_TYPES.ALL) && icon}
                 </View>
                 <Text style={[tabStyles.textStyle, focused ? tabStyles.activeText : tabStyles.inactiveText]}>{routeName}</Text>
@@ -64,7 +64,8 @@ const tabStyles = StyleSheet.create({
         fontFamily: 'PTSans-NarrowBold',
         textTransform: 'capitalize',
         fontSize: 16,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginLeft: 8
     },
     activeText: {
         color: '#45ade1'
@@ -84,9 +85,8 @@ class CustomTabBar extends React.Component {
         return (
             <View horizontal={true} style={styles.container}>
                 {routes.map((route, index) =>
-                    <View style={styles.tabBarItem}>
+                    <View style={styles.tabBarItem} key={index}>
                         <CustomTab
-                            key={index}
                             routeName={route.routeName}
                             onPress={() => this.navigationHandler(route.routeName)}
                             focused={navigation.state.index === index}

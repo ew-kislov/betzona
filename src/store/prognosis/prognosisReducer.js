@@ -1,12 +1,13 @@
 import * as actionTypes from './prognosisActionTypes'
+import { DAY_TYPES } from '../../constants'
 
 const initialState = {
     prognosisListLoading: false,
     prognosisListRefreshing: false,
     prognosisList: {
-        'все': [],
-        'сегодня': [],
-        'завтра': []
+        [DAY_TYPES.ALL]: [],
+        [DAY_TYPES.TODAY]: [],
+        [DAY_TYPES.TOMORROW]: []
     },
     prognosisListError: null,
 

@@ -10,7 +10,7 @@ export const TournamentPanel = ({ tournament, style, onPress }) => {
                 <View style={{ flex: 1, flexGrow: 10 }}>
                     <DescriptionText>{tournament.name}</DescriptionText>
                 </View>
-                <View style={{ flex: 1, flexGrow: 1, marginLeft: 10 }}>
+                <View style={{ flex: 1, flexGrow: 1, marginLeft: 10, alignItems: 'flex-end' }}>
                     <ChevronIcon />
                 </View>
             </View>

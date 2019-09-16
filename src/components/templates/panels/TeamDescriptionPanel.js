@@ -18,7 +18,7 @@ export const TeamDescriptionPanel = ({ team, style }) => {
             <View style={{ marginTop: 10 }}>
                 {team && team.last.map(matchResult =>
                     <MatchResult
-                        key={matchResult.score.match_id}
+                        key={matchResult.match_id}
                         currentTeamName={team ? team.name : ''}
                         matchResult={matchResult}
                         style={{ marginTop: 5 }}

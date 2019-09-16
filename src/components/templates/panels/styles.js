@@ -59,7 +59,7 @@ export const styles = {
         alignItems: 'center',
         borderBottomWidth: 1,
         borderBottomColor: '#e0e4e8',
-        padding: 10
+        padding: 12
     },
     chosenPrognosisPanel: {
         padding: 10,
