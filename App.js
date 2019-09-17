@@ -21,7 +21,7 @@ import {
 import { SCREENS } from './src/constants'
 
 import { connect } from 'react-redux'
-import { initAuthDataActionCreator } from './src/store'
+import { initAuthDataActionCreator, getProfileBankActionCreator } from './src/store'
 
 const stackNavigator = createStackNavigator(
     {
@@ -56,7 +56,9 @@ const store = configureStore()
 class AppWithoutConnect extends Component {
 
     componentDidMount() {
-        this.props.initAuthDataActionCreator().then(() => SplashScreen.hide())
+        this.props.initAuthDataActionCreator()
+            .then(() => this.props.getProfileBankActionCreator(this.props.token))
+            .then(() => SplashScreen.hide())
     }
 
     render() {
@@ -69,6 +71,9 @@ class AppWithoutConnect extends Component {
     }
 }
 
-const AppWithConnect = connect(null, { initAuthDataActionCreator })(AppWithoutConnect)
+mapStateToProps = state => ({
+    token: state.auth.token
+})
+const AppWithConnect = connect(mapStateToProps, { initAuthDataActionCreator, getProfileBankActionCreator })(AppWithoutConnect)
 
 export default App = () => <Provider store={store}><AppWithConnect /></Provider>

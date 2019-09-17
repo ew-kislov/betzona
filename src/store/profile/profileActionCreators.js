@@ -9,3 +9,13 @@ export function getProfileBetsActionCreator(username) {
             .catch(error => dispatch(actions.getProfileBetsFail(error)))
     }
 }
+
+export function getProfileBankActionCreator(token) {
+    return dispatch => {
+        dispatch(actions.getProfileBankRequest)
+        return service.getProfileBank(token)
+            .then(profileBank => dispatch(actions.getProfileBankSuccess(profileBank)))
+            .catch(error => dispatch(actions.getProfileBankFail(error)))
+
+    }
+}

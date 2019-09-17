@@ -3,7 +3,7 @@ import Toast from 'react-native-root-toast'
 
 import { SideMenu } from './SideMenu'
 
-import { loginActionCreator, logoutActionCreator } from '../../../store'
+import { loginActionCreator, logoutActionCreator, getProfileBankActionCreator } from '../../../store'
 import { connect } from 'react-redux'
 import { SCREENS } from '../../../constants'
 
@@ -22,7 +22,9 @@ export class SideMenuContainerWithoutConnect extends Component {
             this.props.loginActionCreator(this.state.username, this.state.password)
                 .then(() => {
                     if (this.props.error)
-                        Toast.show('Вы ввели неверные данные')
+                        Toast.show('Вы введи неверные данные')
+                    else
+                        this.props.getProfileBankActionCreator(this.props.token)
                 })
         else
             Toast.show('Введите логин и пароль')
@@ -37,11 +39,12 @@ export class SideMenuContainerWithoutConnect extends Component {
     navigateToAddPrognosis = () => this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
 
     render() {
-        let { token, username, loading } = this.props
+        let { token, username, authLoading, profileLoading, profileBank } = this.props
         return <SideMenu
-            loading={loading}
+            loading={authLoading || profileLoading}
             token={token}
             username={username}
+            profileBank={profileBank}
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}
             handleLogin={this.handleLogin}
@@ -54,10 +57,21 @@ export class SideMenuContainerWithoutConnect extends Component {
 }
 
 const mapStateToProps = state => ({
-    loading: state.auth.loading,
+    authLoading: state.auth.loading,
     token: state.auth.token,
     username: state.auth.username,
-    error: state.auth.error
+    error: state.auth.error,
+
+    profileLoading: state.profile.loading,
+    profileBank: state.profile.profileBank,
+    profileError: state.profile.error
 })
 export const SideMenuContainer =
-    connect(mapStateToProps, { loginActionCreator, logoutActionCreator })(SideMenuContainerWithoutConnect)
+    connect(
+        mapStateToProps,
+        {
+            getProfileBankActionCreator,
+            loginActionCreator,
+            logoutActionCreator
+        }
+    )(SideMenuContainerWithoutConnect)
