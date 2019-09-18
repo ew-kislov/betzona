@@ -7,6 +7,19 @@ import { getSportListActionCreator } from '../../../store'
 import { SCREENS } from '../../../constants'
 
 export class ChooseSportContainerWithoutConnect extends Component {
+
+    favouriteMatches = {
+        name: 'Популярные матчи',
+        imageSource: require('../../../../assets/png/popular.png'),
+        onPress: () => this.props.navigation.navigate(SCREENS.CHOOSE_MATCH, { popular: true })
+    }
+
+    nearestMatches = {
+        name: 'Ближайшие матчи',
+        imageSource: require('../../../../assets/png/nearest.png'),
+        onPress: () => this.props.navigation.navigate(SCREENS.CHOOSE_MATCH, { nearest: true })
+    }
+
     componentDidMount() {
         this.props.getSportListActionCreator(this.props.token)
     }
@@ -15,7 +28,13 @@ export class ChooseSportContainerWithoutConnect extends Component {
 
     render() {
         let { loading, sportList } = this.props
-        return <ChooseSport loading={loading} sportList={sportList} navigateToTournaments={this.navigateToTournaments} />
+        return <ChooseSport
+            loading={loading}
+            favouriteMatches={this.favouriteMatches}
+            nearestMatches={this.nearestMatches}
+            sportList={sportList}
+            navigateToTournaments={this.navigateToTournaments}
+        />
     }
 }
 

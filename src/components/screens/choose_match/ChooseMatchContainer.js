@@ -9,12 +9,18 @@ import { SCREENS } from '../../../constants'
 export class ChooseMatchContainerWithoutConnect extends Component {
 
     state = {
-        tournament: this.props.navigation.getParam('tournament'),
         matchesShown: 10
     }
 
     componentDidMount() {
-        this.props.getMatchListActionCreator(this.props.token, this.props.navigation.getParam('tournament').id)
+        let tournament = this.props.navigation.getParam('tournament')
+        let popular = this.props.navigation.getParam('popular')
+        let nearest = this.props.navigation.getParam('nearest')
+
+        this.props.getMatchListActionCreator(
+            this.props.token,
+            { tournament_id: tournament ? tournament.id : null, popular, nearest }
+        )
     }
 
     showMore = () => this.setState({ matchesShown: this.state.matchesShown + 10 })
@@ -23,13 +29,15 @@ export class ChooseMatchContainerWithoutConnect extends Component {
 
     render() {
         let { loading, matchList } = this.props
-        let { tournament, matchesShown } = this.state
+        let { matchesShown } = this.state
         return <ChooseMatch
             loading={loading}
+            popular={this.props.navigation.getParam('popular')}
+            nearest={this.props.navigation.getParam('nearest')}
             matchList={matchList}
             matchesShown={matchesShown}
             showMore={this.showMore}
-            tournament={tournament}
+            tournament={this.props.navigation.getParam('tournament')}
             navigateToChooseOdd={this.navigateToChooseOdd}
         />
     }
