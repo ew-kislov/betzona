@@ -16,6 +16,7 @@ export const SideMenu = ({
     handleLogin,
     handleLogout,
     navigateToProfileInfo,
+    navigateToRating,
     navigateToPrognosis,
     navigateToAddPrognosis
 }) => {
@@ -55,6 +56,11 @@ export const SideMenu = ({
                 <MenuItem onPress={navigateToPrognosis} style={{ marginTop: 5 }}>
                     <Icon name="md-home" color='#394f68' size={21} />
                     <Text style={[styles.sideMenuText, { marginLeft: 15 }]}>Прогнозы на спорт</Text>
+                </MenuItem>
+
+                <MenuItem onPress={navigateToRating} style={{ marginTop: 5 }}>
+                    <Icon name="md-star" color='#394f68' size={21} />
+                    <Text style={[styles.sideMenuText, { marginLeft: 15 }]}>Рейтинг игроков за месяц</Text>
                 </MenuItem>
 
                 {

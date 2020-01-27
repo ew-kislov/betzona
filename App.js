@@ -15,7 +15,8 @@ import {
     ChooseTournamentContainer,
     ChooseMatchContainer,
     ChooseOddContainer,
-    ChooseMoneyContainer
+    ChooseMoneyContainer,
+    RatingContainer
 } from './src/components/screens'
 
 import { SCREENS } from './src/constants'
@@ -32,7 +33,8 @@ const stackNavigator = createStackNavigator(
         [SCREENS.CHOOSE_TOURNAMENT]: ChooseTournamentContainer,
         [SCREENS.CHOOSE_MATCH]: ChooseMatchContainer,
         [SCREENS.CHOOSE_ODD]: ChooseOddContainer,
-        [SCREENS.CHOOSE_MONEY]: ChooseMoneyContainer
+        [SCREENS.CHOOSE_MONEY]: ChooseMoneyContainer,
+        [SCREENS.RATING]: RatingContainer
     },
     {
         initialRouteName: SCREENS.PROGNOSIS_LIST,

@@ -14,6 +14,12 @@ export const styles = {
         fontFamily: 'PTSans-Narrow',
         color: '#222'
     },
+    subdescriptionText: {
+        fontSize: 14,
+        lineHeight: 20,
+        fontFamily: 'PTSans-Narrow',
+        color: '#222'
+    },
     boldText: {
         fontSize: 14,
         fontFamily: 'PTSans-NarrowBold',
@@ -38,6 +44,7 @@ export const styles = {
         fontSize: 10,
         fontFamily: 'PTSans-Narrow',
         color: '#8a8a8a',
-        marginBottom: 12
+        marginBottom: 12,
+        lineHeight: 12
     }
 }

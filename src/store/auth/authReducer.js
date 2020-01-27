@@ -10,12 +10,12 @@ const initialState = {
 export function authReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.AUTH_REQUEST:
-            return { ...state, loading: true }
+            return { ...state, loading: true, error: false }
 
         case actionTypes.LOGIN_SUCCESS:
-            return { ...state, token: action.token, username: action.username, loading: false }
+            return { ...state, token: action.token, username: action.username, loading: false, error: false }
         case actionTypes.LOGOUT_SUCCESS:
-            return { ...state, token: null, username: null, loading: false }
+            return { ...state, token: null, username: null, loading: false, error: false }
         case actionTypes.INIT_AUTH_DATA_SUCCESS:
             return { ...state, token: action.token, username: action.username, error: false, loading: false }
 

@@ -7,7 +7,6 @@ import { getMatchListActionCreator } from '../../../store'
 import { SCREENS } from '../../../constants'
 
 export class ChooseMatchContainerWithoutConnect extends Component {
-
     state = {
         matchesShown: 10
     }

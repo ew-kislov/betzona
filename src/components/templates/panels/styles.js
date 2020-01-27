@@ -52,7 +52,9 @@ export const styles = {
         borderTopWidth: 1,
         borderTopColor: '#e0e4e8',
         marginTop: 10,
-        paddingTop: 10
+        paddingTop: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     itemPanel: {
         flexDirection: 'row',
@@ -110,4 +112,20 @@ export const styles = {
         height: 40,
         resizeMode: 'contain'
     },
+    profileBetSumText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-Narrow',
+        color: '#222'
+    },
+    profileBetResultText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-Narrow',
+        color: '#666'
+    },
+    profileSumResultText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-Narrow',
+        padding: 2,
+        color: '#fff'
+    }
 }

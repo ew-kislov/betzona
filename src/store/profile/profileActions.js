@@ -23,3 +23,15 @@ export const getProfileBankFail = error => ({
     type: actionTypes.GET_PROFILE_BANK_FAIL,
     error
 })
+
+export const getProfileStatsRequest = () => ({
+    type: actionTypes.GET_PROFILE_STATS_REQUEST
+})
+export const getProfileStatsSuccess = profileStats => ({
+    type: actionTypes.GET_PROFILE_STATS_SUCCESS,
+    profileStats
+})
+export const getProfileStatsFail = error => ({
+    type: actionTypes.GET_PROFILE_STATS_FAIL,
+    error
+})

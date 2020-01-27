@@ -5,6 +5,7 @@ import { ChooseMoney } from './ChooseMoney'
 import { connect } from 'react-redux'
 import { getMoneyListActionCreator, addPrognosisActionCreator } from '../../../store'
 import Toast from 'react-native-root-toast'
+import { SCREENS } from '../../../constants'
 
 export class ChooseMoneyContainerWithoutConnect extends Component {
 
@@ -38,8 +39,10 @@ export class ChooseMoneyContainerWithoutConnect extends Component {
             .then(() => {
                 if (this.props.prognosisError)
                     Toast.show('Вы не можете делать повторные прогнозы')
-                else
+                else {
                     Toast.show('Ваш прогноз добавлен')
+                    this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
+                }
             })
     }
 

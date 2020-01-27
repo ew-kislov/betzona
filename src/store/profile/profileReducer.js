@@ -4,6 +4,7 @@ const initialState = {
     loading: false,
     profileBets: [],
     profileBank: {},
+    profileStats: {},
     error: false
 }
 
@@ -21,6 +22,13 @@ export function profileReducer(state = initialState, action) {
         case actionTypes.GET_PROFILE_BANK_SUCCESS:
             return { ...state, profileBank: action.profileBank, loading: false }
         case actionTypes.GET_PROFILE_BANK_FAIL:
+            return { ...state, error: action.error, loading: false }
+
+        case actionTypes.GET_PROFILE_STATS_REQUEST:
+            return { ...state, loading: true }
+        case actionTypes.GET_PROFILE_STATS_SUCCESS:
+            return { ...state, profileStats: action.profileStats, loading: false }
+        case actionTypes.GET_PROFILE_STATS_FAIL:
             return { ...state, error: action.error, loading: false }
 
         default:
