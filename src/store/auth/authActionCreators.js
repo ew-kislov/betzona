@@ -27,3 +27,12 @@ export function initAuthDataActionCreator() {
             .catch(error => dispatch(actions.authFail(error)))
     }
 }
+
+export function registrationActionCreator(username, email, password) {
+    return dispatch => {
+        dispatch(actions.authRequest())
+        return service.registrate(username, email, password)
+            .then(token => dispatch(actions.registrationSuccess({ username, token })))
+            .catch(error => dispatch(actions.authFail(error)))
+    }
+}

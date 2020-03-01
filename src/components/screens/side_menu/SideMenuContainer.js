@@ -38,6 +38,7 @@ export class SideMenuContainerWithoutConnect extends Component {
     navigateToRating = () => this.props.navigation.navigate(SCREENS.RATING)
     navigateToPrognosis = () => this.props.navigation.navigate(SCREENS.PROGNOSIS_LIST)
     navigateToAddPrognosis = () => this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
+    navigateToRegistration = () => this.props.navigation.navigate(SCREENS.REGISTRATION)
 
     render() {
         let { token, username, authLoading, profileLoading, profileBank } = this.props
@@ -54,6 +55,7 @@ export class SideMenuContainerWithoutConnect extends Component {
             navigateToRating={this.navigateToRating}
             navigateToPrognosis={this.navigateToPrognosis}
             navigateToAddPrognosis={this.navigateToAddPrognosis}
+            navigateToRegistration={this.navigateToRegistration}
         />
     }
 }

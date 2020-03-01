@@ -18,6 +18,8 @@ export function authReducer(state = initialState, action) {
             return { ...state, token: null, username: null, loading: false, error: false }
         case actionTypes.INIT_AUTH_DATA_SUCCESS:
             return { ...state, token: action.token, username: action.username, error: false, loading: false }
+        case actionTypes.REGISTRATION_SUCCESS:
+            return { ...state, token: action.token, username: action.username, error: false, loading: false }
 
         case actionTypes.AUTH_FAIL:
             return { ...state, error: action.error, loading: false }

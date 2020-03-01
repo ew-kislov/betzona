@@ -1,8 +1,15 @@
 import React from 'react'
-import { SafeAreaView, View, Text } from 'react-native'
+import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-ionicons'
 
-import { PrimaryInput, WidePrimaryButton, RowContainer, PrimaryTitleText, MenuItem } from '../../primitives'
+import {
+    PrimaryInput,
+    WidePrimaryButton,
+    RowContainer,
+    PrimaryTitleText,
+    MenuItem,
+    PrimaryUnderlinedText
+} from '../../primitives'
 import { ContentLayout } from '../../templates'
 import { styles } from '../styles'
 
@@ -18,7 +25,8 @@ export const SideMenu = ({
     navigateToProfileInfo,
     navigateToRating,
     navigateToPrognosis,
-    navigateToAddPrognosis
+    navigateToAddPrognosis,
+    navigateToRegistration
 }) => {
     return (
         <ContentLayout style={{ padding: 20 }} loading={loading}>
@@ -48,7 +56,10 @@ export const SideMenu = ({
                                 <Text style={styles.sideMenuBoldText}>Авторизация</Text>
                                 <PrimaryInput onChangeText={handleUsernameChange} style={{ marginTop: 20 }} placeholder="Логин" />
                                 <PrimaryInput onChangeText={handlePasswordChange} style={{ marginTop: 20 }} placeholder="Пароль" secureTextEntry={true} />
-                                <WidePrimaryButton onPress={handleLogin} style={{ marginTop: 20 }} isActive={true} text="Войти">Войти</WidePrimaryButton>
+                                <WidePrimaryButton onPress={handleLogin} style={{ marginTop: 20 }} isActive={true}>Войти</WidePrimaryButton>
+                                <TouchableOpacity onPress={navigateToRegistration} style={{ marginTop: 10, padding: 5 }}>
+                                    <PrimaryUnderlinedText style={{ alignSelf: 'center' }}>Или зарегистрироваться</PrimaryUnderlinedText>
+                                </TouchableOpacity>
                             </View>
                         )
                 }

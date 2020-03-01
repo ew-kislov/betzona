@@ -25,3 +25,18 @@ export function initAuthData() {
         .then(usernameItem => username = usernameItem)
         .then(() => ({ token, username }))
 }
+
+export function registrate(username, email, password) {
+    let formData = new FormData()
+    formData.append('username', username)
+    formData.append('email', email)
+    formData.append('password', password)
+
+    return axios.post(BACKEND_URL + '/signup', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+    })
+        .then(response => token = response.data.data)
+        .then(() => AsyncStorage.setItem('token', token))
+        .then(() => AsyncStorage.setItem('username', username))
+        .then(() => token)
+}

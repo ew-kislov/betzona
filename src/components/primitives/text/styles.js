@@ -1,4 +1,6 @@
-export const styles = {
+import { StyleSheet } from 'react-native'
+
+export const styles = StyleSheet.create({
     titleText: {
         fontSize: 17,
         fontFamily: 'PTSans-NarrowBold',
@@ -35,6 +37,13 @@ export const styles = {
         fontFamily: 'PTSans-Narrow',
         color: '#45ade1'
     },
+    primaryUnderlinedText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-Narrow',
+        textDecorationLine: 'underline',
+        textDecorationColor: '#45ade1',
+        color: '#45ade1',
+    },
     primaryTitleText: {
         fontSize: 17,
         fontFamily: 'PTSans-NarrowBold',
@@ -47,4 +56,4 @@ export const styles = {
         marginBottom: 12,
         lineHeight: 12
     }
-}
+})

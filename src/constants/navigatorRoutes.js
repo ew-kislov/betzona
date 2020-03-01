@@ -7,5 +7,6 @@ export const SCREENS = {
     CHOOSE_MATCH: 'Выберите матч',
     CHOOSE_ODD: 'Выберите котировку',
     CHOOSE_MONEY: 'Выберите сумму',
-    RATING: 'Рейтинг игроков за месяц'
+    RATING: 'Рейтинг игроков за месяц',
+    REGISTRATION: 'Регистрация'
 }

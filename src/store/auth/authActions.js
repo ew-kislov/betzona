@@ -3,6 +3,9 @@ import * as actionTypes from './authActionTypes'
 export const authRequest = () => ({
     type: actionTypes.AUTH_REQUEST,
 })
+export const registrationRequest = () => ({
+    type: actionTypes.REGISTRATION_REQUEST
+})
 
 export const loginSuccess = ({ token, username }) => ({
     type: actionTypes.LOGIN_SUCCESS,
@@ -17,8 +20,17 @@ export const initAuthDataSuccess = ({ token, username }) => ({
     token,
     username
 })
+export const registrationSuccess = ({ token, username }) => ({
+    type: actionTypes.REGISTRATION_SUCCESS,
+    token,
+    username
+})
 
 export const authFail = error => ({
     type: actionTypes.AUTH_FAIL,
+    error
+})
+export const registrationFail = error => ({
+    type: actionTypes.REGISTRATION_FAIL,
     error
 })
