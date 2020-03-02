@@ -32,11 +32,13 @@ export function registrate(username, email, password) {
     formData.append('email', email)
     formData.append('password', password)
 
+    let token
+
     return axios.post(BACKEND_URL + '/signup', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
     })
-        .then(response => token = response.data.data)
+        .then(response => token = response.data.data.token)
         .then(() => AsyncStorage.setItem('token', token))
         .then(() => AsyncStorage.setItem('username', username))
-        .then(() => token)
+        .then(() => { console.warn(token); return token})
 }

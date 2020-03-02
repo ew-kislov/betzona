@@ -3,7 +3,7 @@ import Toast from 'react-native-root-toast'
 
 import { Registration } from './Registration'
 
-import { registrationActionCreator } from '../../../store'
+import { registrationActionCreator, getProfileBankActionCreator } from '../../../store'
 import { connect } from 'react-redux'
 
 export class RegistrationContainerWithoutConnect extends Component {
@@ -21,10 +21,10 @@ export class RegistrationContainerWithoutConnect extends Component {
             this.props.registrationActionCreator(this.state.username, this.state.email, this.state.password)
                 .then(() => {
                     if (this.props.error) {
-                        Toast.show('Вы введи неверные данные')
+                        Toast.show(this.props.error)
                     }
                     else
-                        Toast.show(this.props.token + '')
+                        this.props.getProfileBankActionCreator(this.props.token)
                 })
         } else {
             Toast.show('Введите все данные')
@@ -49,4 +49,7 @@ const mapStateToProps = state => ({
     error: state.auth.error
 })
 export const RegistrationContainer
-    = connect(mapStateToProps, { registrationActionCreator })(RegistrationContainerWithoutConnect)
+    = connect(
+        mapStateToProps,
+        { registrationActionCreator, getProfileBankActionCreator }
+    )(RegistrationContainerWithoutConnect)

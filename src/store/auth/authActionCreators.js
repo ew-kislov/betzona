@@ -33,6 +33,6 @@ export function registrationActionCreator(username, email, password) {
         dispatch(actions.authRequest())
         return service.registrate(username, email, password)
             .then(token => dispatch(actions.registrationSuccess({ username, token })))
-            .catch(error => dispatch(actions.authFail(error)))
+            .catch(error => dispatch(actions.authFail(error?.response?.data?.message)))
     }
 }
