@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",
+    "@react-native-community/google-signin": "^3.0.4",
     "axios": "^0.19.0",
     "moment": "^2.24.0",
     "react": "16.8.6",
@@ -21,6 +22,7 @@
     "react-native-root-toast": "^3.1.2",
     "react-native-splash-screen": "^3.2.0",
     "react-native-vector-icons": "^6.6.0",
+    "react-native-vkontakte-login": "^1.0.0",
     "react-navigation": "^3.11.1",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
