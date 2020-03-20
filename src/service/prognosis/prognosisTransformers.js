@@ -38,13 +38,13 @@ export function prognosisResponseTransformer(prognosis) {
     let home = {
         name: prognosis.home_team.name,
         description: prognosis.home,
-        logoUrl: prognosis.home_logo.filename,
+        logoUrl: prognosis.home_logo?.filename || '',
         last: prognosis.scores.home.splice(0, 5)
     }
     let away = {
         name: prognosis.away_team.name,
         description: prognosis.away,
-        logoUrl: prognosis.away_logo.filename,
+        logoUrl: prognosis.away_logo?.filename || '',
         last: prognosis.scores.away.splice(0, 5)
     }
 

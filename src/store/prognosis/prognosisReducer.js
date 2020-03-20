@@ -32,11 +32,11 @@ export function prognosisReducer(state = initialState, action) {
             return { ...state, prognosisListError: action.prognosisListError, prognosisListLoading: false, prognosisListRefreshing: false }
 
         case actionTypes.GET_PROGNOSIS_REQUEST:
-            return { ...state, prognosisLoading: true }
+            return { ...state, prognosisLoading: true, prognosisError: false }
         case actionTypes.GET_PROGNOSIS_REFRESH_REQUEST:
-            return { ...state, prognosisRefreshing: true }
+            return { ...state, prognosisRefreshing: true, prognosisError: false }
         case actionTypes.GET_PROGNOSIS_SUCCESS:
-            return { ...state, prognosis: action.prognosis, prognosisLoading: false, prognosisRefreshing: false }
+            return { ...state, prognosis: action.prognosis, prognosisLoading: false, prognosisRefreshing: false, prognosisError: false }
         case actionTypes.GET_PROGNOSIS_FAIL:
             return { ...state, prognosisError: action.prognosisError, prognosisLoading: false, prognosisRefreshing: false }
 

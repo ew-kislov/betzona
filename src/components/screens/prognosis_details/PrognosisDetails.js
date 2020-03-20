@@ -19,7 +19,7 @@ export const PrognosisDetails = ({
     refreshing,
     prognosis,
     refreshHandler,
-    makeBet,
+    makeBet
 }) => {
     return (
         <ScreenLayout>

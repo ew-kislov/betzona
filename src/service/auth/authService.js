@@ -37,8 +37,8 @@ export function registrate(username, email, password) {
     return axios.post(BACKEND_URL + '/signup', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
     })
-        .then(response => token = response.data.data.token)
-        .then(() => AsyncStorage.setItem('token', token))
-        .then(() => AsyncStorage.setItem('username', username))
-        .then(() => { console.warn(token); return token})
+        .then(response => response.data.data.token)
+        // .then(() => AsyncStorage.setItem('token', token))
+        // .then(() => AsyncStorage.setItem('username', username))
+        // .then(() => { console.warn(token); return token})
 }
