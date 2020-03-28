@@ -17,7 +17,8 @@ import {
     ChooseOddContainer,
     ChooseMoneyContainer,
     RatingContainer,
-    RegistrationContainer
+    RegistrationContainer,
+    EmailVerificationContainer
 } from './src/components/screens'
 
 import { SCREENS } from './src/constants'
@@ -36,7 +37,8 @@ const stackNavigator = createStackNavigator(
         [SCREENS.CHOOSE_ODD]: ChooseOddContainer,
         [SCREENS.CHOOSE_MONEY]: ChooseMoneyContainer,
         [SCREENS.RATING]: RatingContainer,
-        [SCREENS.REGISTRATION]: RegistrationContainer
+        [SCREENS.REGISTRATION]: RegistrationContainer,
+        [SCREENS.EMAIL_VERIFICATION]: EmailVerificationContainer
     },
     {
         initialRouteName: SCREENS.PROGNOSIS_LIST,

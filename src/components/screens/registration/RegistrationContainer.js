@@ -6,12 +6,7 @@ import { Registration } from './Registration'
 import { registrationActionCreator, getProfileBankActionCreator } from '../../../store'
 import { connect } from 'react-redux'
 
-import {
-    GoogleSignin,
-    GoogleSigninButton,
-    statusCodes,
-} from '@react-native-community/google-signin'
-import VKLogin from 'react-native-vkontakte-login';
+import { SCREENS } from '../../../constants'
 
 export class RegistrationContainerWithoutConnect extends Component {
     state = {
@@ -35,7 +30,7 @@ export class RegistrationContainerWithoutConnect extends Component {
                         Toast.show(this.props.error)
                     }
                     else {
-                        Toast.show('На указанную почту мы отправили сообщение для активации аккаунта. Пожалуйста, проверьте вашу почту и активируйте аккаунт!')
+                        this.props.navigation.navigate(SCREENS.EMAIL_VERIFICATION)
                     }
                 })
         } else {
