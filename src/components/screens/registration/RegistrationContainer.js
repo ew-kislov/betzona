@@ -39,18 +39,21 @@ export class RegistrationContainerWithoutConnect extends Component {
     }
 
     render() {
+        let { loading } = this.props
         return (
             <Registration
                 handleUsernameChange={this.handleUsernameChange}
                 handleEmailChange={this.handleEmailChange}
                 handlePasswordChange={this.handlePasswordChange}
                 handleRegistration={this.handleRegistration}
+                loading={loading}
             />
         )
     }
 }
 
 const mapStateToProps = state => ({
+    loading: state.auth.loading,
     token: state.auth.token,
     username: state.auth.username,
     error: state.auth.error

@@ -3,11 +3,12 @@ import { Text, TouchableOpacity } from 'react-native'
 
 import { styles } from './styles'
 
-export const WidePrimaryButton = ({ children, style, onPress }) => {
+export const WidePrimaryButton = ({ children, style, onPress, disabled }) => {
     return (
         <TouchableOpacity
-            style={[styles.widePrimaryButton, style]}
+            style={[disabled ? styles.widePrimaryButtonInactive : styles.widePrimaryButton, style]}
             onPress={onPress}
+            disabled={disabled}
         >
             <Text style={styles.widePrimaryButtonText}>{children}</Text>
         </TouchableOpacity>

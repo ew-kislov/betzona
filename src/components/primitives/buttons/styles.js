@@ -65,6 +65,12 @@ export const styles = {
         backgroundColor: '#45ade1',
         alignItems: 'center'
     },
+    widePrimaryButtonInactive: {
+        padding: 14,
+        borderRadius: 5,
+        backgroundColor: '#ccc',
+        alignItems: 'center'
+    },
     widePrimaryButtonText: {
         fontSize: 15,
         fontFamily: 'PTSans-NarrowBold',
