@@ -4,9 +4,15 @@ import AsyncStorage from '@react-native-community/async-storage'
 import { BACKEND_URL } from '../../constants'
 
 export function login(username, password) {
+    let formData = new FormData()
+    formData.append('username', username)
+    formData.append('password', password)
+
     let token
-    return axios.post(BACKEND_URL + '/login', { username, password })
-        .then(response => token = response.data.data)
+    return axios.post(BACKEND_URL + '/login', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+    })
+        .then(response => token = response.data.data.token)
         .then(() => AsyncStorage.setItem('token', token))
         .then(() => AsyncStorage.setItem('username', username))
         .then(() => token)
@@ -38,7 +44,4 @@ export function registrate(username, email, password) {
         headers: { 'Content-Type': 'multipart/form-data' }
     })
         .then(response => response.data.data.token)
-        // .then(() => AsyncStorage.setItem('token', token))
-        // .then(() => AsyncStorage.setItem('username', username))
-        // .then(() => { console.warn(token); return token})
 }

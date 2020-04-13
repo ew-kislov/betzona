@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* betzonaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* betzonaTests.m */; };
 		025ECA2760674B5A9EEA8191 /* PTSansNarrow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDEAF74A92204486A4AD9A66 /* PTSansNarrow-Regular.ttf */; };
@@ -91,6 +90,11 @@
 		FBC38D62A669492B903A2397 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B5766BDF31504F54925C5CC2 /* calendar.png */; };
 		FCB8E2E8A6094A3DB9C4B8DC /* portu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA4937C897E44CDA3DDC0F1 /* portu.png */; };
 		FEF66795460847CCBEB9CEAD /* football_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7564FBAB040C182D639DC /* football_white.png */; };
+		710C31A3090A49E1A26F3D76 /* google.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA543BBE4304E88AC142488 /* google.png */; };
+		392CEC43AB1A4292ADEC83EB /* nearest.png in Resources */ = {isa = PBXBuildFile; fileRef = B6E6B9C179A04650A798E927 /* nearest.png */; };
+		E14C6EA53D5941D9A3A55325 /* popular.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB6434474FC458FAF589628 /* popular.png */; };
+		0F47E789DD9A4722B71FC016 /* vk.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA846011287486AA867F968 /* vk.png */; };
+		7648A827938E4EE987A99E1B /* yandex.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DD0C209C384F159391E9E8 /* yandex.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +196,11 @@
 		F90F56C62AC847719A466230 /* hockey_white.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = hockey_white.png; path = ../assets/png/hockey_white.png; sourceTree = "<group>"; };
 		FBE94095E44FD2CCFDBAD7E0 /* libPods-betzona-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-betzona-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC7564FBAB040C182D639DC /* football_white.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = football_white.png; path = ../assets/png/football_white.png; sourceTree = "<group>"; };
+		CDA543BBE4304E88AC142488 /* google.png */ = {isa = PBXFileReference; name = "google.png"; path = "../assets/png/google.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B6E6B9C179A04650A798E927 /* nearest.png */ = {isa = PBXFileReference; name = "nearest.png"; path = "../assets/png/nearest.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7EB6434474FC458FAF589628 /* popular.png */ = {isa = PBXFileReference; name = "popular.png"; path = "../assets/png/popular.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAA846011287486AA867F968 /* vk.png */ = {isa = PBXFileReference; name = "vk.png"; path = "../assets/png/vk.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		47DD0C209C384F159391E9E8 /* yandex.png */ = {isa = PBXFileReference; name = "yandex.png"; path = "../assets/png/yandex.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +344,11 @@
 				0BB3AC4C47DF46CD850F867D /* tennis_blue.png */,
 				8F376298BDFD4441A29A270D /* volleyball.png */,
 				8515A6DBEB3A4B3C9EF8435E /* water_polo.png */,
+				CDA543BBE4304E88AC142488 /* google.png */,
+				B6E6B9C179A04650A798E927 /* nearest.png */,
+				7EB6434474FC458FAF589628 /* popular.png */,
+				AAA846011287486AA867F968 /* vk.png */,
+				47DD0C209C384F159391E9E8 /* yandex.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -612,6 +626,11 @@
 				24976B7F18BF4230B769D3DC /* tennis_blue.png in Resources */,
 				04FF6E513322433EA8525FC2 /* volleyball.png in Resources */,
 				2EDC3C155C604E2D9E15598F /* water_polo.png in Resources */,
+				710C31A3090A49E1A26F3D76 /* google.png in Resources */,
+				392CEC43AB1A4292ADEC83EB /* nearest.png in Resources */,
+				E14C6EA53D5941D9A3A55325 /* popular.png in Resources */,
+				0F47E789DD9A4722B71FC016 /* vk.png in Resources */,
+				7648A827938E4EE987A99E1B /* yandex.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

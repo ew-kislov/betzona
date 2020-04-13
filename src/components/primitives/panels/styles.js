@@ -1,4 +1,6 @@
-export const styles = {
+import { StyleSheet } from 'react-native'
+
+export const styles = StyleSheet.create({
     panel: {
         backgroundColor: '#FFFFFF',
         borderRadius: 3,
@@ -41,4 +43,11 @@ export const styles = {
         alignItems: 'center',
         borderWidth: 1
     },
-}
+    sliderPanel: {
+        backgroundColor: '#EFEFF0',
+        height: 40,
+        borderRadius: 7,
+        padding: 5,
+        flexDirection: 'row'
+    }
+})

@@ -1,4 +1,7 @@
-export const styles = {
+import { StyleSheet } from 'react-native'
+
+
+export const styles = StyleSheet.create({
     primaryButton: {
         padding: 9,
         borderRadius: 5,
@@ -108,5 +111,66 @@ export const styles = {
         padding: 8,
         borderBottomRightRadius: 3,
         borderTopRightRadius: 3
+    },
+    sliderButton: {
+        flex: 1,
+        flexGrow: 1,
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 2,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.20,
+        shadowRadius: 1.41,
+        flexDirection: 'row'
+    },
+    sliderButtonInactive: {
+        flex: 1,
+        flexGrow: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'row'
+    },
+    sliderButtonText: {
+        fontSize: 13,
+        fontFamily: 'PTSans-Narrow',
+        color: "#45ADE2",
+    },
+    sliderButtonInactiveText: {
+        fontSize: 13,
+        fontFamily: 'PTSans-Narrow',
+        color: "#828a92",
+    },
+    sportTabButton: {
+        height: 64,
+        width: 64,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 14,
+        backgroundColor: '#45ADE2',
+        elevation: 3,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+    },
+    sportTabButtonInactive: {
+        height: 64,
+        width: 64,
+        alignContent: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 14,
+        borderColor: '#EFEFEF',
+        borderWidth: 1
     }
-}
+})

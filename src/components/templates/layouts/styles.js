@@ -10,12 +10,13 @@ export const styles = {
     centerContainer: {
         padding: 10,
         paddingBottom: 0,
-        paddingTop: 0,
+        paddingTop: 0
+    },
+    centerContainerWithoutPadding: {
+        padding: 0
     },
     container: {
         backgroundColor: '#FFF',
         flex: 1
-        // width: SCREEN_WIDTH,
-        // height: Platform.OS === 'android' ? SCREEN_HEIGHT - 24 : SCREEN_HEIGHT - 40,
     },
 }

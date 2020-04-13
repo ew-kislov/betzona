@@ -6,7 +6,7 @@ export function loginActionCreator(username, password) {
         dispatch(actions.authRequest())
         return service.login(username, password)
             .then(token => dispatch(actions.loginSuccess({ username, token })))
-            .catch(error => dispatch(actions.authFail(error)))
+            .catch(error => dispatch(actions.authFail(error?.response?.data?.message || error)))
     }
 }
 

@@ -1,10 +1,29 @@
-export const styles = {
+import { Dimensions, StyleSheet } from 'react-native'
+
+export const styles = StyleSheet.create({
     prognosePanel: {
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingTop: 6,
-        marginBottom: 12,
-        paddingBottom: 18
+        width: Dimensions.get('screen').width - 30,
+        height: 140,
+        alignSelf: 'center',
+        backgroundColor: "#fff",
+        borderRadius: 14
+    },
+    prognoseSection: {
+        flexGrow: 1,
+        alignItems: 'center',
+        flex: 1,
+        justifyContent: 'center',
+        textAlign: 'center',
+    },
+    prognosisBottom: {
+        borderTopWidth: 1,
+        borderTopColor: '#e9e9e9',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: 40,
+        width: '86%'
     },
     VSPanel: {
         justifyContent: 'space-between',
@@ -35,6 +54,12 @@ export const styles = {
         width: 70,
         height: 70,
         resizeMode: 'contain'
+    },
+    logoImage: {
+        width: 40,
+        height: 40,
+        resizeMode: 'contain',
+        marginTop: 5
     },
     VSImageContainer: {
         alignItems: 'center',
@@ -128,4 +153,4 @@ export const styles = {
         padding: 2,
         color: '#fff'
     }
-}
+})

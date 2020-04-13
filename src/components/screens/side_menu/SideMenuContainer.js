@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavigationActions } from 'react-navigation'
 import Toast from 'react-native-root-toast'
 
 import { SideMenu } from './SideMenu'
@@ -14,6 +15,8 @@ export class SideMenuContainerWithoutConnect extends Component {
         password: ''
     }
 
+    closeDrawer = () => this.props.navigation.closeDrawer();
+
     handleUsernameChange = value => this.setState({ username: value })
     handlePasswordChange = value => this.setState({ password: value })
 
@@ -21,8 +24,10 @@ export class SideMenuContainerWithoutConnect extends Component {
         if (this.state.username !== '' && this.state.password != '')
             this.props.loginActionCreator(this.state.username, this.state.password)
                 .then(() => {
-                    if (this.props.error)
+                    if (this.props.error) {
                         Toast.show('Вы введи неверные данные')
+                        console.warn(this.props.error);
+                    }
                     else
                         this.props.getProfileBankActionCreator(this.props.token)
                 })
@@ -34,7 +39,10 @@ export class SideMenuContainerWithoutConnect extends Component {
         this.props.logoutActionCreator()
     }
 
-    navigateToProfileInfo = () => this.props.navigation.navigate(SCREENS.PROFILE_INFO)
+    navigateToProfileInfo = () => {
+        console.warn(this.props.username)
+        this.props.navigation.navigate('Profile', {}, NavigationActions.navigate({ routename: SCREENS.PROFILE_INFO, params: { username: this.props.username } }))
+    }
     navigateToRating = () => this.props.navigation.navigate(SCREENS.RATING)
     navigateToPrognosis = () => this.props.navigation.navigate(SCREENS.PROGNOSIS_LIST)
     navigateToAddPrognosis = () => this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
@@ -47,6 +55,7 @@ export class SideMenuContainerWithoutConnect extends Component {
             token={token}
             username={username}
             profileBank={profileBank}
+            closeDrawer={this.closeDrawer}
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}
             handleLogin={this.handleLogin}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { StatusBar } from 'react-native'
-import { createStackNavigator, createAppContainer, createDrawerNavigator, SafeAreaView } from 'react-navigation'
+import { StatusBar, Dimensions } from 'react-native'
+import { createStackNavigator, createAppContainer, createDrawerNavigator, SafeAreaView, createBottomTabNavigator } from 'react-navigation'
 import SplashScreen from 'react-native-splash-screen'
 
 import { Provider } from 'react-redux'
@@ -26,23 +26,80 @@ import { SCREENS } from './src/constants'
 import { connect } from 'react-redux'
 import { initAuthDataActionCreator, getProfileBankActionCreator } from './src/store'
 
-const stackNavigator = createStackNavigator(
+const prognosisNavigator = createStackNavigator(
     {
         [SCREENS.PROGNOSIS_LIST]: PrognosisListContainer,
-        [SCREENS.PROGNOSIS_DETAILS]: PrognosisDetailsContainer,
-        [SCREENS.PROFILE_INFO]: ProfileInfoContainer,
-        [SCREENS.CHOOSE_SPORT]: ChooseSportContainer,
-        [SCREENS.CHOOSE_TOURNAMENT]: ChooseTournamentContainer,
-        [SCREENS.CHOOSE_MATCH]: ChooseMatchContainer,
-        [SCREENS.CHOOSE_ODD]: ChooseOddContainer,
-        [SCREENS.CHOOSE_MONEY]: ChooseMoneyContainer,
-        [SCREENS.RATING]: RatingContainer,
-        [SCREENS.REGISTRATION]: RegistrationContainer,
-        [SCREENS.EMAIL_VERIFICATION]: EmailVerificationContainer
+        [SCREENS.PROGNOSIS_DETAILS]: PrognosisDetailsContainer
     },
     {
         initialRouteName: SCREENS.PROGNOSIS_LIST,
         headerMode: 'none'
+    }
+)
+
+const profileNavigator = createStackNavigator(
+    {
+        [SCREENS.PROFILE_INFO]: ProfileInfoContainer,
+        [SCREENS.REGISTRATION]: RegistrationContainer,
+        [SCREENS.EMAIL_VERIFICATION]: EmailVerificationContainer
+    },
+    {
+        initialRouteName: SCREENS.PROFILE_INFO,
+        headerMode: 'none'
+    }
+)
+
+const ratingNavigator = createStackNavigator(
+    {
+        [SCREENS.RATING]: RatingContainer,
+    },
+    {
+        initialRouteName: SCREENS.RATING,
+        headerMode: 'none'
+    }
+)
+
+const addPrognosisNavigator = createStackNavigator(
+    {
+        [SCREENS.CHOOSE_SPORT]: ChooseSportContainer,
+        [SCREENS.CHOOSE_TOURNAMENT]: ChooseTournamentContainer,
+        [SCREENS.CHOOSE_MATCH]: ChooseMatchContainer,
+        [SCREENS.CHOOSE_ODD]: ChooseOddContainer,
+        [SCREENS.CHOOSE_MONEY]: ChooseMoneyContainer
+    },
+    {
+        initialRouteName: SCREENS.CHOOSE_SPORT,
+        headerMode: 'none'
+    }
+)
+
+const tabbarVisible = (navigation) => {
+    const { routes } = navigation.state;
+
+    let showTabbar = true;
+    routes.forEach((route) => {
+        if (route.routeName === SCREENS.PROGNOSIS_DETAILS) {
+            showTabbar = false;
+        }
+    });
+
+    return showTabbar;
+};
+
+const stackNavigator = createBottomTabNavigator(
+    {
+        'Home': {
+            navigationOptions: ({ navigation }) => ({
+                tabBarVisible: tabbarVisible(navigation),
+            }),
+            screen: prognosisNavigator
+        },
+        'Rating': ratingNavigator,
+        'Add': addPrognosisNavigator,
+        'Profile': profileNavigator,
+    },
+    {
+        initialRouteName: 'Home'
     }
 )
 
@@ -51,9 +108,11 @@ const appNavigator = createDrawerNavigator(
         'APP': stackNavigator
     },
     {
-        contentComponent: SideMenuContainer
+        contentComponent: SideMenuContainer,
+        drawerWidth: Dimensions.get('window').width
     }
 )
+
 
 const AppContainer = createAppContainer(appNavigator)
 
@@ -69,8 +128,8 @@ class AppWithoutConnect extends Component {
 
     render() {
         return (
-            <SafeAreaView backgroundColor='#00000040' style={{ flex: 1, color: '#767676' }} forceInset={{ bottom: 'never' }}>
-                <StatusBar backgroundColor='#00000040' barStyle="light-content" />
+            <SafeAreaView backgroundColor='#fff' style={{ flex: 1, color: '#767676' }} forceInset={{ bottom: 'never' }}>
+                <StatusBar backgroundColor='#fff' barStyle="dark-content" />
                 <AppContainer />
             </SafeAreaView>
         )

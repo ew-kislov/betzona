@@ -8,7 +8,8 @@ import {
     RowContainer,
     PrimaryTitleText,
     MenuItem,
-    PrimaryUnderlinedText
+    PrimaryUnderlinedText,
+    CloseIcon
 } from '../../primitives'
 import { ContentLayout } from '../../templates'
 import { styles } from '../styles'
@@ -18,6 +19,7 @@ export const SideMenu = ({
     token,
     username,
     profileBank,
+    closeDrawer,
     handleUsernameChange,
     handlePasswordChange,
     handleLogin,
@@ -31,6 +33,9 @@ export const SideMenu = ({
     return (
         <ContentLayout style={{ padding: 20 }} loading={loading}>
             <SafeAreaView />
+            <TouchableOpacity onPress={closeDrawer}>
+                <CloseIcon />
+            </TouchableOpacity>
             <View style={{ marginTop: 10 }}>
                 {
                     token ?

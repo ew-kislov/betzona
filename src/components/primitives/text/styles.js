@@ -16,6 +16,11 @@ export const styles = StyleSheet.create({
         fontFamily: 'PTSans-Narrow',
         color: '#222'
     },
+    whiteText: {
+        fontSize: 12,
+        fontFamily: 'PTSans-Narrow',
+        color: '#fff',
+    },
     subdescriptionText: {
         fontSize: 14,
         lineHeight: 20,
@@ -25,12 +30,14 @@ export const styles = StyleSheet.create({
     boldText: {
         fontSize: 14,
         fontFamily: 'PTSans-NarrowBold',
-        color: '#222'
+        color: '#222',
+        textAlign: 'center'
     },
     smallText: {
-        fontSize: 10,
+        fontSize: 12,
         fontFamily: 'PTSans-Narrow',
-        color: '#bfbfbf'
+        color: '#bfbfbf',
+        textAlign: 'center'
     },
     primaryText: {
         fontSize: 13,

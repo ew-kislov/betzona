@@ -1,8 +1,9 @@
 import React from 'react'
+import { View, Text } from 'react-native'
 
 import { ContentLayout } from '../../layouts/ContentLayout'
 import { PrognosisPanel } from '../../panels'
-import { SubtitleText, PrimaryButton, RowContainer, Panel } from '../../../primitives'
+import { SubtitleText, PrimaryButton, RowContainer, Panel, SliderPanel, SliderButton } from '../../../primitives'
 import { styles } from '../styles'
 
 import { SPORT_TYPES, DAY_TYPES } from '../../../../constants'
@@ -12,7 +13,6 @@ export const PrognosisListTab = ({
     refreshing,
     prognosisList,
     refreshHandler,
-    nearestPrognosisList,
     selector,
     changeSelector,
     prognosisPressHandler
@@ -26,32 +26,38 @@ export const PrognosisListTab = ({
     isBlank = (allPrognosisLength == 0 && todayPrognosisLength == 0 && tomorrowPrognosisLength == 0)
 
     return (
-        <ContentLayout loading={loading} refreshing={refreshing} refreshHandler={refreshHandler}>
+        <ContentLayout loading={loading} refreshing={refreshing} refreshHandler={refreshHandler} withoutPadding={true}>
 
-            {isBlank && <SubtitleText style={{ marginTop: 10 }}>Прогнозов нет</SubtitleText>}
-            <RowContainer style={{ marginTop: 10 }}>
-                {allPrognosisLength > 0 && <PrimaryButton style={{ marginRight: 10 }} isActive={selector == DAY_TYPES.ALL} onPress={() => changeSelector(DAY_TYPES.ALL)}>Все</PrimaryButton>}
-                {todayPrognosisLength > 0 && <PrimaryButton style={{ marginRight: 10 }} isActive={selector == DAY_TYPES.TODAY} onPress={() => changeSelector(DAY_TYPES.TODAY)}>Сегодня</PrimaryButton>}
-                {tomorrowPrognosisLength > 0 && <PrimaryButton isActive={selector == DAY_TYPES.TOMORROW} onPress={() => changeSelector(DAY_TYPES.TOMORROW)}>Завтра</PrimaryButton>}
-            </RowContainer>
+            {
+                isBlank ?
+                    <SubtitleText style={{ margin: 15 }}>Прогнозов нет</SubtitleText>
+                    :
+                    <SliderPanel style={{ margin: 15 }}>
+                        {allPrognosisLength > 0 && <SliderButton isActive={selector == DAY_TYPES.ALL} onPress={() => changeSelector(DAY_TYPES.ALL)}>Все</SliderButton>}
+                        {allPrognosisLength > 0 && <SliderButton isActive={selector == DAY_TYPES.TODAY} onPress={() => changeSelector(DAY_TYPES.TODAY)}>Сегодня</SliderButton>}
+                        {allPrognosisLength > 0 && <SliderButton isActive={selector == DAY_TYPES.TOMORROW} isLast={true} onPress={() => changeSelector(DAY_TYPES.TOMORROW)}>Завтра</SliderButton>}
+                    </SliderPanel>
+            }
 
             {
                 currentPrognosisLength > 0 && (
-                    <Panel style={{ marginTop: 20, marginBottom: 10 }}>
+                    <View style={{ alignItems: 'center' }}>
                         {prognosisList[selector].map((prognosis, ind) => (
                             <PrognosisPanel
                                 key={prognosis.id}
-                                title={prognosis.title}
+                                home={prognosis.home}
+                                away={prognosis.away}
                                 dateString={prognosis.dateString}
+                                homeLogo={prognosis.homeLogo}
+                                awayLogo={prognosis.awayLogo}
                                 sport={prognosis.sport}
                                 odd={prognosis.odd}
                                 rate={prognosis.rate}
-                                style={currentPrognosisLength !== ind + 1 ? styles.prognosisPanel : { paddingBottom: 0, marginBottom: 5 }}
                                 onPress={() => prognosisPressHandler(prognosis.path)}
                                 popular={false}
                             />
                         ))}
-                    </Panel>
+                    </View>
                 )
             }
         </ContentLayout>

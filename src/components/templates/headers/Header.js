@@ -21,7 +21,7 @@ export const HeaderWithoutNavigation = ({ navigation, customTitle, title, noShad
     }
 
     return (
-        <View style={noShadow ? styles.header_no_shadow : styles.header}>
+        <View style={styles.header}>
             {
                 back ?
                     <TouchableOpacity style={styles.headerIcon} onPress={() => navigation.goBack()}>

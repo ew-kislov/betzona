@@ -8,30 +8,12 @@ export const styles = {
         zIndex: 100,
         width: SCREEN_WIDTH,
         flexDirection: 'row',
-        backgroundColor: '#f6f6f6',
-        alignItems: 'center',
-        margin: 0,
-        shadowOpacity: 0.3,
-        shadowRadius: 6,
-        shadowOffset: {
-            height: 0,
-            width: 0
-        },
-        elevation: 4
-    },
-    header_no_shadow: {
-        height: 54,
-        zIndex: 100,
-        width: SCREEN_WIDTH,
-        flexDirection: 'row',
-        backgroundColor: '#f6f6f6',
+        backgroundColor: '#ааа',
         alignItems: 'center',
         margin: 0,
     },
     headerIcon: {
         padding: 15,
-        paddingLeft: 20,
-        paddingRight: 20
     },
     headerTitleView: {
         marginLeft: 6,
@@ -41,8 +23,10 @@ export const styles = {
     },
     headerText: {
         fontFamily: 'PTSans-NarrowBold',
-        fontSize: 20,
-        color: '#767676',
-        marginRight: 40
+        fontSize: 17,
+        lineHeight: 22,
+        color: '#1B2939',
+        marginRight: 60,
+        marginLeft: 20
     }
 }

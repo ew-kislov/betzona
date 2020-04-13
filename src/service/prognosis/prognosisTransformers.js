@@ -22,10 +22,12 @@ export function prognosisListResponseTransformer(prognosisList) {
                 odd: prognosis.oddstype.name,
                 home: prognosis.home_team.name,
                 away: prognosis.away_team.name,
+                homeLogo: prognosis.home_logo?.filename || '',
+                awayLogo: prognosis.away_logo?.filename || '',
                 title: prognosis.home_team.name + ' - ' + prognosis.away_team.name,
                 sport: prognosis.sport.name,
                 date: date,
-                dateString: formattedDate
+                dateString: formattedDate,
             }
         })
 
