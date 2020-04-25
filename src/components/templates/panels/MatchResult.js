@@ -1,8 +1,9 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, Text } from 'react-native'
 
-import { RowContainer, UpperText, DescriptionText } from '../../primitives'
+import { RowContainer, UpperText, DescriptionText, WhiteText } from '../../primitives'
 import { styles } from './styles'
+import LinearGradient from 'react-native-linear-gradient'
 
 export const MatchResult = ({ matchResult, currentTeamName, style }) => {
 
@@ -30,11 +31,24 @@ export const MatchResult = ({ matchResult, currentTeamName, style }) => {
             </DescriptionText>
 
             <RowContainer style={{ alignItems: 'center' }}>
-                {currentTeamName && <View style={[
-                    styles.indicator,
-                    { backgroundColor: currentScore > opponentScore ? '#68942c' : currentScore == opponentScore ? '#ffa200' : '#de0b1a' }
-                ]} />}
                 <DescriptionText>{firstScore}</DescriptionText>
+                <View>
+                    {
+                        currentScore > opponentScore ? (
+                            <LinearGradient style={styles.resultIndicator} colors={['#BCE384', '#68942C']}>
+                                <Text style={styles.indicatorText}>В</Text>
+                            </LinearGradient>
+                        ) : currentScore == opponentScore ? (
+                            <LinearGradient style={styles.resultIndicator} colors={['#FFDD64', '#FFA300']}>
+                                <Text style={styles.indicatorText}>Н</Text>
+                            </LinearGradient>
+                        ) : (
+                            <LinearGradient style={styles.resultIndicator} colors={['#FF8888', '#DE0D1B']}>
+                                <Text style={styles.indicatorText}>П</Text>
+                            </LinearGradient>
+                        )
+                    }
+                </View>
             </RowContainer>
         </RowContainer>
     )

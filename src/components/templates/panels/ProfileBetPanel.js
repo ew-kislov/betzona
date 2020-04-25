@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-import { Panel, RowContainer, DescriptionText, TimeButton, PrimaryText, OddRateButton } from '../../primitives'
+import { Panel, RowContainer, DescriptionText, TimeButton, PrimaryText, OddRateButton, ShadowPanel, SmallText, RateButton, GrayText } from '../../primitives'
 import { styles } from './styles'
 
 export const ProfileBetPanel = ({ profileBet, style }) => {
@@ -16,29 +16,30 @@ export const ProfileBetPanel = ({ profileBet, style }) => {
         resultColor = '#ff741f'
 
     return (
-        <Panel style={style}>
-            <RowContainer style={{ alignItems: 'center' }}>
-                <TimeButton>{profileBet.time}</TimeButton>
-                <View style={{ marginLeft: 30 }}>
-                    <DescriptionText>{profileBet.homeName}</DescriptionText>
-                    <DescriptionText>{profileBet.awayName}</DescriptionText>
-                </View>
+        <ShadowPanel outerStyle={style} innerStyle={{ padding: 15 }} height={146}>
+            <RowContainer style={{ alignItems: 'center', width: '100%', justifyContent: 'space-between' }}>
+                <DescriptionText>{profileBet.homeName}</DescriptionText>
+                <SmallText>{profileBet.time}</SmallText>
+                <DescriptionText>{profileBet.awayName}</DescriptionText>
             </RowContainer>
 
-            <PrimaryText style={{ marginTop: 15 }}>{'#' + profileBet.description}</PrimaryText>
+            <View style={{ width: '100%' }}>
+                <PrimaryText style={{ marginTop: 15 }}>{'#' + profileBet.description}</PrimaryText>
+            </View>
 
-            <OddRateButton style={{ marginTop: 15 }} odd={profileBet.odd} rate={profileBet.rate} />
+            <RowContainer style={{ justifyContent: 'space-between', width: '100%' }}>
+                <DescriptionText>{profileBet.odd}</DescriptionText>
+                <RateButton>{profileBet.rate}</RateButton>
+            </RowContainer>
 
             <View style={styles.oddPayment}>
                 <Text style={styles.profileBetSumText}>{profileBet.sum + '€'}</Text>
-                <Text style={styles.profileBetResultText}>{'Результат: ' + profileBet.score}</Text>
+                <GrayText>{'Результат: ' + profileBet.score}</GrayText>
                 {
-                    profileBet.resultSum ?
-                        <Text style={[styles.profileSumResultText, { backgroundColor: resultColor }]}>{profileBet.resultSum + '€'}</Text>
-                        :
-                        <View />
+                    profileBet.resultSum &&
+                    <Text style={[styles.profileSumResultText, { color: resultColor }]}>{profileBet.resultSum + '€'}</Text>
                 }
             </View>
-        </Panel>
+        </ShadowPanel>
     )
 }

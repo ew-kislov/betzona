@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: Dimensions.get('screen').width - 30,
-        height: 140,
+        height: 165,
         alignSelf: 'center',
         backgroundColor: "#fff",
         borderRadius: 14
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
         borderTopColor: '#e9e9e9',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: 40,
+        height: 45,
         width: '86%'
     },
     VSPanel: {
@@ -32,14 +32,15 @@ export const styles = StyleSheet.create({
     },
     VSText: {
         flexGrow: 1,
-        fontFamily: 'PTSans-NarrowBold',
-        fontSize: 20,
-        color: '#a0a0a0',
+        fontFamily: 'PTSans-Narrow',
+        fontSize: 12,
+        color: '#1B2939',
         textAlign: 'center',
+        opacity: 0.3
     },
     VSMiddle: {
         flexGrow: 1,
-        marginTop: 60,
+        marginTop: 40,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -48,7 +49,7 @@ export const styles = StyleSheet.create({
     divider: {
         height: 1,
         flexGrow: 1,
-        backgroundColor: '#e0e4e8'
+        backgroundColor: '#E2E2E2'
     },
     VSImage: {
         width: 70,
@@ -75,26 +76,27 @@ export const styles = StyleSheet.create({
     },
     oddPayment: {
         borderTopWidth: 1,
-        borderTopColor: '#e0e4e8',
+        borderTopColor: '#E2E2E2',
         marginTop: 10,
         paddingTop: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        width: '100%',
+        alignItems: 'center'
     },
     itemPanel: {
         flexDirection: 'row',
         alignItems: 'center',
         borderBottomWidth: 1,
-        borderBottomColor: '#e0e4e8',
+        borderBottomColor: '#E2E2E2',
         padding: 12
     },
     chosenPrognosisPanel: {
-        padding: 10,
-        borderRadius: 3,
-        backgroundColor: '#98be62',
+        padding: 20,
+        borderRadius: 7,
         justifyContent: 'center',
         alignItems: 'center',
-        width: 180,
+        height: 86,
         alignSelf: 'center'
     },
     chosenPrognosisPanelTopText: {
@@ -108,24 +110,29 @@ export const styles = StyleSheet.create({
         color: "#fff"
     },
     inactiveSum: {
-        width: 100,
-        height: 40,
+        width: 64,
+        height: 64,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 10,
+        marginTop: 20,
+        marginHorizontal: 6,
+        borderRadius: 50,
+        backgroundColor: '#ECECEC'
     },
     activeSum: {
-        width: 100,
-        height: 40,
+        width: 64,
+        height: 64,
         justifyContent: 'center',
-        backgroundColor: '#98be62',
         alignItems: 'center',
-        marginTop: 10
+        marginTop: 20,
+        marginHorizontal: 6,
+        borderRadius: 50,
+        backgroundColor: '#45ADE2'
     },
     inactiveSumText: {
         fontSize: 16,
         fontFamily: 'PTSans-NarrowBold',
-        color: '#222'
+        color: '#1B2939'
     },
     activeSumText: {
         fontSize: 16,
@@ -135,6 +142,7 @@ export const styles = StyleSheet.create({
     sportImage: {
         width: 40,
         height: 40,
+        marginLeft: 10,
         resizeMode: 'contain'
     },
     profileBetSumText: {
@@ -152,5 +160,25 @@ export const styles = StyleSheet.create({
         fontFamily: 'PTSans-Narrow',
         padding: 2,
         color: '#fff'
+    },
+    resultIndicator: {
+        width: 20,
+        height: 20,
+        borderRadius: 4,
+        marginLeft: 10,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    indicatorText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-NarrowBold',
+        color: '#ffffff'
+    },
+    rateButton: {
+        height: 24,
+        width: 43,
+        borderRadius: 7,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })

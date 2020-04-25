@@ -11,6 +11,7 @@ export class ChooseMoneyContainerWithoutConnect extends Component {
 
     state = {
         odd: this.props.navigation.getParam('odd'),
+        oddName: this.props.navigation.getParam('oddName'),
         match: this.props.navigation.getParam('match'),
 
         activeSum: null
@@ -48,11 +49,12 @@ export class ChooseMoneyContainerWithoutConnect extends Component {
 
     render() {
         let { moneyLoading, moneyList, prognosisLoading } = this.props
-        let { odd, match, activeSum } = this.state
+        let { odd, oddName, match, activeSum } = this.state
         return <ChooseMoney
             loading={moneyLoading || prognosisLoading}
             moneyList={moneyList}
             odd={odd}
+            oddName={oddName}
             match={match}
             activeSum={activeSum}
             handleSumChange={this.handleSumChange}

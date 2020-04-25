@@ -1,15 +1,17 @@
 import React from 'react'
 import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native'
-import Icon from 'react-native-ionicons'
 
 import {
-    PrimaryInput,
-    WidePrimaryButton,
     RowContainer,
-    PrimaryTitleText,
     MenuItem,
-    PrimaryUnderlinedText,
-    CloseIcon
+    CloseIcon,
+    LogoIcon,
+    PhoneIcon,
+    DrawerHomeIcon,
+    DrawerRatingIcon,
+    DrawerAddIcon,
+    DrawerProfileIcon,
+    DrawerLogoutIcon
 } from '../../primitives'
 import { ContentLayout } from '../../templates'
 import { styles } from '../styles'
@@ -17,34 +19,32 @@ import { styles } from '../styles'
 export const SideMenu = ({
     loading,
     token,
-    username,
     profileBank,
     closeDrawer,
-    handleUsernameChange,
-    handlePasswordChange,
-    handleLogin,
     handleLogout,
     navigateToProfileInfo,
     navigateToRating,
     navigateToPrognosis,
     navigateToAddPrognosis,
-    navigateToRegistration
 }) => {
     return (
-        <ContentLayout style={{ padding: 20 }} loading={loading}>
-            <SafeAreaView />
-            <TouchableOpacity onPress={closeDrawer}>
-                <CloseIcon />
-            </TouchableOpacity>
-            <View style={{ marginTop: 10 }}>
-                {
-                    token ?
+        <View style={{ flex: 1 }}>
+            <ContentLayout style={{ padding: 20, paddingTop: 30 }} loading={loading}>
+                <SafeAreaView />
+                <PhoneIcon style={{ position: 'absolute', right: -20 }} />
+
+                <RowContainer style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                    <LogoIcon />
+                    <TouchableOpacity onPress={closeDrawer}>
+                        <CloseIcon />
+                    </TouchableOpacity>
+                </RowContainer>
+
+                <View style={{ marginTop: 10 }}>
+                    {
+                        token &&
                         (
-                            <View style={styles.loggedPanel}>
-                                <RowContainer>
-                                    <Text style={styles.sideMenuBoldText}>Вы авторизовались как: </Text>
-                                    <PrimaryTitleText>{username}</PrimaryTitleText>
-                                </RowContainer>
+                            <View>
                                 <RowContainer style={{ marginTop: 10 }}>
                                     <Text style={styles.sideMenuText}>Доступно: </Text>
                                     <Text style={styles.sideMenuBoldText}>{profileBank.available + '€'}</Text>
@@ -55,49 +55,44 @@ export const SideMenu = ({
                                 </RowContainer>
                             </View>
                         )
-                        :
-                        (
-                            <View>
-                                <Text style={styles.sideMenuBoldText}>Авторизация</Text>
-                                <PrimaryInput onChangeText={handleUsernameChange} style={{ marginTop: 20 }} placeholder="Логин" />
-                                <PrimaryInput onChangeText={handlePasswordChange} style={{ marginTop: 20 }} placeholder="Пароль" secureTextEntry={true} />
-                                <WidePrimaryButton onPress={handleLogin} style={{ marginTop: 20 }} isActive={true}>Войти</WidePrimaryButton>
-                                <TouchableOpacity onPress={navigateToRegistration} style={{ marginTop: 10, padding: 5 }}>
-                                    <PrimaryUnderlinedText style={{ alignSelf: 'center' }}>Или зарегистрироваться</PrimaryUnderlinedText>
-                                </TouchableOpacity>
-                            </View>
-                        )
-                }
+                    }
 
-                <MenuItem onPress={navigateToPrognosis} style={{ marginTop: 5 }}>
-                    <Icon name="md-home" color='#394f68' size={21} />
-                    <Text style={[styles.sideMenuText, { marginLeft: 15 }]}>Прогнозы на спорт</Text>
-                </MenuItem>
+                    <MenuItem onPress={navigateToPrognosis} style={{ marginTop: 20 }}>
+                        <DrawerHomeIcon />
+                        <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Прогнозы на спорт</Text>
+                    </MenuItem>
 
-                <MenuItem onPress={navigateToRating} style={{ marginTop: 5 }}>
-                    <Icon name="md-star" color='#394f68' size={21} />
-                    <Text style={[styles.sideMenuText, { marginLeft: 15 }]}>Рейтинг игроков за месяц</Text>
-                </MenuItem>
+                    <MenuItem onPress={navigateToRating} style={{ marginTop: 5 }}>
+                        <DrawerRatingIcon />
+                        <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Рейтинг игроков за месяц</Text>
+                    </MenuItem>
 
-                {
-                    token && (
-                        <View>
-                            <MenuItem onPress={navigateToProfileInfo} style={{ marginTop: 5 }}>
-                                <Icon name="md-person" color='#394f68' size={21} />
-                                <Text style={[styles.sideMenuText, { marginLeft: 15 }]}>Открыть профиль</Text>
-                            </MenuItem>
+                    <MenuItem onPress={navigateToProfileInfo} style={{ marginTop: 5 }}>
+                        <DrawerAddIcon />
+                        <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Открыть профиль</Text>
+                    </MenuItem>
 
-                            <MenuItem onPress={navigateToAddPrognosis} style={{ marginTop: 5 }}>
-                                <Icon name="md-add" color='#394f68' size={21} />
-                                <Text style={[styles.sideMenuText, { marginLeft: 15 }]}>Добавить прогноз</Text>
-                            </MenuItem>
+                    <MenuItem onPress={navigateToAddPrognosis} style={{ marginTop: 5 }}>
+                        <DrawerProfileIcon />
+                        <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Добавить прогноз</Text>
+                    </MenuItem>
 
-                            <WidePrimaryButton onPress={handleLogout} style={{ marginTop: 20 }} isActive={true} text="Войти">Выйти</WidePrimaryButton>
-                        </View>
-                    )
-                }
 
-            </View>
-        </ContentLayout >
+                    {/* <WidePrimaryButton onPress={handleLogout} style={{ marginTop: 20 }} isActive={true} text="Войти">Выйти</WidePrimaryButton> */}
+                </View>
+            </ContentLayout>
+
+            {
+                token &&
+                (
+                    <TouchableOpacity style={{ position: 'absolute', bottom: 30, alignSelf: 'center' }} onPress={handleLogout}>
+                        <RowContainer style={{ alignItems: 'center' }}>
+                            <DrawerLogoutIcon />
+                            <Text style={[styles.sideMenuBoldText, { marginLeft: 15 }]}>Выйти из аккаунта</Text>
+                        </RowContainer>
+                    </TouchableOpacity>
+                )
+            }
+        </View>
     )
 }

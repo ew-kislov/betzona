@@ -16,8 +16,8 @@ export class ChooseOddContainerWithoutConnect extends Component {
         this.props.getOddListActionCreator(this.props.token, this.state.match.id)
     }
 
-    navigateToChooseMoney = odd => {
-        this.props.navigation.navigate(SCREENS.CHOOSE_MONEY, { odd, match: this.state.match })
+    navigateToChooseMoney = (odd, oddName) => {
+        this.props.navigation.navigate(SCREENS.CHOOSE_MONEY, { odd, oddName, match: this.state.match })
     }
 
     render() {

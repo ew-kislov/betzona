@@ -5,10 +5,9 @@ SCREEN_WIDTH = Dimensions.get('window').width
 export const styles = {
     header: {
         height: 54,
-        zIndex: 100,
         width: SCREEN_WIDTH,
         flexDirection: 'row',
-        backgroundColor: '#ааа',
+        backgroundColor: '#fff',
         alignItems: 'center',
         margin: 0,
     },
@@ -28,5 +27,16 @@ export const styles = {
         color: '#1B2939',
         marginRight: 60,
         marginLeft: 20
+    },
+    shadow: {
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 12,
+        },
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+
+        elevation: 24
     }
 }

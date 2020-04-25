@@ -1,16 +1,11 @@
 import React from 'react'
-import { View, TouchableOpacity } from 'react-native'
-import { DescriptionText, RateButton, RowContainer } from '../../primitives'
+import { RateButton, SubdescriptionText, ShadowPanel } from '../../primitives'
 
-export const QuotationPanel = ({ odd, handleOddPress, style }) => {
+export const QuotationPanel = ({ odd, handleOddPress, innerStyle, outerStyle }) => {
     return (
-        <TouchableOpacity onPress={() => handleOddPress(odd)}>
-            <RowContainer style={[{ alignItems: 'center' }, style]}>
-                <View style={{ width: 80 }}>
-                    <DescriptionText>{odd.label}</DescriptionText>
-                </View>
-                <RateButton style={{ marginLeft: 10 }}>{odd.ratio}</RateButton>
-            </RowContainer>
-        </TouchableOpacity>
+        <ShadowPanel height={86} width={100}  innerStyle={[innerStyle, { justifyContent: 'space-around', paddingVertical: 5, alignItems: 'center' }]} outerStyle={[outerStyle]} onPress={() => handleOddPress()}>
+            <SubdescriptionText>{odd.label}</SubdescriptionText>
+            <RateButton>{odd.ratio}</RateButton>
+        </ShadowPanel>
     )
 }

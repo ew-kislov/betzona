@@ -35,12 +35,11 @@ export const styles = StyleSheet.create({
     },
 
     rateButton: {
-        padding: 9,
-        borderRadius: 2.5,
-        textAlign: 'center',
-        width: 60,
-        justifyContent: 'center',
+        height: 24,
+        width: 43,
+        borderRadius: 7,
         alignItems: 'center',
+        justifyContent: 'center'
     },
     rateButtonText: {
         fontSize: 16,
@@ -172,5 +171,28 @@ export const styles = StyleSheet.create({
         borderRadius: 14,
         borderColor: '#EFEFEF',
         borderWidth: 1
-    }
+    },
+    mainTabButton: {
+        width: 64,
+        height: 64,
+        borderRadius: 100,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    outlineButton: {
+        padding: 12,
+        borderRadius: 7,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        borderWidth: 2,
+        height: 48,
+        borderColor: '#45ade1'
+    },
+    outlineButtonText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-NarrowBold',
+        color: "#45ade1"
+    },
 })

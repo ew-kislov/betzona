@@ -17,7 +17,7 @@ export class ProfileStatisticsTabContainerWithoutConnect extends Component {
     render() {
         let { loading, profileStats } = this.props
         return (
-            <ProfileStatisticsTab loading={loading} profileStats={profileStats} />
+            <ProfileStatisticsTab loading={loading} profileStats={profileStats?.stats || {}} graph={profileStats?.graph || {}} />
         )
     }
 }

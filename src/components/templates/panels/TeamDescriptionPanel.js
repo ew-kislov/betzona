@@ -8,7 +8,7 @@ import { MatchResult } from './MatchResult'
 export const TeamDescriptionPanel = ({ team, style }) => {
     return (
         <View style={style}>
-            <SubtitleText>{team && team.name}</SubtitleText>
+            <TitleText>{team && team.name}</TitleText>
             <DescriptionText style={{ marginTop: 10 }}>
                 {team && team.description}
             </DescriptionText>

@@ -13,7 +13,7 @@ export const ChooseOdd = ({ loading, oddList, navigateToChooseMoney, match }) =>
         <ScreenLayout>
             <Header back customTitle title={match.name} />
             <ContentLayout loading={loading}>
-                <View style={{ marginBottom: 20, marginTop: 20 }}>
+                <View style={{ marginBottom: 20, marginTop: 10 }}>
                     {Object.keys(oddList).map((oddName, ind) =>
                         <OddPanel
                             key={ind}

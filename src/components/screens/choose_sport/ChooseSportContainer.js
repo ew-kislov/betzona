@@ -10,13 +10,13 @@ export class ChooseSportContainerWithoutConnect extends Component {
 
     favouriteMatches = {
         name: 'Популярные матчи',
-        imageSource: require('../../../../assets/png/popular.png'),
+        imageSource: require('../../../../assets/png/popular2.png'),
         onPress: () => this.props.navigation.navigate(SCREENS.CHOOSE_MATCH, { popular: true })
     }
 
     nearestMatches = {
         name: 'Ближайшие матчи',
-        imageSource: require('../../../../assets/png/nearest.png'),
+        imageSource: require('../../../../assets/png/nearest2.png'),
         onPress: () => this.props.navigation.navigate(SCREENS.CHOOSE_MATCH, { nearest: true })
     }
 

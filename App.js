@@ -18,13 +18,16 @@ import {
     ChooseMoneyContainer,
     RatingContainer,
     RegistrationContainer,
-    EmailVerificationContainer
+    EmailVerificationContainer,
+    ProfileContainer
 } from './src/components/screens'
 
 import { SCREENS } from './src/constants'
 
 import { connect } from 'react-redux'
 import { initAuthDataActionCreator, getProfileBankActionCreator } from './src/store'
+
+import { HomeIcon, HomeActiveIcon, RatingActiveIcon, RatingIcon, AddActiveIcon, AddIcon, ProfileActiveIcon, ProfileIcon, MainTabButton } from './src/components/primitives'
 
 const prognosisNavigator = createStackNavigator(
     {
@@ -39,12 +42,12 @@ const prognosisNavigator = createStackNavigator(
 
 const profileNavigator = createStackNavigator(
     {
-        [SCREENS.PROFILE_INFO]: ProfileInfoContainer,
+        [SCREENS.PROFILE]: ProfileContainer,
         [SCREENS.REGISTRATION]: RegistrationContainer,
         [SCREENS.EMAIL_VERIFICATION]: EmailVerificationContainer
     },
     {
-        initialRouteName: SCREENS.PROFILE_INFO,
+        initialRouteName: SCREENS.PROFILE,
         headerMode: 'none'
     }
 )
@@ -52,6 +55,7 @@ const profileNavigator = createStackNavigator(
 const ratingNavigator = createStackNavigator(
     {
         [SCREENS.RATING]: RatingContainer,
+        [SCREENS.RATING_PROFILE_INFO]: ProfileInfoContainer
     },
     {
         initialRouteName: SCREENS.RATING,
@@ -86,26 +90,62 @@ const tabbarVisible = (navigation) => {
     return showTabbar;
 };
 
-const stackNavigator = createBottomTabNavigator(
+const tabNavigator = createBottomTabNavigator(
     {
         'Home': {
-            navigationOptions: ({ navigation }) => ({
-                tabBarVisible: tabbarVisible(navigation),
-            }),
-            screen: prognosisNavigator
+            screen: prognosisNavigator,
+            navigationOptions: {
+                tabBarIcon: ({ tintColor }) => (<MainTabButton isActive={tintColor == '#000000'} icon={tintColor == '#000000' ? <HomeActiveIcon /> : <HomeIcon />} />)
+            }
         },
-        'Rating': ratingNavigator,
-        'Add': addPrognosisNavigator,
-        'Profile': profileNavigator,
+        'Rating': {
+            screen: ratingNavigator,
+            navigationOptions: {
+                tabBarIcon: ({ tintColor }) => (<MainTabButton isActive={tintColor == '#000000'} icon={tintColor == '#000000' ? <RatingActiveIcon /> : <RatingIcon />} />)
+            }
+        },
+        'Add': {
+            screen: addPrognosisNavigator,
+            navigationOptions: {
+                tabBarIcon: ({ tintColor }) => (<MainTabButton isActive={tintColor == '#000000'} icon={tintColor == '#000000' ? <AddActiveIcon /> : <AddIcon />} />)
+            }
+        },
+        'Profile': {
+            screen: profileNavigator,
+            navigationOptions: {
+                tabBarIcon: ({ tintColor }) => (<MainTabButton isActive={tintColor == '#000000'} icon={tintColor == '#000000' ? <ProfileActiveIcon /> : <ProfileIcon />} />)
+            }
+        },
     },
     {
-        initialRouteName: 'Home'
+        initialRouteName: 'Home',
+        tabBarOptions: {
+            scrollEnabled: false,
+            showIcon: true,
+            showLabel: false,
+            activeTintColor: '#000000',
+            inactiveTintColor: '#FFFFFF',
+            tabStyle: {
+                marginBottom: 5
+            },
+            style: {
+                shadowColor: "#000",
+                shadowOffset: {
+                    width: 0,
+                    height: 2,
+                },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+
+                elevation: 5
+            }
+        }
     }
 )
 
 const appNavigator = createDrawerNavigator(
     {
-        'APP': stackNavigator
+        'APP': tabNavigator
     },
     {
         contentComponent: SideMenuContainer,

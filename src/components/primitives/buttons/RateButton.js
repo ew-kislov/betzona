@@ -1,13 +1,13 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import LinearGradient from 'react-native-linear-gradient'
 
 import { styles } from './styles'
+import { WhiteText } from '../text'
 
-export const RateButton = ({ children, style, popular }) => {
+export const RateButton = ({ children, style }) => {
     return (
-        <View style={[styles.rateButton, style, popular ? { backgroundColor: '#98be62' } : { backgroundColor: '#74bce4' } ]}>
-            <Text style={styles.rateButtonText}>{children}</Text>
-        </View>
-        
+        <LinearGradient colors={['#6ECCFC', '#3692C0']} style={[styles.rateButton, style]}>
+            <WhiteText>{children}</WhiteText>
+        </LinearGradient>
     )
 }

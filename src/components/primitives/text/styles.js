@@ -2,19 +2,19 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
     titleText: {
-        fontSize: 17,
+        fontSize: 18,
         fontFamily: 'PTSans-NarrowBold',
-        color: '#222'
+        color: '#1B2939'
     },
     subtitleText: {
         fontSize: 16,
         fontFamily: 'PTSans-NarrowBold',
-        color: '#222'
+        color: '#1B2939'
     },
     descriptionText: {
         fontSize: 16,
         fontFamily: 'PTSans-Narrow',
-        color: '#222'
+        color: '#1B2939'
     },
     whiteText: {
         fontSize: 12,
@@ -25,19 +25,17 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         lineHeight: 20,
         fontFamily: 'PTSans-Narrow',
-        color: '#222'
+        color: '#1B2939'
     },
     boldText: {
         fontSize: 14,
         fontFamily: 'PTSans-NarrowBold',
-        color: '#222',
-        textAlign: 'center'
+        color: '#1B2939',
     },
     smallText: {
         fontSize: 12,
         fontFamily: 'PTSans-Narrow',
-        color: '#bfbfbf',
-        textAlign: 'center'
+        color: '#bfbfbf'
     },
     primaryText: {
         fontSize: 13,
@@ -62,5 +60,11 @@ export const styles = StyleSheet.create({
         color: '#8a8a8a',
         marginBottom: 12,
         lineHeight: 12
-    }
+    },
+    grayText: {
+        fontSize: 14,
+        fontFamily: 'PTSans-Narrow',
+        color: '#000',
+        opacity: 0.3
+    },
 })

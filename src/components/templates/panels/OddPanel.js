@@ -1,31 +1,31 @@
 import React from 'react'
 import { View } from 'react-native'
-import { SubtitleText, RowContainer } from '../../primitives'
+import { SubtitleText, RowContainer, TitleText } from '../../primitives'
 import { styles } from './styles'
 import { QuotationPanel } from './QuotationPanel'
 
 export const OddPanel = ({ oddName, oddInfo, handleOddPress }) => {
     return (
         <View>
-            <SubtitleText>{oddName}</SubtitleText>
-            <View style={[styles.divider, { marginTop: 10 }]} />
+            <TitleText>{oddName}</TitleText>
             {
-                Object.keys(oddInfo).map(oddSubName => {
-                    let renderedOdds = oddInfo[oddSubName].map(odd =>
+                Object.keys(oddInfo).map(oddGroupName => {
+                    let renderedOdds = oddInfo[oddGroupName].map(odd =>
                         <QuotationPanel
-                            style={{ marginRight: 20, marginTop: 10 }}
+                            outerStyle={{ marginRight: 15, marginTop: 20 }}
                             odd={odd}
                             key={odd.id}
-                            handleOddPress={handleOddPress}
+                            handleOddPress={() => handleOddPress(odd, oddName)}
                         />)
 
                     return (
-                        <RowContainer key={oddSubName} style={{ marginBottom: 15, flex: 1, flexWrap: 'wrap' }}>
+                        <RowContainer key={oddGroupName} style={{ marginBottom: 15, flex: 1, flexWrap: 'wrap' }}>
                             {renderedOdds}
                         </RowContainer>
                     )
                 })
             }
+            <View style={[styles.divider, { marginBottom: 15 }]} />
         </View>
     )
 }

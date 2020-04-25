@@ -14,10 +14,9 @@ export const Registration = ({
     handleRegistration,
     loading
 }) => {
-    console.warn(loading);
     return (
         <ScreenLayout>
-            <Header menu />
+            <Header back />
             <ContentLayout>
                 <PrimaryInput onChangeText={handleUsernameChange} style={{ marginTop: 20 }} placeholder='Логин' />
                 <PrimaryInput onChangeText={handleEmailChange} style={{ marginTop: 20 }} placeholder='Email' />

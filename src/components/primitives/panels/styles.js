@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 export const styles = StyleSheet.create({
     panel: {
@@ -28,11 +28,10 @@ export const styles = StyleSheet.create({
         borderBottomWidth: 1
     },
     menuItem: {
-        paddingTop: 10,
-        paddingBottom: 10,
-        borderBottomColor: '#cadbe1',
-        borderBottomWidth: 1,
-        flexDirection: 'row'
+        paddingTop: 7,
+        paddingBottom: 7,
+        flexDirection: 'row',
+        alignItems: 'center'
     },
     grayPanel: {
         backgroundColor: '#FFFFFF',
@@ -49,5 +48,12 @@ export const styles = StyleSheet.create({
         borderRadius: 7,
         padding: 5,
         flexDirection: 'row'
+    },
+    shadowPanel: {
+        alignSelf: 'center',
+        backgroundColor: "#fff",
+        borderRadius: 14,
+        zIndex: 100000,
+        width: '100%'
     }
 })

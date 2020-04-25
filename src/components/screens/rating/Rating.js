@@ -10,8 +10,8 @@ export const Rating = ({ loading, monthRating, showMore, elementsShown, currentU
         <ScreenLayout>
             <Header menu />
             <ContentLayout scrollEndHanler={showMore} loading={loading}>
-                <View style={styles.ratingHeader}>
-                    <BoldText style={{ flexGrow: 1, flex: 1 }}>№</BoldText>
+                <View style={styles.ratingItem}>
+                    <BoldText style={{ flexGrow: 1, flex: 1 }}>#</BoldText>
                     <BoldText style={{ flexGrow: 3, flex: 1 }}>Игрок</BoldText>
                     <BoldText style={{ flexGrow: 1, flex: 1 }}>Ставок</BoldText>
                     <BoldText style={{ flexGrow: 1, flex: 1 }}>ROI</BoldText>

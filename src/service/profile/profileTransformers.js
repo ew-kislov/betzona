@@ -60,5 +60,13 @@ export function transformProfileStatsResponse(profileStatsRaw) {
     for (statType in categoriesStats)
         profileStats[statType] = transformCategoryStatsResponse(categoriesStats[statType])
 
-    return profileStats;
+    const graphSize = Object.keys(profileStatsRaw.graph).length;
+
+    return {
+        stats: profileStats,
+        graph: {
+            labels: Object.keys(profileStatsRaw.graph).slice(Math.max(graphSize - 5, 0)),
+            data: Object.values(profileStatsRaw.graph).slice(Math.max(graphSize - 5, 0)),
+        }
+    }
 }

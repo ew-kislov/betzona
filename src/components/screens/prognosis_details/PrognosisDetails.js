@@ -12,7 +12,7 @@ import {
     MatchResult
 } from '../../templates'
 
-import { TitleText } from '../../../components/primitives'
+import { TitleText, SliderPanel, SliderButton } from '../../../components/primitives'
 
 export const PrognosisDetails = ({
     loading,
@@ -23,10 +23,15 @@ export const PrognosisDetails = ({
 }) => {
     return (
         <ScreenLayout>
-            <Header customTitle={true} title={prognosis.title} back />
+            <Header customTitle={true} title={prognosis.title} shadow back />
             <ContentLayout loading={loading} refreshing={refreshing} refreshHandler={refreshHandler}>
-                <VSPanel homeTeam={prognosis.home} awayTeam={prognosis.away} style={{ marginTop: 15 }} />
-                <DetailedBetPanel description={prognosis.tournament} date={prognosis.date} time={prognosis.time} onPress={makeBet} style={{ marginTop: 35 }} />
+                <TitleText style={{ selfAlign: 'center', textAlign: 'center', marginTop: 25 }}>{prognosis.tournament}</TitleText>
+                <VSPanel homeTeam={prognosis.home} awayTeam={prognosis.away} time={prognosis.time} date={prognosis.date} style={{ marginTop: 20 }} />
+
+                <SliderPanel style={{ margin: 25 }}>
+                    <SliderButton isActive={true} disabled={true}>{prognosis.home && prognosis.home.name}</SliderButton>
+                    <SliderButton isActive={false} disabled={true}>{prognosis.away && prognosis.away.name}</SliderButton>
+                </SliderPanel>
 
                 <TeamDescriptionPanel team={prognosis.home} style={{ marginTop: 20, marginBottom: 20 }} />
                 <TeamDescriptionPanel team={prognosis.away} style={{ marginTop: 20 }} />

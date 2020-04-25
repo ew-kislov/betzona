@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { NavigationActions } from 'react-navigation'
+import React, { Component, PureComponent } from 'react'
 import Toast from 'react-native-root-toast'
 
 import { SideMenu } from './SideMenu'
@@ -8,50 +7,36 @@ import { loginActionCreator, logoutActionCreator, getProfileBankActionCreator } 
 import { connect } from 'react-redux'
 import { SCREENS } from '../../../constants'
 
-export class SideMenuContainerWithoutConnect extends Component {
+export class SideMenuContainerWithoutConnect extends PureComponent {
+    componentDidMount = () => {
+        if (this.props.token) {
+            this.props.getProfileBankActionCreator(this.props.token)
+        }
+    }
 
-    state = {
-        username: '',
-        password: ''
+    shouldComponentUpdate(nextProps, nextState) {
+        return (
+            this.props.profileBank.available != nextProps.profileBank.available ||
+            this.props.profileBank.bank != nextProps.profileBank.bank ||
+            this.props.token != nextProps.token
+        )
     }
 
     closeDrawer = () => this.props.navigation.closeDrawer();
-
-    handleUsernameChange = value => this.setState({ username: value })
-    handlePasswordChange = value => this.setState({ password: value })
-
-    handleLogin = () => {
-        if (this.state.username !== '' && this.state.password != '')
-            this.props.loginActionCreator(this.state.username, this.state.password)
-                .then(() => {
-                    if (this.props.error) {
-                        Toast.show('Вы введи неверные данные')
-                        console.warn(this.props.error);
-                    }
-                    else
-                        this.props.getProfileBankActionCreator(this.props.token)
-                })
-        else
-            Toast.show('Введите логин и пароль')
-    }
 
     handleLogout = () => {
         this.props.logoutActionCreator()
     }
 
-    navigateToProfileInfo = () => {
-        console.warn(this.props.username)
-        this.props.navigation.navigate('Profile', {}, NavigationActions.navigate({ routename: SCREENS.PROFILE_INFO, params: { username: this.props.username } }))
-    }
+    navigateToProfileInfo = () => this.props.navigation.navigate(SCREENS.PROFILE)
     navigateToRating = () => this.props.navigation.navigate(SCREENS.RATING)
     navigateToPrognosis = () => this.props.navigation.navigate(SCREENS.PROGNOSIS_LIST)
     navigateToAddPrognosis = () => this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
-    navigateToRegistration = () => this.props.navigation.navigate(SCREENS.REGISTRATION)
 
     render() {
-        let { token, username, authLoading, profileLoading, profileBank } = this.props
+        let { token, username, profileLoading, profileBank } = this.props
         return <SideMenu
-            loading={authLoading || profileLoading}
+            loading={profileLoading}
             token={token}
             username={username}
             profileBank={profileBank}
@@ -70,7 +55,6 @@ export class SideMenuContainerWithoutConnect extends Component {
 }
 
 const mapStateToProps = state => ({
-    authLoading: state.auth.loading,
     token: state.auth.token,
     username: state.auth.username,
     error: state.auth.error,

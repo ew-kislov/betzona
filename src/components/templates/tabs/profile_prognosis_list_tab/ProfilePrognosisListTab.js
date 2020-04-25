@@ -6,7 +6,7 @@ import {
     ContentLayout,
     ProfileBetPanel
 } from '../../../templates'
-import { SubtitleText } from '../../../primitives'
+import { SubtitleText, SmallText, GrayText } from '../../../primitives'
 
 export const ProfilePrognosisListTab = ({ loading, profileBets, betsShown, showMore }) => {
     let count = 0
@@ -18,12 +18,14 @@ export const ProfilePrognosisListTab = ({ loading, profileBets, betsShown, showM
                         if (count < betsShown) {
                             let renderedProfileBets = profileBetsByDate.map(profileBet => {
                                 count++
-                                return <ProfileBetPanel key={profileBet.id} style={{ marginTop: 10 }} profileBet={profileBet} />
+                                return <ProfileBetPanel key={profileBet.id} style={{ marginTop: 15 }} profileBet={profileBet} />
                             })
                             return (
-                                <View key={date} style={{ marginBottom: 20 }}>
-                                    <SubtitleText style={{ marginTop: 20 }}>{date}</SubtitleText>
-                                    {renderedProfileBets}
+                                <View key={date} style={{ marginBottom: 15 }}>
+                                    <GrayText style={{ marginTop: 15, marginLeft: 5 }}>{date}</GrayText>
+                                    <View style={{ alignItems: 'center' }}>
+                                        {renderedProfileBets}
+                                    </View>
                                 </View>
                             )
                         }

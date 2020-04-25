@@ -13,9 +13,7 @@ export class RatingContainerWithoutConnect extends Component {
 
     showMore = () => this.setState({ elementsShown: this.state.elementsShown + 20 })
 
-    navigateToProfile = (username) => {
-        this.props.navigation.navigate(SCREENS.PROFILE_INFO, { username })
-    }
+    navigateToProfile = (username) => this.props.navigation.navigate(SCREENS.RATING_PROFILE_INFO, { username })
 
     componentDidMount() {
         this.props.getMonthRatingActionCreator()

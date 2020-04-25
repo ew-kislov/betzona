@@ -1,7 +1,7 @@
 export const SCREENS = {
     PROGNOSIS_LIST: 'Прогнозы на спорт',
     PROGNOSIS_DETAILS: 'Прогноз',
-    PROFILE_INFO: 'Профиль',
+    RATING_PROFILE_INFO: 'Профиль участника',
     CHOOSE_SPORT: 'Выберите вид спорта',
     CHOOSE_TOURNAMENT: 'Выберите тур',
     CHOOSE_MATCH: 'Выберите матч',
@@ -9,5 +9,6 @@ export const SCREENS = {
     CHOOSE_MONEY: 'Выберите сумму',
     RATING: 'Рейтинг игроков за месяц',
     REGISTRATION: 'Регистрация',
-    EMAIL_VERIFICATION: 'Подтверждение регистрации'
+    EMAIL_VERIFICATION: 'Подтверждение регистрации',
+    PROFILE: 'Профиль'
 }

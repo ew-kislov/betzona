@@ -1,19 +1,17 @@
 import React from 'react'
 import { BoxShadow } from "react-native-shadow";
 
-export const RoundWideShadow = ({ children, width, height }) => {
+export const RoundWideShadow = ({ children, style, width, height, border, y, x, opacity }) => {
     const shadowOpt = {
         width,
         height,
         color: "#000",
-        border: 16,
+        border: border || 20,
         radius: 14,
-        opacity: 0.08,
-        x: 0,
-        y: 5,
-        style: {
-            marginBottom: 20
-        }
+        opacity: opacity || 0.05,
+        x: x || 0,
+        y: y || 5,
+        style
     }
 
     return (

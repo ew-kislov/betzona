@@ -1,28 +1,27 @@
 import React from 'react'
 import { View, Image, TouchableOpacity, Dimensions } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient';
 
-import { DescriptionText, SmallText, RowContainer, BoldText, WhiteText, RoundWideShadow } from '../../primitives'
+import { DescriptionText, SmallText, RowContainer, BoldText, RoundWideShadow, RateButton } from '../../primitives'
 import { styles } from './styles'
 
 export const PrognosisPanel = ({ home, away, homeLogo, awayLogo, dateString, sport, rate, onPress, style }) => {
     return (
-        <RoundWideShadow width={Dimensions.get('screen').width - 30} height={140}>
+        <RoundWideShadow width={Dimensions.get('screen').width - 30} height={165} style={{ marginBottom: 10 }}>
             <TouchableOpacity onPress={onPress}>
                 <View style={[styles.prognosePanel, style]}>
                     <RowContainer style={{ height: 50, width: '86%' }}>
                         <View style={[styles.prognoseSection, { justifyContent: 'center' }]}>
-                            <BoldText>{home}</BoldText>
+                            <BoldText style={{ textAlign: 'center' }}>{home}</BoldText>
                         </View>
                         <View style={styles.prognoseSection}>
                             <BoldText>—</BoldText>
                         </View>
                         <View style={[styles.prognoseSection, { justifyContent: 'center' }]}>
-                            <BoldText>{away}</BoldText>
+                            <BoldText style={{ textAlign: 'center' }}>{away}</BoldText>
                         </View>
                     </RowContainer>
 
-                    <RowContainer style={{ height: 50, width: '86%', paddingBottom: 5 }}>
+                    <RowContainer style={{ height: 65, width: '86%', paddingBottom: 5 }}>
                         <View style={styles.prognoseSection}>
                             <Image
                                 source={homeLogo && homeLogo !== '' ? { uri: 'https://betzona.ru/img/logo_team/' + homeLogo } : require('../../../../assets/png/no_logo.png')}
@@ -41,9 +40,7 @@ export const PrognosisPanel = ({ home, away, homeLogo, awayLogo, dateString, spo
                     </RowContainer>
                     <RowContainer style={styles.prognosisBottom}>
                         <DescriptionText>Посмотреть прогноз</DescriptionText>
-                        <LinearGradient colors={['#6ECCFC', '#3692C0']} style={{ height: 24, width: 43, borderRadius: 7, alignItems: 'center', justifyContent: 'center' }}>
-                            <WhiteText>{rate}</WhiteText>
-                        </LinearGradient>
+                        <RateButton>{rate}</RateButton>
                     </RowContainer>
                 </View>
             </TouchableOpacity>
