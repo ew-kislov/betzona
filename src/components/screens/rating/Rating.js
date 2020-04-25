@@ -13,7 +13,7 @@ export const Rating = ({ loading, monthRating, showMore, elementsShown, currentU
                 <View style={styles.ratingItem}>
                     <BoldText style={{ flexGrow: 1, flex: 1 }}>#</BoldText>
                     <BoldText style={{ flexGrow: 3, flex: 1 }}>Игрок</BoldText>
-                    <BoldText style={{ flexGrow: 1, flex: 1 }}>Ставок</BoldText>
+                    <BoldText style={{ flexGrow: 2, flex: 1 }}>Ставок</BoldText>
                     <BoldText style={{ flexGrow: 1, flex: 1 }}>ROI</BoldText>
                     <BoldText style={{ flexGrow: 1, flex: 1 }}>Банк</BoldText>
                 </View>
@@ -22,7 +22,7 @@ export const Rating = ({ loading, monthRating, showMore, elementsShown, currentU
                         <TouchableOpacity onPress={() => navigateToProfile(user.username)} style={[styles.ratingItem, user.username == currentUser && { backgroundColor: '#f2ccc4' }]}>
                             <SubdescriptionText style={{ flexGrow: 1, flex: 1 }}>{ind + 1}</SubdescriptionText>
                             <SubdescriptionText style={{ flexGrow: 3, flex: 1 }}>{user.username}</SubdescriptionText>
-                            <SubdescriptionText style={{ flexGrow: 1, flex: 1 }}>{user.betCount}</SubdescriptionText>
+                            <SubdescriptionText style={{ flexGrow: 2, flex: 1 }}>{user.betCount}</SubdescriptionText>
                             <SubdescriptionText style={{ flexGrow: 1, flex: 1 }}>{user.roi + '%'}</SubdescriptionText>
                             <SubdescriptionText style={{ flexGrow: 1, flex: 1 }}>{user.profit + '€'}</SubdescriptionText>
                         </TouchableOpacity>

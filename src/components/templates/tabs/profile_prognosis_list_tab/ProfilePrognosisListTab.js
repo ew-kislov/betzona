@@ -12,7 +12,7 @@ export const ProfilePrognosisListTab = ({ loading, profileBets, betsShown, showM
     let count = 0
     return (
         <ScreenLayout>
-            <ContentLayout scrollEndHanler={showMore} loading={loading}>
+            <ContentLayout scrollEndHanler={showMore} loading={loading} withoutPadding={true}>
                 {
                     Object.entries(profileBets).map(([date, profileBetsByDate]) => {
                         if (count < betsShown) {
@@ -22,7 +22,7 @@ export const ProfilePrognosisListTab = ({ loading, profileBets, betsShown, showM
                             })
                             return (
                                 <View key={date} style={{ marginBottom: 15 }}>
-                                    <GrayText style={{ marginTop: 15, marginLeft: 5 }}>{date}</GrayText>
+                                    <GrayText style={{ marginTop: 15, marginLeft: 15 }}>{date}</GrayText>
                                     <View style={{ alignItems: 'center' }}>
                                         {renderedProfileBets}
                                     </View>

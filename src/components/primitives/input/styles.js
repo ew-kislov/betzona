@@ -7,7 +7,8 @@ export const styles = {
         borderColor: '#DCDCDC',
         backgroundColor: '#fff',
         borderWidth: 1,
-        fontFamily: 'PTSans-Narrow',
-        color: '#999'
+        fontFamily: 'Geometria',
+        color: '#999',
+        fontSize: 12
     }
 }

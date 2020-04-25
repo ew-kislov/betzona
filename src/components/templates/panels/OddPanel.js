@@ -4,15 +4,15 @@ import { SubtitleText, RowContainer, TitleText } from '../../primitives'
 import { styles } from './styles'
 import { QuotationPanel } from './QuotationPanel'
 
-export const OddPanel = ({ oddName, oddInfo, handleOddPress }) => {
+export const OddPanel = ({ oddName, oddInfo, handleOddPress, last }) => {
     return (
         <View>
-            <TitleText>{oddName}</TitleText>
+            <TitleText style={{ marginLeft: 15 }}>{oddName}</TitleText>
             {
                 Object.keys(oddInfo).map(oddGroupName => {
                     let renderedOdds = oddInfo[oddGroupName].map(odd =>
                         <QuotationPanel
-                            outerStyle={{ marginRight: 15, marginTop: 20 }}
+                            outerStyle={{ marginLeft: 15, marginTop: 20 }}
                             odd={odd}
                             key={odd.id}
                             handleOddPress={() => handleOddPress(odd, oddName)}
@@ -25,7 +25,7 @@ export const OddPanel = ({ oddName, oddInfo, handleOddPress }) => {
                     )
                 })
             }
-            <View style={[styles.divider, { marginBottom: 15 }]} />
+            {!last && <View style={[styles.divider, { marginBottom: 15, marginHorizontal: 15 }]} />}
         </View>
     )
 }

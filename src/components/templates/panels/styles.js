@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     },
     VSText: {
         flexGrow: 1,
-        fontFamily: 'PTSans-Narrow',
+        fontFamily: 'Geometria-Medium',
         fontSize: 12,
         color: '#1B2939',
         textAlign: 'center',
@@ -78,11 +78,14 @@ export const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: '#E2E2E2',
         marginTop: 10,
-        paddingTop: 10,
+        // paddingTop: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%',
-        alignItems: 'center'
+        alignItems: 'center',
+        // backgroundColor: '#ccc',
+        flex: 1,
+        height: 50
     },
     itemPanel: {
         flexDirection: 'row',
@@ -131,12 +134,12 @@ export const styles = StyleSheet.create({
     },
     inactiveSumText: {
         fontSize: 16,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Bold',
         color: '#1B2939'
     },
     activeSumText: {
         fontSize: 16,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Bold',
         color: '#fff'
     },
     sportImage: {
@@ -180,5 +183,10 @@ export const styles = StyleSheet.create({
         borderRadius: 7,
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    dateText: {
+        fontSize: 12,
+        fontFamily: 'Geometria-Thin',
+        color: '#45ADE2'
     }
 })

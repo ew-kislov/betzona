@@ -1,12 +1,12 @@
 export const styles = {
     sideMenuText: {
         fontSize: 14,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Medium',
         color: '#1B2939'
     },
     sideMenuBoldText: {
         fontSize: 14,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Medium',
         color: '#45ADE2'
     },
     ratingHeader: {

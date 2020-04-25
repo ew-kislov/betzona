@@ -3,43 +3,49 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
     titleText: {
         fontSize: 18,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Bold',
+        color: '#1B2939'
+    },
+    thinText: {
+        fontSize: 12,
+        fontFamily: 'Geometria-Thin',
         color: '#1B2939'
     },
     subtitleText: {
         fontSize: 16,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Bold',
         color: '#1B2939'
     },
     descriptionText: {
-        fontSize: 16,
-        fontFamily: 'PTSans-Narrow',
-        color: '#1B2939'
+        fontSize: 14,
+        fontFamily: 'Geometria',
+        color: '#1B2939',
+        lineHeight: 19
     },
     whiteText: {
         fontSize: 12,
-        fontFamily: 'PTSans-Narrow',
+        fontFamily: 'Geometria-Medium',
         color: '#fff',
     },
     subdescriptionText: {
         fontSize: 14,
         lineHeight: 20,
-        fontFamily: 'PTSans-Narrow',
+        fontFamily: 'Geometria-Thin',
         color: '#1B2939'
     },
     boldText: {
         fontSize: 14,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Bold',
         color: '#1B2939',
     },
     smallText: {
         fontSize: 12,
-        fontFamily: 'PTSans-Narrow',
+        fontFamily: 'Geometria-Medium',
         color: '#bfbfbf'
     },
     primaryText: {
-        fontSize: 13,
-        fontFamily: 'PTSans-Narrow',
+        fontSize: 12,
+        fontFamily: 'Geometria-Medium',
         color: '#45ade1'
     },
     primaryUnderlinedText: {
@@ -63,8 +69,13 @@ export const styles = StyleSheet.create({
     },
     grayText: {
         fontSize: 14,
-        fontFamily: 'PTSans-Narrow',
+        fontFamily: 'Geometria-Medium',
         color: '#000',
         opacity: 0.3
     },
+    mediumText: {
+        fontSize: 14,
+        fontFamily: 'Geometria-Medium',
+        color: '#1B2939'
+    }
 })

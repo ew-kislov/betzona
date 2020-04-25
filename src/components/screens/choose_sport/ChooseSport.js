@@ -6,14 +6,15 @@ import {
     Header,
     ContentLayout,
     SportPanel,
+    PrognosisPanel,
 } from '../../templates'
 
 export const ChooseSport = ({ loading, favouriteMatches, nearestMatches, sportList, navigateToTournaments }) => {
     return (
         <ScreenLayout>
             <Header menu />
-            <ContentLayout loading={loading}>
-                <View style={{ marginBottom: 20 }}>
+            <ContentLayout loading={loading} withoutPadding={true}>
+                <View style={{ marginBottom: 20, alignItems: 'center' }}>
                     <SportPanel
                         sport={favouriteMatches}
                         onPress={favouriteMatches.onPress}

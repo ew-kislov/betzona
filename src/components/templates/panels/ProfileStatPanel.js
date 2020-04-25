@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 import Pie from 'react-native-pie'
 
-import { SubdescriptionText, RowContainer, ShadowPanel, BoldText } from '../../primitives'
+import { SubdescriptionText, RowContainer, ShadowPanel, BoldText, MediumText } from '../../primitives'
 
 import { styles } from './styles'
 
@@ -16,7 +16,7 @@ export const ProfileStatPanel = ({ statElement, style }) => {
                         <LinearGradient colors={['#BCE384', '#68942C']} style={{ width: 10, height: 10, borderRadius: 30 }} />
                         <RowContainer style={{ marginLeft: 10 }}>
                             <SubdescriptionText>Выиграло {statElement.winCount} </SubdescriptionText>
-                            <BoldText>/ {statElement.winPercent}%</BoldText>
+                            <MediumText>/ {statElement.winPercent}%</MediumText>
                         </RowContainer>
                     </RowContainer>
 
@@ -24,7 +24,7 @@ export const ProfileStatPanel = ({ statElement, style }) => {
                         <LinearGradient colors={['#FF8888', '#DE0D1B']} style={{ width: 10, height: 10, borderRadius: 30 }} />
                         <RowContainer style={{ marginLeft: 10 }}>
                             <SubdescriptionText>Проиграло {statElement.loseCount} </SubdescriptionText>
-                            <BoldText>/ {statElement.losePercent}%</BoldText>
+                            <MediumText>/ {statElement.losePercent}%</MediumText>
                         </RowContainer>
                     </RowContainer>
 
@@ -32,7 +32,7 @@ export const ProfileStatPanel = ({ statElement, style }) => {
                         <LinearGradient colors={['#FFDD64', '#FFA300']} style={{ width: 10, height: 10, borderRadius: 30 }} />
                         <RowContainer style={{ marginLeft: 10 }}>
                             <SubdescriptionText>Возвратов {statElement.drawCount} </SubdescriptionText>
-                            <BoldText>/ {statElement.drawPercent}%</BoldText>
+                            <MediumText>/ {statElement.drawPercent}%</MediumText>
                         </RowContainer>
                     </RowContainer>
                 </View>
@@ -52,10 +52,10 @@ export const ProfileStatPanel = ({ statElement, style }) => {
 
             <RowContainer style={{ justifyContent: 'space-between', width: '100%', marginTop: 16 }}>
                 <RowContainer>
-                    <SubdescriptionText>Всего: {statElement.totalCount}</SubdescriptionText>
+                    <MediumText>Всего: {statElement.totalCount}</MediumText>
                 </RowContainer>
                 <RowContainer>
-                    <SubdescriptionText>ROI: {statElement.roi + '%'}</SubdescriptionText>
+                    <MediumText>ROI: {statElement.roi + '%'}</MediumText>
                 </RowContainer>
             </RowContainer>
 

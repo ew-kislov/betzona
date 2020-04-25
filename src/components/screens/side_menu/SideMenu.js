@@ -11,7 +11,8 @@ import {
     DrawerRatingIcon,
     DrawerAddIcon,
     DrawerProfileIcon,
-    DrawerLogoutIcon
+    DrawerLogoutIcon,
+    SubdescriptionText
 } from '../../primitives'
 import { ContentLayout } from '../../templates'
 import { styles } from '../styles'
@@ -29,9 +30,8 @@ export const SideMenu = ({
 }) => {
     return (
         <View style={{ flex: 1 }}>
-            <ContentLayout style={{ padding: 20, paddingTop: 30 }} loading={loading}>
+            <ContentLayout style={{ padding: 20, paddingTop: 30, zIndex: 10000 }} loading={loading}>
                 <SafeAreaView />
-                <PhoneIcon style={{ position: 'absolute', right: -20 }} />
 
                 <RowContainer style={{ justifyContent: 'space-between', alignItems: 'center' }}>
                     <LogoIcon />
@@ -46,11 +46,11 @@ export const SideMenu = ({
                         (
                             <View>
                                 <RowContainer style={{ marginTop: 10 }}>
-                                    <Text style={styles.sideMenuText}>Доступно: </Text>
+                                    <SubdescriptionText>Доступно: </SubdescriptionText>
                                     <Text style={styles.sideMenuBoldText}>{profileBank.available + '€'}</Text>
                                 </RowContainer>
                                 <RowContainer style={{ marginTop: 5, marginBottom: 10 }}>
-                                    <Text style={styles.sideMenuText}>Банк: </Text>
+                                    <SubdescriptionText>Банк: </SubdescriptionText>
                                     <Text style={styles.sideMenuBoldText}>{profileBank.bank + '€'}</Text>
                                 </RowContainer>
                             </View>
@@ -77,15 +77,13 @@ export const SideMenu = ({
                         <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Добавить прогноз</Text>
                     </MenuItem>
 
-
-                    {/* <WidePrimaryButton onPress={handleLogout} style={{ marginTop: 20 }} isActive={true} text="Войти">Выйти</WidePrimaryButton> */}
                 </View>
             </ContentLayout>
 
             {
                 token &&
                 (
-                    <TouchableOpacity style={{ position: 'absolute', bottom: 30, alignSelf: 'center' }} onPress={handleLogout}>
+                    <TouchableOpacity style={{ position: 'absolute', bottom: 30, alignSelf: 'center', zIndex: 100000 }} onPress={handleLogout}>
                         <RowContainer style={{ alignItems: 'center' }}>
                             <DrawerLogoutIcon />
                             <Text style={[styles.sideMenuBoldText, { marginLeft: 15 }]}>Выйти из аккаунта</Text>
@@ -93,6 +91,8 @@ export const SideMenu = ({
                     </TouchableOpacity>
                 )
             }
+
+            <PhoneIcon style={{ position: 'absolute', right: 0, zIndex: 1 }} />
         </View>
     )
 }

@@ -95,6 +95,75 @@
 		E14C6EA53D5941D9A3A55325 /* popular.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EB6434474FC458FAF589628 /* popular.png */; };
 		0F47E789DD9A4722B71FC016 /* vk.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA846011287486AA867F968 /* vk.png */; };
 		7648A827938E4EE987A99E1B /* yandex.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DD0C209C384F159391E9E8 /* yandex.png */; };
+		4B0BCF463CD04DC4913F0642 /* add_active.png in Resources */ = {isa = PBXBuildFile; fileRef = A2FB1C26E20D414A884AA4C7 /* add_active.png */; };
+		541F500E2E7F42A5BD4E7D47 /* add_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = CC61B5537DCA407989AAAD08 /* add_active.svg */; };
+		F1DEBBB05AF5459EAF01DFCA /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D156F17B00F4513B16B59E8 /* add.png */; };
+		10073F6128434E8F8D38AEBF /* add.svg in Resources */ = {isa = PBXBuildFile; fileRef = 46D8BDB497A543EC9B5BDD3B /* add.svg */; };
+		95B74946DB764F01B9B0F8EB /* american_football2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F08B03E02F34093BB5BC47F /* american_football2.png */; };
+		746D5E041F2C45D2BD95B66D /* baseball2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF0421B94D24B738006A405 /* baseball2.png */; };
+		A2381981C9574F48A0FE9EB2 /* basketball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D9A441B2634FCEBE8AC36B /* basketball2.png */; };
+		7CCCB6FEB36F4117A6906FDC /* chevron2.png in Resources */ = {isa = PBXBuildFile; fileRef = 67C1BF4F68164FCBA383AF46 /* chevron2.png */; };
+		5A0F37B8477340248BAA0D0B /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1ECD18E5F948FC9C4CEB14 /* close.png */; };
+		06BBCE40472643AD8B28EE17 /* drawer_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 939941C6F09A4525A9E57640 /* drawer_add.png */; };
+		A1A9E556F6524959B9AC76D9 /* drawer_home.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2A2338727046418F6416E2 /* drawer_home.png */; };
+		6F015BAD63EC457486476B85 /* drawer_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = AA2A738385884170A404B075 /* drawer_iphone.png */; };
+		DF9EE4C68A6A4FCD864A12DE /* drawer_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18EE6AE7A51C415A9541E4CC /* drawer_logo.png */; };
+		917407D4A4D7411FA4CCA794 /* drawer_logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 71E00426B27A42D0B6410267 /* drawer_logout.png */; };
+		7D36B13AF3624EEFB33CEC0E /* drawer_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A1FFFCF1544BA0B238F3CB /* drawer_profile.png */; };
+		E546F6AF0FE64D4AB136C9E6 /* drawer_rating.png in Resources */ = {isa = PBXBuildFile; fileRef = AA9A4E6D7FD940FF8E5FF85E /* drawer_rating.png */; };
+		B1B40F292E4648D4A3B3F934 /* football2.png in Resources */ = {isa = PBXBuildFile; fileRef = FD349C4447C84864AEF6621E /* football2.png */; };
+		8E41E4571BDF4A2789D628E0 /* handball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AE5A2D85E4A4A788B3429A0 /* handball2.png */; };
+		7B21179A006947F3A55F3E63 /* hockey2.png in Resources */ = {isa = PBXBuildFile; fileRef = 862FF226DA73403B9EAFDB14 /* hockey2.png */; };
+		8FFFD119BB574F499C1D1478 /* home_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACF1B8FCE4344968604FB0C /* home_active.png */; };
+		26E14D332F4243EBB5E4D0C5 /* home_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 64084F0164424C6791E1B774 /* home_active.svg */; };
+		2094019823A64DBEB41AE1BA /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B3F3EDCC5934000B6B1D0B9 /* home.png */; };
+		66E9C91449EE4546B158CF7B /* home.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0C05CE6564394604B54D1B81 /* home.svg */; };
+		DF08E82852C94A35BB039EC7 /* nearest2.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A066BC0C8D421282B61C12 /* nearest2.png */; };
+		EBC8FC96D6254F1CA9F4B1F5 /* popular2.png in Resources */ = {isa = PBXBuildFile; fileRef = 822C998DE07545D8BEA74F43 /* popular2.png */; };
+		BE02B0E6E2044001BC080539 /* profile_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F83522E6A4C4D2485CC0216 /* profile_active.png */; };
+		7D5DE634AA2F474CAC2703DD /* profile_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9627024C98A84F889B1AA2E4 /* profile_active.svg */; };
+		CABFB0B6E9524EBDB6C7C18C /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F0EDEBFDDE4162BC9B0A78 /* profile.png */; };
+		B35AC6D1A37E47A88D0A5332 /* profile.svg in Resources */ = {isa = PBXBuildFile; fileRef = BEE7466C14B1462FA9244311 /* profile.svg */; };
+		37820A33F27941019CC52F85 /* rating_active.png in Resources */ = {isa = PBXBuildFile; fileRef = A4765D17A1164D75B50F3E99 /* rating_active.png */; };
+		F1A098D25D8E4F8A9DEC0E75 /* rating_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = DA070B78F4BC48CFA5E3765D /* rating_active.svg */; };
+		F52395DAAB3C416AA6D49B2F /* rating.png in Resources */ = {isa = PBXBuildFile; fileRef = 574F35735A6D4D42AC4785D6 /* rating.png */; };
+		9E6D1D87DBBF47DA80754DD9 /* rating.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7C392D80DC8646EA8E22DBD1 /* rating.svg */; };
+		3B9087EDFAD84B8FAE36142B /* rating2.png in Resources */ = {isa = PBXBuildFile; fileRef = 456534E2608D44DCBA90E21B /* rating2.png */; };
+		106C7F5F5FB04AC8971D3C6F /* soccer2.png in Resources */ = {isa = PBXBuildFile; fileRef = E701F3500D15450594028FB2 /* soccer2.png */; };
+		A0B9CDE44D9244BBA660638B /* tab_all_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB6C5EEC57B443FA53657C4 /* tab_all_active.png */; };
+		A503A99A1A3A4B58A0EC5168 /* tab_all_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = DD7F42389DCD4854944B4F60 /* tab_all_active.svg */; };
+		705DD7E9BCBE440E805D6212 /* tab_all.png in Resources */ = {isa = PBXBuildFile; fileRef = 8452383167ED4C52A4CF6469 /* tab_all.png */; };
+		BD6898465DC249B1B077B0F7 /* tab_basketball_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 839CDEB7403447B3B03464E1 /* tab_basketball_active.png */; };
+		019C0C73934D43BF8816CB28 /* tab_basketball_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = B7631DBD703C417CBDFD4E6B /* tab_basketball_active.svg */; };
+		BA506DED95AD47D9BDD03099 /* tab_basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = D944683478EC4541AF8FDC33 /* tab_basketball.png */; };
+		27F957DF77424615B9580C7C /* tab_football_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 47DC1D7BA37B4684B9DC3029 /* tab_football_active.png */; };
+		D7B3401B9220485B8C32A84C /* tab_football_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = D4DDD4EE9E5D4A579EA02ECA /* tab_football_active.svg */; };
+		C7F8152B7C644887A678546A /* tab_football.png in Resources */ = {isa = PBXBuildFile; fileRef = C6452EA1A8194C518FB5B58E /* tab_football.png */; };
+		C77FFD1C25774F2EBBF5827C /* tab_hockey_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 0716474607844C87B3B73AC7 /* tab_hockey_active.png */; };
+		BE81EE57C47741F1A24E391B /* tab_hockey_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = F7B5B3CF760E4A59BC002987 /* tab_hockey_active.svg */; };
+		AEAB7FFC3E1C4B998A74DE7B /* tab_hockey.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A5D243274046F3BE7855E9 /* tab_hockey.png */; };
+		0D452C91BFA34CDA961A2DEF /* tab_tennis_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D57712C96B64F188BE02B16 /* tab_tennis_active.png */; };
+		7BE03768F715417F85C194B8 /* tab_tennis_active.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4626072F5C624ED79FC8813F /* tab_tennis_active.svg */; };
+		E7A459500E8D4880A380A143 /* tab_tennis.png in Resources */ = {isa = PBXBuildFile; fileRef = 6243C4C9D1674E31A1B91940 /* tab_tennis.png */; };
+		5D678BE8C690489C99042AC8 /* tennis2.png in Resources */ = {isa = PBXBuildFile; fileRef = 119A2DB1F54441769F5A50F2 /* tennis2.png */; };
+		2C3DDA4698F34722874C3AFF /* volleyball2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE94B04987F74736B94B381F /* volleyball2.png */; };
+		A5F87942225444DFA574246A /* water_polo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4091885982304BD388A6F50E /* water_polo2.png */; };
+		9BED647073A94BB0AA7E419B /* Geometria-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B20F86EAB0EE4C218F16C322 /* Geometria-Bold.ttf */; };
+		5CB8EEABDD8A47E991785EF7 /* Geometria-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4556922486484E8CA1C0B898 /* Geometria-BoldItalic.ttf */; };
+		3AE48E463EBA4906A239F395 /* Geometria-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B00EDA802A34E87BB00C06C /* Geometria-ExtraBold.ttf */; };
+		9AA8FF8820B344FE8327E780 /* Geometria-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7AC3D6E758443CBBF9D0C78 /* Geometria-ExtraBoldItalic.ttf */; };
+		B01DF0269FC54FD3A39A58DE /* Geometria-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBB43A6A4C9B44079B4E519C /* Geometria-ExtraLight.ttf */; };
+		221FF5D9C6294597A4381168 /* Geometria-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 101CFB27652C4CB9B8E02D74 /* Geometria-ExtraLightItalic.ttf */; };
+		E86AA8C7ACE74A56B0EAEF17 /* Geometria-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0C94256544241308C560207 /* Geometria-Heavy.ttf */; };
+		450B83EA42EF4EE4818652FF /* Geometria-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70AA783F188F48B7BD1F8625 /* Geometria-HeavyItalic.ttf */; };
+		D4644573F3D24A6F9893CCB1 /* Geometria-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BF28BF45645019E8098D6 /* Geometria-Italic.ttf */; };
+		1403A6DE736346FAAD2675C9 /* Geometria-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7769D27C576B4E83A8E9C266 /* Geometria-Light.ttf */; };
+		54EE32CF1BC5405A93A6690D /* Geometria-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843B163609384903B541AF1D /* Geometria-LightItalic.ttf */; };
+		F0B279291F3B40BAA7958375 /* Geometria-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A4307F7448482989FDEA6A /* Geometria-Medium.ttf */; };
+		1C01D6B247BB434E93C78722 /* Geometria-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F37B7CFD197448D19D82CF4D /* Geometria-MediumItalic.ttf */; };
+		084AB4CF66F8443D99D706EE /* Geometria-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F10D806639D64EB4BF12C253 /* Geometria-Thin.ttf */; };
+		D51A7F7FE4A4454EA26DCF31 /* Geometria-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD1EA38EBEB64956A4E0B21C /* Geometria-ThinItalic.ttf */; };
+		86CD1FFBE323433DBBC125A4 /* Geometria.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA220A4373B24052977494D5 /* Geometria.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +270,75 @@
 		7EB6434474FC458FAF589628 /* popular.png */ = {isa = PBXFileReference; name = "popular.png"; path = "../assets/png/popular.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		AAA846011287486AA867F968 /* vk.png */ = {isa = PBXFileReference; name = "vk.png"; path = "../assets/png/vk.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		47DD0C209C384F159391E9E8 /* yandex.png */ = {isa = PBXFileReference; name = "yandex.png"; path = "../assets/png/yandex.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2FB1C26E20D414A884AA4C7 /* add_active.png */ = {isa = PBXFileReference; name = "add_active.png"; path = "../assets/png/add_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CC61B5537DCA407989AAAD08 /* add_active.svg */ = {isa = PBXFileReference; name = "add_active.svg"; path = "../assets/png/add_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D156F17B00F4513B16B59E8 /* add.png */ = {isa = PBXFileReference; name = "add.png"; path = "../assets/png/add.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		46D8BDB497A543EC9B5BDD3B /* add.svg */ = {isa = PBXFileReference; name = "add.svg"; path = "../assets/png/add.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F08B03E02F34093BB5BC47F /* american_football2.png */ = {isa = PBXFileReference; name = "american_football2.png"; path = "../assets/png/american_football2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BCF0421B94D24B738006A405 /* baseball2.png */ = {isa = PBXFileReference; name = "baseball2.png"; path = "../assets/png/baseball2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55D9A441B2634FCEBE8AC36B /* basketball2.png */ = {isa = PBXFileReference; name = "basketball2.png"; path = "../assets/png/basketball2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		67C1BF4F68164FCBA383AF46 /* chevron2.png */ = {isa = PBXFileReference; name = "chevron2.png"; path = "../assets/png/chevron2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC1ECD18E5F948FC9C4CEB14 /* close.png */ = {isa = PBXFileReference; name = "close.png"; path = "../assets/png/close.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		939941C6F09A4525A9E57640 /* drawer_add.png */ = {isa = PBXFileReference; name = "drawer_add.png"; path = "../assets/png/drawer_add.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DF2A2338727046418F6416E2 /* drawer_home.png */ = {isa = PBXFileReference; name = "drawer_home.png"; path = "../assets/png/drawer_home.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA2A738385884170A404B075 /* drawer_iphone.png */ = {isa = PBXFileReference; name = "drawer_iphone.png"; path = "../assets/png/drawer_iphone.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		18EE6AE7A51C415A9541E4CC /* drawer_logo.png */ = {isa = PBXFileReference; name = "drawer_logo.png"; path = "../assets/png/drawer_logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		71E00426B27A42D0B6410267 /* drawer_logout.png */ = {isa = PBXFileReference; name = "drawer_logout.png"; path = "../assets/png/drawer_logout.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		61A1FFFCF1544BA0B238F3CB /* drawer_profile.png */ = {isa = PBXFileReference; name = "drawer_profile.png"; path = "../assets/png/drawer_profile.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA9A4E6D7FD940FF8E5FF85E /* drawer_rating.png */ = {isa = PBXFileReference; name = "drawer_rating.png"; path = "../assets/png/drawer_rating.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD349C4447C84864AEF6621E /* football2.png */ = {isa = PBXFileReference; name = "football2.png"; path = "../assets/png/football2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3AE5A2D85E4A4A788B3429A0 /* handball2.png */ = {isa = PBXFileReference; name = "handball2.png"; path = "../assets/png/handball2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		862FF226DA73403B9EAFDB14 /* hockey2.png */ = {isa = PBXFileReference; name = "hockey2.png"; path = "../assets/png/hockey2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9ACF1B8FCE4344968604FB0C /* home_active.png */ = {isa = PBXFileReference; name = "home_active.png"; path = "../assets/png/home_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		64084F0164424C6791E1B774 /* home_active.svg */ = {isa = PBXFileReference; name = "home_active.svg"; path = "../assets/png/home_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B3F3EDCC5934000B6B1D0B9 /* home.png */ = {isa = PBXFileReference; name = "home.png"; path = "../assets/png/home.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0C05CE6564394604B54D1B81 /* home.svg */ = {isa = PBXFileReference; name = "home.svg"; path = "../assets/png/home.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		91A066BC0C8D421282B61C12 /* nearest2.png */ = {isa = PBXFileReference; name = "nearest2.png"; path = "../assets/png/nearest2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		822C998DE07545D8BEA74F43 /* popular2.png */ = {isa = PBXFileReference; name = "popular2.png"; path = "../assets/png/popular2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9F83522E6A4C4D2485CC0216 /* profile_active.png */ = {isa = PBXFileReference; name = "profile_active.png"; path = "../assets/png/profile_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9627024C98A84F889B1AA2E4 /* profile_active.svg */ = {isa = PBXFileReference; name = "profile_active.svg"; path = "../assets/png/profile_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05F0EDEBFDDE4162BC9B0A78 /* profile.png */ = {isa = PBXFileReference; name = "profile.png"; path = "../assets/png/profile.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BEE7466C14B1462FA9244311 /* profile.svg */ = {isa = PBXFileReference; name = "profile.svg"; path = "../assets/png/profile.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A4765D17A1164D75B50F3E99 /* rating_active.png */ = {isa = PBXFileReference; name = "rating_active.png"; path = "../assets/png/rating_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA070B78F4BC48CFA5E3765D /* rating_active.svg */ = {isa = PBXFileReference; name = "rating_active.svg"; path = "../assets/png/rating_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		574F35735A6D4D42AC4785D6 /* rating.png */ = {isa = PBXFileReference; name = "rating.png"; path = "../assets/png/rating.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C392D80DC8646EA8E22DBD1 /* rating.svg */ = {isa = PBXFileReference; name = "rating.svg"; path = "../assets/png/rating.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		456534E2608D44DCBA90E21B /* rating2.png */ = {isa = PBXFileReference; name = "rating2.png"; path = "../assets/png/rating2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E701F3500D15450594028FB2 /* soccer2.png */ = {isa = PBXFileReference; name = "soccer2.png"; path = "../assets/png/soccer2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2FB6C5EEC57B443FA53657C4 /* tab_all_active.png */ = {isa = PBXFileReference; name = "tab_all_active.png"; path = "../assets/png/tab_all_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD7F42389DCD4854944B4F60 /* tab_all_active.svg */ = {isa = PBXFileReference; name = "tab_all_active.svg"; path = "../assets/png/tab_all_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8452383167ED4C52A4CF6469 /* tab_all.png */ = {isa = PBXFileReference; name = "tab_all.png"; path = "../assets/png/tab_all.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		839CDEB7403447B3B03464E1 /* tab_basketball_active.png */ = {isa = PBXFileReference; name = "tab_basketball_active.png"; path = "../assets/png/tab_basketball_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B7631DBD703C417CBDFD4E6B /* tab_basketball_active.svg */ = {isa = PBXFileReference; name = "tab_basketball_active.svg"; path = "../assets/png/tab_basketball_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D944683478EC4541AF8FDC33 /* tab_basketball.png */ = {isa = PBXFileReference; name = "tab_basketball.png"; path = "../assets/png/tab_basketball.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		47DC1D7BA37B4684B9DC3029 /* tab_football_active.png */ = {isa = PBXFileReference; name = "tab_football_active.png"; path = "../assets/png/tab_football_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D4DDD4EE9E5D4A579EA02ECA /* tab_football_active.svg */ = {isa = PBXFileReference; name = "tab_football_active.svg"; path = "../assets/png/tab_football_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C6452EA1A8194C518FB5B58E /* tab_football.png */ = {isa = PBXFileReference; name = "tab_football.png"; path = "../assets/png/tab_football.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0716474607844C87B3B73AC7 /* tab_hockey_active.png */ = {isa = PBXFileReference; name = "tab_hockey_active.png"; path = "../assets/png/tab_hockey_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F7B5B3CF760E4A59BC002987 /* tab_hockey_active.svg */ = {isa = PBXFileReference; name = "tab_hockey_active.svg"; path = "../assets/png/tab_hockey_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53A5D243274046F3BE7855E9 /* tab_hockey.png */ = {isa = PBXFileReference; name = "tab_hockey.png"; path = "../assets/png/tab_hockey.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D57712C96B64F188BE02B16 /* tab_tennis_active.png */ = {isa = PBXFileReference; name = "tab_tennis_active.png"; path = "../assets/png/tab_tennis_active.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4626072F5C624ED79FC8813F /* tab_tennis_active.svg */ = {isa = PBXFileReference; name = "tab_tennis_active.svg"; path = "../assets/png/tab_tennis_active.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6243C4C9D1674E31A1B91940 /* tab_tennis.png */ = {isa = PBXFileReference; name = "tab_tennis.png"; path = "../assets/png/tab_tennis.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		119A2DB1F54441769F5A50F2 /* tennis2.png */ = {isa = PBXFileReference; name = "tennis2.png"; path = "../assets/png/tennis2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE94B04987F74736B94B381F /* volleyball2.png */ = {isa = PBXFileReference; name = "volleyball2.png"; path = "../assets/png/volleyball2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4091885982304BD388A6F50E /* water_polo2.png */ = {isa = PBXFileReference; name = "water_polo2.png"; path = "../assets/png/water_polo2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B20F86EAB0EE4C218F16C322 /* Geometria-Bold.ttf */ = {isa = PBXFileReference; name = "Geometria-Bold.ttf"; path = "../assets/fonts/Geometria-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4556922486484E8CA1C0B898 /* Geometria-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-BoldItalic.ttf"; path = "../assets/fonts/Geometria-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B00EDA802A34E87BB00C06C /* Geometria-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Geometria-ExtraBold.ttf"; path = "../assets/fonts/Geometria-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7AC3D6E758443CBBF9D0C78 /* Geometria-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-ExtraBoldItalic.ttf"; path = "../assets/fonts/Geometria-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BBB43A6A4C9B44079B4E519C /* Geometria-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Geometria-ExtraLight.ttf"; path = "../assets/fonts/Geometria-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		101CFB27652C4CB9B8E02D74 /* Geometria-ExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-ExtraLightItalic.ttf"; path = "../assets/fonts/Geometria-ExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E0C94256544241308C560207 /* Geometria-Heavy.ttf */ = {isa = PBXFileReference; name = "Geometria-Heavy.ttf"; path = "../assets/fonts/Geometria-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		70AA783F188F48B7BD1F8625 /* Geometria-HeavyItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-HeavyItalic.ttf"; path = "../assets/fonts/Geometria-HeavyItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4D4BF28BF45645019E8098D6 /* Geometria-Italic.ttf */ = {isa = PBXFileReference; name = "Geometria-Italic.ttf"; path = "../assets/fonts/Geometria-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7769D27C576B4E83A8E9C266 /* Geometria-Light.ttf */ = {isa = PBXFileReference; name = "Geometria-Light.ttf"; path = "../assets/fonts/Geometria-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		843B163609384903B541AF1D /* Geometria-LightItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-LightItalic.ttf"; path = "../assets/fonts/Geometria-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		97A4307F7448482989FDEA6A /* Geometria-Medium.ttf */ = {isa = PBXFileReference; name = "Geometria-Medium.ttf"; path = "../assets/fonts/Geometria-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F37B7CFD197448D19D82CF4D /* Geometria-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-MediumItalic.ttf"; path = "../assets/fonts/Geometria-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F10D806639D64EB4BF12C253 /* Geometria-Thin.ttf */ = {isa = PBXFileReference; name = "Geometria-Thin.ttf"; path = "../assets/fonts/Geometria-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD1EA38EBEB64956A4E0B21C /* Geometria-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Geometria-ThinItalic.ttf"; path = "../assets/fonts/Geometria-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AA220A4373B24052977494D5 /* Geometria.ttf */ = {isa = PBXFileReference; name = "Geometria.ttf"; path = "../assets/fonts/Geometria.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +487,75 @@
 				7EB6434474FC458FAF589628 /* popular.png */,
 				AAA846011287486AA867F968 /* vk.png */,
 				47DD0C209C384F159391E9E8 /* yandex.png */,
+				A2FB1C26E20D414A884AA4C7 /* add_active.png */,
+				CC61B5537DCA407989AAAD08 /* add_active.svg */,
+				9D156F17B00F4513B16B59E8 /* add.png */,
+				46D8BDB497A543EC9B5BDD3B /* add.svg */,
+				0F08B03E02F34093BB5BC47F /* american_football2.png */,
+				BCF0421B94D24B738006A405 /* baseball2.png */,
+				55D9A441B2634FCEBE8AC36B /* basketball2.png */,
+				67C1BF4F68164FCBA383AF46 /* chevron2.png */,
+				AC1ECD18E5F948FC9C4CEB14 /* close.png */,
+				939941C6F09A4525A9E57640 /* drawer_add.png */,
+				DF2A2338727046418F6416E2 /* drawer_home.png */,
+				AA2A738385884170A404B075 /* drawer_iphone.png */,
+				18EE6AE7A51C415A9541E4CC /* drawer_logo.png */,
+				71E00426B27A42D0B6410267 /* drawer_logout.png */,
+				61A1FFFCF1544BA0B238F3CB /* drawer_profile.png */,
+				AA9A4E6D7FD940FF8E5FF85E /* drawer_rating.png */,
+				FD349C4447C84864AEF6621E /* football2.png */,
+				3AE5A2D85E4A4A788B3429A0 /* handball2.png */,
+				862FF226DA73403B9EAFDB14 /* hockey2.png */,
+				9ACF1B8FCE4344968604FB0C /* home_active.png */,
+				64084F0164424C6791E1B774 /* home_active.svg */,
+				4B3F3EDCC5934000B6B1D0B9 /* home.png */,
+				0C05CE6564394604B54D1B81 /* home.svg */,
+				91A066BC0C8D421282B61C12 /* nearest2.png */,
+				822C998DE07545D8BEA74F43 /* popular2.png */,
+				9F83522E6A4C4D2485CC0216 /* profile_active.png */,
+				9627024C98A84F889B1AA2E4 /* profile_active.svg */,
+				05F0EDEBFDDE4162BC9B0A78 /* profile.png */,
+				BEE7466C14B1462FA9244311 /* profile.svg */,
+				A4765D17A1164D75B50F3E99 /* rating_active.png */,
+				DA070B78F4BC48CFA5E3765D /* rating_active.svg */,
+				574F35735A6D4D42AC4785D6 /* rating.png */,
+				7C392D80DC8646EA8E22DBD1 /* rating.svg */,
+				456534E2608D44DCBA90E21B /* rating2.png */,
+				E701F3500D15450594028FB2 /* soccer2.png */,
+				2FB6C5EEC57B443FA53657C4 /* tab_all_active.png */,
+				DD7F42389DCD4854944B4F60 /* tab_all_active.svg */,
+				8452383167ED4C52A4CF6469 /* tab_all.png */,
+				839CDEB7403447B3B03464E1 /* tab_basketball_active.png */,
+				B7631DBD703C417CBDFD4E6B /* tab_basketball_active.svg */,
+				D944683478EC4541AF8FDC33 /* tab_basketball.png */,
+				47DC1D7BA37B4684B9DC3029 /* tab_football_active.png */,
+				D4DDD4EE9E5D4A579EA02ECA /* tab_football_active.svg */,
+				C6452EA1A8194C518FB5B58E /* tab_football.png */,
+				0716474607844C87B3B73AC7 /* tab_hockey_active.png */,
+				F7B5B3CF760E4A59BC002987 /* tab_hockey_active.svg */,
+				53A5D243274046F3BE7855E9 /* tab_hockey.png */,
+				8D57712C96B64F188BE02B16 /* tab_tennis_active.png */,
+				4626072F5C624ED79FC8813F /* tab_tennis_active.svg */,
+				6243C4C9D1674E31A1B91940 /* tab_tennis.png */,
+				119A2DB1F54441769F5A50F2 /* tennis2.png */,
+				DE94B04987F74736B94B381F /* volleyball2.png */,
+				4091885982304BD388A6F50E /* water_polo2.png */,
+				B20F86EAB0EE4C218F16C322 /* Geometria-Bold.ttf */,
+				4556922486484E8CA1C0B898 /* Geometria-BoldItalic.ttf */,
+				7B00EDA802A34E87BB00C06C /* Geometria-ExtraBold.ttf */,
+				E7AC3D6E758443CBBF9D0C78 /* Geometria-ExtraBoldItalic.ttf */,
+				BBB43A6A4C9B44079B4E519C /* Geometria-ExtraLight.ttf */,
+				101CFB27652C4CB9B8E02D74 /* Geometria-ExtraLightItalic.ttf */,
+				E0C94256544241308C560207 /* Geometria-Heavy.ttf */,
+				70AA783F188F48B7BD1F8625 /* Geometria-HeavyItalic.ttf */,
+				4D4BF28BF45645019E8098D6 /* Geometria-Italic.ttf */,
+				7769D27C576B4E83A8E9C266 /* Geometria-Light.ttf */,
+				843B163609384903B541AF1D /* Geometria-LightItalic.ttf */,
+				97A4307F7448482989FDEA6A /* Geometria-Medium.ttf */,
+				F37B7CFD197448D19D82CF4D /* Geometria-MediumItalic.ttf */,
+				F10D806639D64EB4BF12C253 /* Geometria-Thin.ttf */,
+				FD1EA38EBEB64956A4E0B21C /* Geometria-ThinItalic.ttf */,
+				AA220A4373B24052977494D5 /* Geometria.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -631,6 +838,75 @@
 				E14C6EA53D5941D9A3A55325 /* popular.png in Resources */,
 				0F47E789DD9A4722B71FC016 /* vk.png in Resources */,
 				7648A827938E4EE987A99E1B /* yandex.png in Resources */,
+				4B0BCF463CD04DC4913F0642 /* add_active.png in Resources */,
+				541F500E2E7F42A5BD4E7D47 /* add_active.svg in Resources */,
+				F1DEBBB05AF5459EAF01DFCA /* add.png in Resources */,
+				10073F6128434E8F8D38AEBF /* add.svg in Resources */,
+				95B74946DB764F01B9B0F8EB /* american_football2.png in Resources */,
+				746D5E041F2C45D2BD95B66D /* baseball2.png in Resources */,
+				A2381981C9574F48A0FE9EB2 /* basketball2.png in Resources */,
+				7CCCB6FEB36F4117A6906FDC /* chevron2.png in Resources */,
+				5A0F37B8477340248BAA0D0B /* close.png in Resources */,
+				06BBCE40472643AD8B28EE17 /* drawer_add.png in Resources */,
+				A1A9E556F6524959B9AC76D9 /* drawer_home.png in Resources */,
+				6F015BAD63EC457486476B85 /* drawer_iphone.png in Resources */,
+				DF9EE4C68A6A4FCD864A12DE /* drawer_logo.png in Resources */,
+				917407D4A4D7411FA4CCA794 /* drawer_logout.png in Resources */,
+				7D36B13AF3624EEFB33CEC0E /* drawer_profile.png in Resources */,
+				E546F6AF0FE64D4AB136C9E6 /* drawer_rating.png in Resources */,
+				B1B40F292E4648D4A3B3F934 /* football2.png in Resources */,
+				8E41E4571BDF4A2789D628E0 /* handball2.png in Resources */,
+				7B21179A006947F3A55F3E63 /* hockey2.png in Resources */,
+				8FFFD119BB574F499C1D1478 /* home_active.png in Resources */,
+				26E14D332F4243EBB5E4D0C5 /* home_active.svg in Resources */,
+				2094019823A64DBEB41AE1BA /* home.png in Resources */,
+				66E9C91449EE4546B158CF7B /* home.svg in Resources */,
+				DF08E82852C94A35BB039EC7 /* nearest2.png in Resources */,
+				EBC8FC96D6254F1CA9F4B1F5 /* popular2.png in Resources */,
+				BE02B0E6E2044001BC080539 /* profile_active.png in Resources */,
+				7D5DE634AA2F474CAC2703DD /* profile_active.svg in Resources */,
+				CABFB0B6E9524EBDB6C7C18C /* profile.png in Resources */,
+				B35AC6D1A37E47A88D0A5332 /* profile.svg in Resources */,
+				37820A33F27941019CC52F85 /* rating_active.png in Resources */,
+				F1A098D25D8E4F8A9DEC0E75 /* rating_active.svg in Resources */,
+				F52395DAAB3C416AA6D49B2F /* rating.png in Resources */,
+				9E6D1D87DBBF47DA80754DD9 /* rating.svg in Resources */,
+				3B9087EDFAD84B8FAE36142B /* rating2.png in Resources */,
+				106C7F5F5FB04AC8971D3C6F /* soccer2.png in Resources */,
+				A0B9CDE44D9244BBA660638B /* tab_all_active.png in Resources */,
+				A503A99A1A3A4B58A0EC5168 /* tab_all_active.svg in Resources */,
+				705DD7E9BCBE440E805D6212 /* tab_all.png in Resources */,
+				BD6898465DC249B1B077B0F7 /* tab_basketball_active.png in Resources */,
+				019C0C73934D43BF8816CB28 /* tab_basketball_active.svg in Resources */,
+				BA506DED95AD47D9BDD03099 /* tab_basketball.png in Resources */,
+				27F957DF77424615B9580C7C /* tab_football_active.png in Resources */,
+				D7B3401B9220485B8C32A84C /* tab_football_active.svg in Resources */,
+				C7F8152B7C644887A678546A /* tab_football.png in Resources */,
+				C77FFD1C25774F2EBBF5827C /* tab_hockey_active.png in Resources */,
+				BE81EE57C47741F1A24E391B /* tab_hockey_active.svg in Resources */,
+				AEAB7FFC3E1C4B998A74DE7B /* tab_hockey.png in Resources */,
+				0D452C91BFA34CDA961A2DEF /* tab_tennis_active.png in Resources */,
+				7BE03768F715417F85C194B8 /* tab_tennis_active.svg in Resources */,
+				E7A459500E8D4880A380A143 /* tab_tennis.png in Resources */,
+				5D678BE8C690489C99042AC8 /* tennis2.png in Resources */,
+				2C3DDA4698F34722874C3AFF /* volleyball2.png in Resources */,
+				A5F87942225444DFA574246A /* water_polo2.png in Resources */,
+				9BED647073A94BB0AA7E419B /* Geometria-Bold.ttf in Resources */,
+				5CB8EEABDD8A47E991785EF7 /* Geometria-BoldItalic.ttf in Resources */,
+				3AE48E463EBA4906A239F395 /* Geometria-ExtraBold.ttf in Resources */,
+				9AA8FF8820B344FE8327E780 /* Geometria-ExtraBoldItalic.ttf in Resources */,
+				B01DF0269FC54FD3A39A58DE /* Geometria-ExtraLight.ttf in Resources */,
+				221FF5D9C6294597A4381168 /* Geometria-ExtraLightItalic.ttf in Resources */,
+				E86AA8C7ACE74A56B0EAEF17 /* Geometria-Heavy.ttf in Resources */,
+				450B83EA42EF4EE4818652FF /* Geometria-HeavyItalic.ttf in Resources */,
+				D4644573F3D24A6F9893CCB1 /* Geometria-Italic.ttf in Resources */,
+				1403A6DE736346FAAD2675C9 /* Geometria-Light.ttf in Resources */,
+				54EE32CF1BC5405A93A6690D /* Geometria-LightItalic.ttf in Resources */,
+				F0B279291F3B40BAA7958375 /* Geometria-Medium.ttf in Resources */,
+				1C01D6B247BB434E93C78722 /* Geometria-MediumItalic.ttf in Resources */,
+				084AB4CF66F8443D99D706EE /* Geometria-Thin.ttf in Resources */,
+				D51A7F7FE4A4454EA26DCF31 /* Geometria-ThinItalic.ttf in Resources */,
+				86CD1FFBE323433DBBC125A4 /* Geometria.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

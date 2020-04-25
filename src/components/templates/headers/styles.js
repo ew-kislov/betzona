@@ -21,8 +21,8 @@ export const styles = {
 
     },
     headerText: {
-        fontFamily: 'PTSans-NarrowBold',
-        fontSize: 17,
+        fontFamily: 'Geometria-Bold',
+        fontSize: 16,
         lineHeight: 22,
         color: '#1B2939',
         marginRight: 60,

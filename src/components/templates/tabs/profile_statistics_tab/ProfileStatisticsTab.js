@@ -13,7 +13,7 @@ export const ProfileStatisticsTab = ({ loading, profileStats, graph }) => {
 
     return (
         <ScreenLayout>
-            <ContentLayout loading={loading}>
+            <ContentLayout loading={loading} withoutPadding={true} >
 
                 {
                     graph && graph.data && graph.data.length > 0 && (
@@ -39,12 +39,12 @@ export const ProfileStatisticsTab = ({ loading, profileStats, graph }) => {
                     Object.entries(profileStats).map(([category, statsByCategory]) => {
                         return (
                             <View>
-                                <SubtitleText style={{ marginTop: 20 }}>{category}</SubtitleText>
+                                <SubtitleText style={{ marginTop: 20, marginLeft: 15 }}>{category}</SubtitleText>
                                 {
                                     statsByCategory.map(statElement => (
-                                        <View>
-                                            <GrayText style={{ marginTop: 20 }}>{statElement.categoryName}</GrayText>
-                                            <ProfileStatPanel style={{ marginTop: 10 }} statElement={statElement} />
+                                        <View style={{ marginLeft: 15 }}>
+                                            <GrayText style={{ marginTop: 10 }}>{statElement.categoryName}</GrayText>
+                                            <ProfileStatPanel style={{ marginTop: 10, marginBottom: 10 }} statElement={statElement} />
                                         </View>
                                     ))
                                 }

@@ -136,13 +136,13 @@ export const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     sliderButtonText: {
-        fontSize: 13,
-        fontFamily: 'PTSans-Narrow',
+        fontSize: 12,
+        fontFamily: 'Geometria-Medium',
         color: "#45ADE2",
     },
     sliderButtonInactiveText: {
-        fontSize: 13,
-        fontFamily: 'PTSans-Narrow',
+        fontSize: 12,
+        fontFamily: 'Geometria-Thin',
         color: "#828a92",
     },
     sportTabButton: {
@@ -192,7 +192,22 @@ export const styles = StyleSheet.create({
     },
     outlineButtonText: {
         fontSize: 14,
-        fontFamily: 'PTSans-NarrowBold',
+        fontFamily: 'Geometria-Bold',
         color: "#45ade1"
+    },
+    outlineButtonInactive: {
+        padding: 12,
+        borderRadius: 7,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        borderWidth: 2,
+        height: 48,
+        borderColor: '#ccc'
+    },
+    outlineButtonTextInactive: {
+        fontSize: 14,
+        fontFamily: 'Geometria-Bold',
+        color: "#ccc"
     },
 })

@@ -13,7 +13,7 @@ export class ProfileContainerWithoutConnect extends Component {
     state = {
         username: '',
         password: '',
-        activeTab: 'statistics'
+        activeTab: 'account'
     }
 
     setActiveTab = (activeTab) => {

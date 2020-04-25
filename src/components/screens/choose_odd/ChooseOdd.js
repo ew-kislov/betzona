@@ -12,14 +12,15 @@ export const ChooseOdd = ({ loading, oddList, navigateToChooseMoney, match }) =>
     return (
         <ScreenLayout>
             <Header back customTitle title={match.name} />
-            <ContentLayout loading={loading}>
-                <View style={{ marginBottom: 20, marginTop: 10 }}>
+            <ContentLayout loading={loading} withoutPadding={true}>
+                <View style={{ marginTop: 10 }}>
                     {Object.keys(oddList).map((oddName, ind) =>
                         <OddPanel
                             key={ind}
                             oddName={oddName}
                             oddInfo={oddList[oddName]}
                             handleOddPress={navigateToChooseMoney}
+                            last={ind == Object.keys(oddList).length - 1}
                         />)}
                 </View>
             </ContentLayout>
