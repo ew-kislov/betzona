@@ -1,20 +1,20 @@
 import React from 'react'
 import { View, Dimensions } from 'react-native'
-import LineChart from '../../../primitives/charts/line-chart'
+// import LineChart from '../../../primitives/charts/line-chart'
 
 import { ScreenLayout, ContentLayout, ProfileStatPanel } from '../../../templates'
 import { SubtitleText, GrayText } from '../../../primitives'
 
-export const ProfileStatisticsTab = ({ loading, profileStats, graph }) => {
+export const ProfileStatisticsTab = ({ loading, profileStats, graph, shown, showMore }) => {
     chartParams = {
         labels: graph.labels,
         datasets: [{ data: graph.data, color: () => '#54b1e0', strokeWidth: 1 }]
     }
-
+    console.warn(shown);
     return (
         <ScreenLayout>
-            <ContentLayout loading={loading} withoutPadding={true} >
-
+            <ContentLayout loading={loading} withoutPadding={true} scrollEndHanler={showMore}>
+{/* 
                 {
                     graph && graph.data && graph.data.length > 0 && (
                         <View>
@@ -33,7 +33,7 @@ export const ProfileStatisticsTab = ({ loading, profileStats, graph }) => {
                             </View>
                         </View>
                     )
-                }
+                } */}
 
                 {
                     Object.entries(profileStats).map(([category, statsByCategory]) => {
@@ -41,7 +41,7 @@ export const ProfileStatisticsTab = ({ loading, profileStats, graph }) => {
                             <View>
                                 <SubtitleText style={{ marginTop: 20, marginLeft: 15 }}>{category}</SubtitleText>
                                 {
-                                    statsByCategory.map(statElement => (
+                                    statsByCategory.map((statElement, ind) => (ind < shown) && (
                                         <View style={{ marginLeft: 15 }}>
                                             <GrayText style={{ marginTop: 10 }}>{statElement.categoryName}</GrayText>
                                             <ProfileStatPanel style={{ marginTop: 10, marginBottom: 10 }} statElement={statElement} />

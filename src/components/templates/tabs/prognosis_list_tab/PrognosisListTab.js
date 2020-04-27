@@ -3,10 +3,9 @@ import { View, Text } from 'react-native'
 
 import { ContentLayout } from '../../layouts/ContentLayout'
 import { PrognosisPanel } from '../../panels'
-import { SubtitleText, PrimaryButton, RowContainer, Panel, SliderPanel, SliderButton } from '../../../primitives'
-import { styles } from '../styles'
+import { SubtitleText, SliderPanel, SliderButton } from '../../../primitives'
 
-import { SPORT_TYPES, DAY_TYPES } from '../../../../constants'
+import { DAY_TYPES } from '../../../../constants'
 
 export const PrognosisListTab = ({
     loading,
@@ -15,9 +14,10 @@ export const PrognosisListTab = ({
     refreshHandler,
     selector,
     changeSelector,
-    prognosisPressHandler
+    prognosisPressHandler,
+    shown,
+    showMore
 }) => {
-
     currentPrognosisLength = prognosisList[selector].length
     allPrognosisLength = prognosisList[DAY_TYPES.ALL].length
     todayPrognosisLength = prognosisList[DAY_TYPES.TODAY].length
@@ -26,7 +26,7 @@ export const PrognosisListTab = ({
     isBlank = (allPrognosisLength == 0 && todayPrognosisLength == 0 && tomorrowPrognosisLength == 0)
 
     return (
-        <ContentLayout loading={loading} refreshing={refreshing} refreshHandler={refreshHandler} withoutPadding={true}>
+        <ContentLayout scrollEndHanler={showMore} loading={loading} refreshing={refreshing} refreshHandler={refreshHandler} withoutPadding={true}>
 
             {
                 isBlank ?
@@ -42,7 +42,7 @@ export const PrognosisListTab = ({
             {
                 currentPrognosisLength > 0 && (
                     <View style={{ alignItems: 'center' }}>
-                        {prognosisList[selector].map((prognosis, ind) => (
+                        {prognosisList[selector].map((prognosis, ind) => (ind < shown) && (
                             <PrognosisPanel
                                 key={prognosis.id}
                                 home={prognosis.home}

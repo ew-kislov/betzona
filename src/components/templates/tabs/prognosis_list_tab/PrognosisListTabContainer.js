@@ -15,11 +15,14 @@ import { SPORT_TYPES, DAY_TYPES } from '../../../../constants'
 export class PrognosisListTabContainerWithoutConnect extends Component {
 
     state = {
-        selector: DAY_TYPES.ALL
+        selector: DAY_TYPES.ALL,
+        shown: 5
     }
 
+    showMore = () => this.setState({ shown: this.state.shown + 5 })
+
     changeSelector = selector => {
-        this.setState({ selector })
+        this.setState({ selector, shown: 5 })
     }
 
     refreshHandler = () => this.props.getPrognosisListActionCreator(true)
@@ -27,7 +30,7 @@ export class PrognosisListTabContainerWithoutConnect extends Component {
     render() {
         let { screenProps, loading, refreshing, prognosisList } = this.props
         let { prognosisPressHandler } = screenProps
-        let { selector } = this.state
+        let { selector, shown } = this.state
 
         return <PrognosisListTab
             loading={loading}
@@ -37,6 +40,8 @@ export class PrognosisListTabContainerWithoutConnect extends Component {
             changeSelector={this.changeSelector}
             prognosisPressHandler={prognosisPressHandler}
             refreshHandler={this.refreshHandler}
+            shown={shown}
+            showMore={this.showMore}
         />
     }
 }

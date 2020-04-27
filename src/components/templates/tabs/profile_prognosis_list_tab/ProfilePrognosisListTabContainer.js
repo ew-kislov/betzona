@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
 
     state = {
-        betsShown: 10
+        betsShown: 3
     }
 
     componentDidMount() {
@@ -19,7 +19,7 @@ export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
         this.props.getProfileBetsActionCreator(username)
     }
 
-    showMore = () => this.setState({ betsShown: this.state.betsShown + 10 })
+    showMore = () => this.setState({ betsShown: this.state.betsShown + 3 })
 
     render() {
         let { loading, profileBets } = this.props

@@ -22,7 +22,7 @@ export class ChooseMatchContainerWithoutConnect extends Component {
         )
     }
 
-    showMore = () => this.setState({ matchesShown: this.state.matchesShown + 10 })
+    showMore = () => this.setState({ matchesShown: this.state.matchesShown + 3 })
 
     navigateToChooseOdd = match => this.props.navigation.navigate(SCREENS.CHOOSE_ODD, { match })
 
