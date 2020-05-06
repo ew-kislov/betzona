@@ -25,7 +25,6 @@ export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
     render() {
         let { loading, profileBets, id, photoUrl, profileBank, activeUsername } = this.props
         let { betsShown } = this.state
-        console.warn(id)
         return (
             <ProfilePrognosisListTab
                 loading={loading}

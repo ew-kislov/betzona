@@ -29,12 +29,12 @@ export const ProfilePrognosisListTab = ({ loading, id, username, activeUsername,
                 {
                     activeUsername == username && (
                         <View>
-                            <RowContainer style={{ marginTop: 40, justifyContent: 'center' }}>
+                            <RowContainer style={{ marginTop: 40, justifyContent: 'center', alignItems: 'center' }}>
                                 <SubdescriptionText>Доступно: </SubdescriptionText>
                                 <BoldText>{available}</BoldText>
                             </RowContainer>
 
-                            <RowContainer style={{ justifyContent: 'center' }}>
+                            <RowContainer style={{ justifyContent: 'center', alignItems: 'center', marginTop: 5 }}>
                                 <SubdescriptionText>Банк: </SubdescriptionText>
                                 <BoldText>{bank}</BoldText>
                             </RowContainer>

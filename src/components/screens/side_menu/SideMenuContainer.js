@@ -15,11 +15,6 @@ export class SideMenuContainerWithoutConnect extends PureComponent {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.profileBank.available != nextProps.profileBank.available ||
-            this.props.profileBank.bank != nextProps.profileBank.bank ||
-            this.props.token != nextProps.token) {
-                console.warn('Sidemenu updated')
-            }
         return (
             this.props.profileBank.available != nextProps.profileBank.available ||
             this.props.profileBank.bank != nextProps.profileBank.bank ||
