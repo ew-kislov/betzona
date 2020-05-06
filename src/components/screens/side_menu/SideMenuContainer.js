@@ -44,7 +44,8 @@ export class SideMenuContainerWithoutConnect extends PureComponent {
             loading={profileLoading}
             token={token}
             username={username}
-            profileBank={profileBank}
+            available={profileBank.available}
+            bank={profileBank.bank}
             closeDrawer={this.closeDrawer}
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ProfilePrognosisListTab } from './ProfilePrognosisListTab'
 
-import { getProfileBetsActionCreator } from '../../../../store'
+import { getProfileBetsActionCreator, getProfileStatsActionCreator } from '../../../../store'
 import { connect } from 'react-redux'
 
 export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
@@ -13,28 +13,45 @@ export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
     componentDidMount() {
         let username = this.props.screenProps.username;
         if (!username) {
-            username = this.props.username;
+            username = this.props.activeUsername;
         }
 
         this.props.getProfileBetsActionCreator(username)
+        this.props.getProfileStatsActionCreator(username)
     }
 
     showMore = () => this.setState({ betsShown: this.state.betsShown + 3 })
 
     render() {
-        let { loading, profileBets } = this.props
+        let { loading, profileBets, id, photoUrl, profileBank, activeUsername } = this.props
         let { betsShown } = this.state
+        console.warn(id)
         return (
-            <ProfilePrognosisListTab loading={loading} profileBets={profileBets} betsShown={betsShown} showMore={this.showMore} />
+            <ProfilePrognosisListTab
+                loading={loading}
+                id={id}
+                username={this.props.screenProps.username || activeUsername}
+                activeUsername={activeUsername}
+                photoUrl={photoUrl}
+                available={profileBank.available}
+                bank={profileBank.bank}
+                profileBets={profileBets}
+                betsShown={betsShown}
+                showMore={this.showMore}
+            />
         )
     }
 }
 
 const mapStateToProps = state => ({
-    username: state.auth.username,
+    activeUsername: state.auth.username,
+    loading: state.profile.loading,
+    id: state.profile.id,
+    photoUrl: state.profile.photoUrl,
+    profileBank: state.profile.profileBank,
     loading: state.profile.loading,
     profileBets: state.profile.profileBets,
     error: state.profile.error
 })
 export const ProfilePrognosisListTabContainer
-    = connect(mapStateToProps, { getProfileBetsActionCreator })(ProfilePrognosisListTabContainerWithoutConnect)
+    = connect(mapStateToProps, { getProfileBetsActionCreator, getProfileStatsActionCreator })(ProfilePrognosisListTabContainerWithoutConnect)

@@ -21,14 +21,17 @@ export class ProfileStatisticsTabContainerWithoutConnect extends Component {
     }
 
     render() {
-        let { loading, profileStats } = this.props
-        let {shown} = this.state
+        let { loading, profileStats, id, username, photoUrl } = this.props
+        let { shown } = this.state
         return (
             <ProfileStatisticsTab
-            loading={loading}
-            profileStats={profileStats?.stats || {}} graph={profileStats?.graph || {}}
-            shown={shown}
-            showMore={this.showMore}
+                loading={loading}
+                id={id}
+                username={username}
+                photoUrl={photoUrl}
+                profileStats={profileStats?.stats || {}} graph={profileStats?.graph || {}}
+                shown={shown}
+                showMore={this.showMore}
             />
         )
     }
@@ -37,6 +40,9 @@ export class ProfileStatisticsTabContainerWithoutConnect extends Component {
 const mapStateToProps = state => ({
     username: state.auth.username,
     loading: state.profile.loading,
+    id: state.profile.id,
+    photoUrl: state.profile.photoUrl,
+    profileBank: state.profile.profileBank,
     profileStats: state.profile.profileStats,
     error: state.profile.error
 })

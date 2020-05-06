@@ -2,7 +2,9 @@ export const styles = {
     sideMenuText: {
         fontSize: 14,
         fontFamily: 'Geometria-Medium',
-        color: '#1B2939'
+        color: '#1B2939',
+        textAlign: 'center',
+        alignSelf: 'center'
     },
     sideMenuBoldText: {
         fontSize: 14,

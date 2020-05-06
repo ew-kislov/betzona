@@ -16,7 +16,7 @@ export const ProfileBetPanel = ({ profileBet, style }) => {
         resultColor = '#ff741f'
 
     return (
-        <ShadowPanel outerStyle={style} innerStyle={{ padding: 10 }} height={170}>
+        <ShadowPanel disabled={true} outerStyle={style} innerStyle={{ padding: 10 }} height={170}>
             <RowContainer>
                 <View style={styles.prognoseSection}>
                     <DescriptionText style={{ textAlign: 'center' }}>{profileBet.homeName}</DescriptionText>

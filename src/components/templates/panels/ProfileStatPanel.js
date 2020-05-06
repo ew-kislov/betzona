@@ -9,7 +9,7 @@ import { styles } from './styles'
 
 export const ProfileStatPanel = ({ statElement, style }) => {
     return (
-        <ShadowPanel outerStyle={style} innerStyle={{ padding: 15 }} height={134}>
+        <ShadowPanel disabled={true} outerStyle={style} innerStyle={{ padding: 15 }} height={134}>
             <RowContainer style={{ justifyContent: 'space-between', alignItems: 'center' }}>
                 <View>
                     <RowContainer style={{ alignItems: 'center' }}>

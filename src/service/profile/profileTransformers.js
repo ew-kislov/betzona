@@ -39,6 +39,20 @@ export function tranformProfileBankResponse(profileBank) {
     }
 }
 
+function transformCategoryStatResponse(stat) {
+    return {
+        categoryName: stat.category_name,
+        totalCount: stat.count_bets,
+        winCount: stat.count_win,
+        winPercent: Math.round(stat.count_win / stat.count_bets * 100),
+        loseCount: stat.count_lose,
+        losePercent: Math.round(stat.count_lose / stat.count_bets * 100),
+        drawCount: stat.count_draw,
+        drawPercent: Math.round(stat.count_draw / stat.count_bets * 100),
+        roi: (stat.profit / stat.total_bets * 100).toFixed(2)
+    }
+}
+
 function transformCategoryStatsResponse(categoryStatistics) {
     return categoryStatistics.map(statisticsElement => ({
         categoryName: statisticsElement.category_name,
@@ -54,19 +68,39 @@ function transformCategoryStatsResponse(categoryStatistics) {
 }
 
 export function transformProfileStatsResponse(profileStatsRaw) {
+    // stats
+
     const categoriesStats = profileStatsRaw.stats.categories_stats;
+    const totalStats = profileStatsRaw.stats.total_stats;
+    // const totalStats = profileStatsRaw.stats.total_stats;
 
     let profileStats = {};
+    profileStats['Общая статистика'] = [transformCategoryStatResponse(totalStats['Общая статистика'])]
+    
     for (statType in categoriesStats)
         profileStats[statType] = transformCategoryStatsResponse(categoriesStats[statType])
 
+    //graph
+
     const graphSize = Object.keys(profileStatsRaw.graph).length;
+
+    const graph = {
+        labels: Object.keys(profileStatsRaw.graph).slice(Math.max(graphSize - 5, 0)),
+        data: Object.values(profileStatsRaw.graph).slice(Math.max(graphSize - 5, 0)),
+    }
+
+    // profile
+
+    const profile = {
+        id: profileStatsRaw.user.id ,
+        email: profileStatsRaw.user.email,
+        username: profileStatsRaw.user.username,
+        photoUrl: profileStatsRaw.user.path
+    }
 
     return {
         stats: profileStats,
-        graph: {
-            labels: Object.keys(profileStatsRaw.graph).slice(Math.max(graphSize - 5, 0)),
-            data: Object.values(profileStatsRaw.graph).slice(Math.max(graphSize - 5, 0)),
-        }
+        graph,
+        profile
     }
 }

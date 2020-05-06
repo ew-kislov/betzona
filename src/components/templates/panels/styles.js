@@ -186,7 +186,7 @@ export const styles = StyleSheet.create({
     },
     dateText: {
         fontSize: 12,
-        fontFamily: 'Geometria-Thin',
+        fontFamily: 'Geometria-Light',
         color: '#45ADE2'
     }
 })

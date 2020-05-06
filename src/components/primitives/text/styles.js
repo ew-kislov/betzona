@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     },
     thinText: {
         fontSize: 12,
-        fontFamily: 'Geometria-Thin',
+        fontFamily: 'Geometria-Light',
         color: '#1B2939'
     },
     subtitleText: {
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     subdescriptionText: {
         fontSize: 14,
         lineHeight: 20,
-        fontFamily: 'Geometria-Thin',
+        fontFamily: 'Geometria-Light',
         color: '#1B2939'
     },
     boldText: {

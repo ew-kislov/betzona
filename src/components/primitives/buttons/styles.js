@@ -142,7 +142,7 @@ export const styles = StyleSheet.create({
     },
     sliderButtonInactiveText: {
         fontSize: 12,
-        fontFamily: 'Geometria-Thin',
+        fontFamily: 'Geometria-Light',
         color: "#828a92",
     },
     sportTabButton: {

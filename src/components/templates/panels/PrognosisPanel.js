@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Image, TouchableOpacity, Dimensions } from 'react-native'
 
-import { DescriptionText, SmallText, RowContainer, BoldText, RoundWideShadow, RateButton, ThinText } from '../../primitives'
+import { DescriptionText, SmallText, RowContainer, BoldText, RoundWideShadow, RateButton, ThinText, SubdescriptionText } from '../../primitives'
 import { styles } from './styles'
 
 export const PrognosisPanel = ({ home, away, homeLogo, awayLogo, dateString, sport, rate, onPress, style }) => {
@@ -39,7 +39,7 @@ export const PrognosisPanel = ({ home, away, homeLogo, awayLogo, dateString, spo
                         </View>
                     </RowContainer>
                     <RowContainer style={styles.prognosisBottom}>
-                        <ThinText>Посмотреть прогноз</ThinText>
+                        <SubdescriptionText>Посмотреть прогноз</SubdescriptionText>
                         <RateButton>{rate}</RateButton>
                     </RowContainer>
                 </View>

@@ -20,7 +20,8 @@ import { styles } from '../styles'
 export const SideMenu = ({
     loading,
     token,
-    profileBank,
+    available,
+    bank,
     closeDrawer,
     handleLogout,
     navigateToProfileInfo,
@@ -30,15 +31,10 @@ export const SideMenu = ({
 }) => {
     return (
         <View style={{ flex: 1 }}>
-            <ContentLayout style={{ padding: 20, paddingTop: 30, zIndex: 10000 }} loading={loading}>
+            <ContentLayout style={{ padding: 20, paddingTop: 30, zIndex: 10 }} loading={loading}>
                 <SafeAreaView />
 
-                <RowContainer style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-                    <LogoIcon />
-                    <TouchableOpacity onPress={closeDrawer}>
-                        <CloseIcon />
-                    </TouchableOpacity>
-                </RowContainer>
+                <LogoIcon />
 
                 <View style={{ marginTop: 10 }}>
                     {
@@ -47,11 +43,11 @@ export const SideMenu = ({
                             <View>
                                 <RowContainer style={{ marginTop: 10 }}>
                                     <SubdescriptionText>Доступно: </SubdescriptionText>
-                                    <Text style={styles.sideMenuBoldText}>{profileBank.available + '€'}</Text>
+                                    <Text style={styles.sideMenuBoldText}>{available + '€'}</Text>
                                 </RowContainer>
                                 <RowContainer style={{ marginTop: 5, marginBottom: 10 }}>
                                     <SubdescriptionText>Банк: </SubdescriptionText>
-                                    <Text style={styles.sideMenuBoldText}>{profileBank.bank + '€'}</Text>
+                                    <Text style={styles.sideMenuBoldText}>{bank + '€'}</Text>
                                 </RowContainer>
                             </View>
                         )
@@ -62,23 +58,34 @@ export const SideMenu = ({
                         <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Прогнозы на спорт</Text>
                     </MenuItem>
 
-                    <MenuItem onPress={navigateToRating} style={{ marginTop: 5 }}>
+                    <MenuItem onPress={navigateToRating} style={{ marginTop: 15 }}>
                         <DrawerRatingIcon />
                         <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Рейтинг игроков за месяц</Text>
                     </MenuItem>
 
-                    <MenuItem onPress={navigateToProfileInfo} style={{ marginTop: 5 }}>
-                        <DrawerAddIcon />
-                        <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Открыть профиль</Text>
-                    </MenuItem>
+                    {
+                        token &&
+                        (
+                            <View>
+                                <MenuItem onPress={navigateToProfileInfo} style={{ marginTop: 15 }}>
+                                    <DrawerAddIcon />
+                                    <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Открыть профиль</Text>
+                                </MenuItem>
 
-                    <MenuItem onPress={navigateToAddPrognosis} style={{ marginTop: 5 }}>
-                        <DrawerProfileIcon />
-                        <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Добавить прогноз</Text>
-                    </MenuItem>
+                                <MenuItem onPress={navigateToAddPrognosis} style={{ marginTop: 15 }}>
+                                    <DrawerProfileIcon />
+                                    <Text style={[styles.sideMenuText, { marginLeft: 12 }]}>Добавить прогноз</Text>
+                                </MenuItem>
+                            </View>
+                        )
+                    }
 
                 </View>
             </ContentLayout>
+
+            <TouchableOpacity style={{ position: 'absolute', top: 30, right: 30, zIndex: 100000 }} onPress={closeDrawer}>
+                <CloseIcon />
+            </TouchableOpacity>
 
             {
                 token &&

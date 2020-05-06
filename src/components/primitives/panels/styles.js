@@ -31,7 +31,8 @@ export const styles = StyleSheet.create({
         paddingTop: 7,
         paddingBottom: 7,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        textAlign: 'center'
     },
     grayPanel: {
         backgroundColor: '#FFFFFF',
