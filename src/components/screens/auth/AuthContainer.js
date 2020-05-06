@@ -9,6 +9,8 @@ import Toast from 'react-native-root-toast'
 import { ProfileInfo } from '../profile_info'
 import { SCREENS } from '../../../constants'
 
+import { sleep } from '../../../util/sleep'
+
 export class ProfileContainerWithoutConnect extends Component {
     state = {
         username: '',
@@ -26,12 +28,16 @@ export class ProfileContainerWithoutConnect extends Component {
     handleLogin = () => {
         if (this.state.username !== '' && this.state.password != '')
             this.props.loginActionCreator(this.state.username, this.state.password)
+                .then(() => sleep(500))
                 .then(() => {
                     if (this.props.error) {
                         Toast.show('Вы ввели неверные данные')
                     }
-                    else
+                    else {
+                        console.warn('Before fucking call in container - ' + this.props.token);
                         this.props.getProfileBankActionCreator(this.props.token)
+                    }
+                        
                 })
         else
             Toast.show('Введите логин и пароль')

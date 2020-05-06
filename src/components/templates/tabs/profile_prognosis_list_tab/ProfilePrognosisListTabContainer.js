@@ -23,7 +23,7 @@ export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
     showMore = () => this.setState({ betsShown: this.state.betsShown + 3 })
 
     render() {
-        let { loading, profileBets, id, photoUrl, profileBank, activeUsername } = this.props
+        let { loading, profileBets, id, photoUrl, available, bank, activeUsername } = this.props
         let { betsShown } = this.state
         return (
             <ProfilePrognosisListTab
@@ -32,8 +32,8 @@ export class ProfilePrognosisListTabContainerWithoutConnect extends Component {
                 username={this.props.screenProps.username || activeUsername}
                 activeUsername={activeUsername}
                 photoUrl={photoUrl}
-                available={profileBank.available}
-                bank={profileBank.bank}
+                available={available}
+                bank={bank}
                 profileBets={profileBets}
                 betsShown={betsShown}
                 showMore={this.showMore}
@@ -47,7 +47,8 @@ const mapStateToProps = state => ({
     loading: state.profile.loading,
     id: state.profile.id,
     photoUrl: state.profile.photoUrl,
-    profileBank: state.profile.profileBank,
+    available: state.profile.available,
+    bank: state.profile.bank,
     loading: state.profile.loading,
     profileBets: state.profile.profileBets,
     error: state.profile.error

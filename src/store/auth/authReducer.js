@@ -13,6 +13,7 @@ export function authReducer(state = initialState, action) {
             return { ...state, loading: true, error: false }
 
         case actionTypes.LOGIN_SUCCESS:
+            console.warn('token fucking arrived to reducer' + action.token);
             return { ...state, token: action.token, username: action.username, loading: false, error: false }
         case actionTypes.LOGOUT_SUCCESS:
             return { ...state, token: null, username: null, loading: false, error: false }

@@ -11,11 +11,13 @@ export function getProfileBetsActionCreator(username) {
 }
 
 export function getProfileBankActionCreator(token) {
+    console.warn('in creator')
+    console.warn(token)
     return dispatch => {
         dispatch(actions.getProfileBankRequest)
         return service.getProfileBank(token)
-            .then(profileBank => dispatch(actions.getProfileBankSuccess(profileBank)))
-            .catch(error => dispatch(actions.getProfileBankFail(error)))
+            .then(profileBank => { console.warn('got profileBank'); console.warn(profileBank); return dispatch(actions.getProfileBankSuccess(profileBank))})
+            .catch(error => { console.warn(error); dispatch(actions.getProfileBankFail(error))})
     }
 }
 

@@ -7,19 +7,11 @@ import { loginActionCreator, logoutActionCreator, getProfileBankActionCreator } 
 import { connect } from 'react-redux'
 import { SCREENS } from '../../../constants'
 
-export class SideMenuContainerWithoutConnect extends PureComponent {
+export class SideMenuContainerWithoutConnect extends Component {
     componentDidMount = () => {
         if (this.props.token) {
             this.props.getProfileBankActionCreator(this.props.token)
         }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return (
-            this.props.profileBank.available != nextProps.profileBank.available ||
-            this.props.profileBank.bank != nextProps.profileBank.bank ||
-            this.props.token != nextProps.token
-        )
     }
 
     closeDrawer = () => this.props.navigation.closeDrawer();
@@ -34,13 +26,13 @@ export class SideMenuContainerWithoutConnect extends PureComponent {
     navigateToAddPrognosis = () => this.props.navigation.navigate(SCREENS.CHOOSE_SPORT)
 
     render() {
-        let { token, username, profileLoading, profileBank } = this.props
+        let { token, username, profileLoading, available, bank } = this.props
         return <SideMenu
             loading={profileLoading}
             token={token}
             username={username}
-            available={profileBank.available}
-            bank={profileBank.bank}
+            available={available}
+            bank={bank}
             closeDrawer={this.closeDrawer}
             handleUsernameChange={this.handleUsernameChange}
             handlePasswordChange={this.handlePasswordChange}
@@ -61,7 +53,8 @@ const mapStateToProps = state => ({
     error: state.auth.error,
 
     profileLoading: state.profile.loading,
-    profileBank: state.profile.profileBank,
+    available: state.profile.available,
+    bank: state.profile.bank,
     profileError: state.profile.error
 })
 export const SideMenuContainer =
