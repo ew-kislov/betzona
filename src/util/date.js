@@ -18,5 +18,5 @@ export function getDayMonthFormat(date) {
 }
 
 export function getDateTimeFormat(date) {
-    return date.getDate() + '/' + date.getMonth() + ' ' + date.toTimeString().substr(0, 5)
+    return date.getDate() + '/' + (date.getMonth() + 1) + ' ' + date.toTimeString().substr(0, 5)
 }

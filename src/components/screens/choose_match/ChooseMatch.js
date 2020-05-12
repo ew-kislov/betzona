@@ -35,6 +35,8 @@ export const ChooseMatch = ({
                         <MatchPanel
                             key={match.id}
                             match={match}
+                            popular={popular}
+                            nearest={nearest}
                             onPress={() => navigateToChooseOdd(match)}
                         />
                     )}

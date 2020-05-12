@@ -6,7 +6,8 @@ export function transformMatchListResponse(matchList) {
         return {
             id: match.id,
             date: getDateTimeFormat(date),
-            name: match.home.name + ' - ' + match.away.name
+            name: match.home.name + ' - ' + match.away.name,
+            tournament: match?.tournament?.name || ''
         }
     })
 }
